@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Доставим ваш груз из Европы, Китая, США — под ключ | ELP Cargo</title>
+<meta name="description" content="Доставка грузов с оплатой поставщику, таможней и страховкой. 10+ лет на рынке. Получите бесплатный расчёт за 30 минут!">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elpcargo.ru/">
+<meta property="og:title" content="Доставим ваш груз из Европы, Китая, США — под ключ | ELP Cargo">
+<meta property="og:description" content="Доставка грузов с оплатой поставщику, таможней и страховкой. 10+ лет на рынке.">
+<meta property="og:image" content="https://elpcargo.ru/images/og-preview.jpg">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ELP Cargo",
+  "description": "Международная логистика и таможенное оформление грузов",
+  "url": "https://elpcargo.ru",
+  "logo": "https://elpcargo.ru/images/logo.png",
+  "foundingDate": "2015",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+7-911-920-01-85",
+    "contactType": "customer service",
+    "areaServed": "RU",
+    "availableLanguage": ["ru"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Санкт-Петербург",
+    "addressCountry": "RU",
+    "streetAddress": "Брестский бульвар, 8"
+  },
+  "sameAs": ["https://t.me/ELP_Cargo"]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<style>
+/* ============================================================
+   GLAZED CARGO — Design System
+   Premium logistics with frosted glass aesthetics
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --c-bg: #f7f8fa;
+  --c-surface: #ffffff;
+  --c-dark: #0f1419;
+  --c-dark-2: #1a1f26;
+  --c-accent: #FF6B35;
+  --c-accent-hover: #E65A2B;
+  --c-accent-soft: rgba(255, 107, 53, .08);
+  --c-blue: #3B82F6;
+  --c-green: #10B981;
+  --c-text: #1e293b;
+  --c-text-2: #64748b;
+  --c-text-3: #94a3b8;
+  --c-border: #e2e8f0;
+
+  /* Typography */
+  --f-display: 'Sora', sans-serif;
+  --f-body: 'DM Sans', sans-serif;
+
+  /* Spacing */
+  --s-section: clamp(80px, 12vw, 140px);
+  --s-gap: 24px;
+
+  /* Radius */
+  --r: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* Shadows — Multi-layered elevation */
+  --z1: 0 1px 2px rgba(15, 20, 25, .04), 0 2px 6px rgba(15, 20, 25, .02);
+  --z2: 0 2px 4px rgba(15, 20, 25, .04), 0 4px 12px rgba(15, 20, 25, .04);
+  --z3: 0 4px 6px rgba(15, 20, 25, .04), 0 8px 16px rgba(15, 20, 25, .06);
+  --z4: 0 6px 12px rgba(15, 20, 25, .05), 0 12px 24px rgba(15, 20, 25, .08);
+  --z5: 0 12px 24px rgba(15, 20, 25, .08), 0 24px 48px rgba(15, 20, 25, .12);
+
+  /* Motion */
+  --t-fast: 200ms;
+  --t-base: 300ms;
+  --t-slow: 500ms;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+
+  /* Layout */
+  --max-w: 1360px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--f-body); color: var(--c-text); line-height: 1.6; background: var(--c-bg); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; border: none; outline: none; background: none; }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 4px; border-radius: 6px; }
+
+/* Container */
+.ctn { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+/* Animations */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDown { from { max-height: 0; } to { max-height: var(--height); } }
+
+.fade-up { opacity: 0; animation: fadeUp 0.6s var(--ease) forwards; }
+.fade-up-1 { animation-delay: 0.1s; }
+.fade-up-2 { animation-delay: 0.2s; }
+.fade-up-3 { animation-delay: 0.3s; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 0; transition: all var(--t-base) var(--ease);
+}
+.header.scrolled {
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  padding: 12px 0;
+  box-shadow: var(--z2);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; }
+
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--f-display); font-size: 22px;
+  font-weight: 700; letter-spacing: -.5px;
+  color: #fff; transition: color var(--t-base);
+}
+.header.scrolled .logo { color: var(--c-dark); }
+.logo-box {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--c-accent), #E65A2B);
+  border-radius: var(--r);
+  display: grid; place-items: center;
+  font-size: 14px; font-weight: 800; color: #fff;
+  box-shadow: var(--z3);
+}
+
+.nav { display: flex; gap: 4px; }
+.nav a {
+  padding: 8px 16px; border-radius: var(--r-pill);
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,.7);
+  transition: all var(--t-fast);
+}
+.nav a:hover { color: #fff; background: rgba(255,255,255,.1); }
+.header.scrolled .nav a { color: var(--c-text-2); }
+.header.scrolled .nav a:hover { color: var(--c-dark); background: var(--c-accent-soft); }
+
+.header-cta {
+  padding: 10px 24px;
+  background: var(--c-accent);
+  color: #fff;
+  border-radius: var(--r-pill);
+  font-weight: 600; font-size: 14px;
+  box-shadow: var(--z2);
+  transition: all var(--t-base);
+}
+.header-cta:hover {
+  background: var(--c-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--z4);
+}
+
+.burger {
+  display: none; width: 28px; height: 20px;
+  flex-direction: column; justify-content: space-between;
+  cursor: pointer;
+}
+.burger span {
+  display: block; width: 100%; height: 2px;
+  background: #fff; border-radius: 2px;
+  transition: var(--t-base);
+}
+.header.scrolled .burger span { background: var(--c-dark); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  background: var(--c-dark); overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; opacity: .35;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,20,25,.3) 0%, rgba(15,20,25,.9) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 160px 0 100px;
+  max-width: 680px;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--r-pill);
+  color: rgba(255,255,255,.9);
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 24px;
+}
+.hero-badge .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--c-green);
+  box-shadow: 0 0 10px var(--c-green);
+}
+
+.hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #FF8B5D, var(--c-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,.7);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--r-pill);
+  font-weight: 600; font-size: 15px;
+  cursor: pointer;
+  transition: all var(--t-base);
+  position: relative; overflow: hidden;
+}
+.btn i { width: 18px; height: 18px; }
+
+.btn--primary {
+  background: var(--c-accent);
+  color: #fff;
+  box-shadow: var(--z3);
+}
+.btn--primary:hover {
+  background: var(--c-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--z5);
+}
+
+.btn--ghost {
+  border: 2px solid rgba(255,255,255,.2);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
+}
+.btn--ghost:hover {
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.4);
+}
+
+.hero-stats {
+  display: flex; gap: 40px; flex-wrap: wrap;
+}
+.stat { position: relative; }
+.stat::after {
+  content: '';
+  position: absolute;
+  right: -20px; top: 4px; bottom: 4px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,.15), transparent);
+}
+.stat:last-child::after { display: none; }
+.stat-value {
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.section { padding: var(--s-section) 0; }
+.section--dark { background: var(--c-dark); color: #fff; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px;
+  background: var(--c-accent-soft);
+  color: var(--c-accent);
+  border: 1px solid rgba(255, 107, 53, .15);
+  border-radius: var(--r-pill);
+  font-size: 12px; font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 16px;
+}
+.section-tag i { width: 14px; height: 14px; }
+.section-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  color: var(--c-dark);
+}
+.section--dark .section-title { color: #fff; }
+
+/* ============================================================
+   PROCESS CARDS
+   ============================================================ */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--s-gap);
+}
+
+.process-card {
+  padding: 36px 24px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-xl);
+  text-align: center;
+  box-shadow: var(--z2);
+  transition: all var(--t-base);
+  position: relative;
+}
+.process-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--r-xl);
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, .2), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+.process-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--z4);
+  border-color: rgba(255, 107, 53, .2);
+}
+.process-card:hover::before { opacity: 1; }
+
+.process-icon {
+  width: 100px; height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 24px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+  box-shadow: var(--z2);
+  transition: all var(--t-base);
+}
+.process-card:hover .process-icon {
+  transform: scale(1.1) translateY(-4px);
+}
+.process-icon i {
+  width: 40px; height: 40px;
+  color: #E65100;
+  stroke-width: 1.5;
+}
+
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--c-dark);
+  color: #fff;
+  font-size: 12px; font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.process-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--c-dark);
+}
+
+.process-card p {
+  font-size: 14px;
+  color: var(--c-text-2);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SERVICE GRID
+   ============================================================ */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  padding: 32px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--z2);
+  transition: all var(--t-base);
+  position: relative;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--r-xl);
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, .2), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--z4);
+  border-color: rgba(255, 107, 53, .2);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-icon {
+  width: 56px; height: 56px;
+  margin-bottom: 20px;
+  border-radius: var(--r);
+  background: var(--c-accent-soft);
+  display: grid; place-items: center;
+  transition: all var(--t-base);
+}
+.service-card:hover .service-icon {
+  background: var(--c-accent);
+  transform: scale(1.1);
+}
+.service-icon i {
+  width: 28px; height: 28px;
+  color: var(--c-accent);
+  transition: color var(--t-base);
+}
+.service-card:hover .service-icon i { color: #fff; }
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--c-dark);
+}
+
+.service-card p {
+  font-size: 15px;
+  color: var(--c-text-2);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list { max-width: 800px; margin: 0 auto; }
+
+.faq-item {
+  margin-bottom: 12px;
+  padding: 0 24px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--z1);
+  transition: all var(--t-base);
+}
+.faq-item:hover {
+  box-shadow: var(--z3);
+  border-color: rgba(255, 107, 53, .15);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-weight: 600;
+  gap: 16px;
+}
+.faq-question:hover { color: var(--c-accent); }
+
+.faq-toggle {
+  width: 32px; height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--c-bg);
+  display: grid; place-items: center;
+  transition: all var(--t-base);
+}
+.faq-toggle i {
+  width: 16px; height: 16px;
+  color: var(--c-text-3);
+  transition: transform var(--t-base);
+}
+.faq-item.active .faq-toggle {
+  background: var(--c-accent);
+}
+.faq-item.active .faq-toggle i {
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t-slow);
+}
+.faq-answer-inner {
+  padding: 0 0 20px;
+  color: var(--c-text-2);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 16px 0 12px;
+}
+.contact-info p {
+  color: var(--c-text-2);
+  margin-bottom: 32px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--z1);
+  transition: all var(--t-base);
+}
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--z3);
+  border-color: rgba(255, 107, 53, .2);
+}
+
+.info-icon {
+  width: 44px; height: 44px;
+  min-width: 44px;
+  border-radius: var(--r);
+  background: var(--c-accent);
+  display: grid; place-items: center;
+  box-shadow: var(--z2);
+}
+.info-icon i { width: 20px; height: 20px; color: #fff; }
+
+.info-card h5 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--c-text-3);
+  margin-bottom: 2px;
+}
+.info-card a, .info-card span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.info-card a:hover { color: var(--c-accent); }
+
+.form-box {
+  padding: 40px;
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--z3);
+}
+
+.form-box h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.form-box > p {
+  color: var(--c-text-3);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field.full { grid-column: 1 / -1; }
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-text-2);
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 14px 16px;
+  border: 2px solid var(--c-border);
+  border-radius: var(--r);
+  background: var(--c-bg);
+  transition: all var(--t-base);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, .08);
+  background: var(--c-surface);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 16px;
+}
+
+#formStatus {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: var(--r);
+  font-size: 14px;
+  display: none;
+}
+#formStatus.success {
+  background: rgba(16, 185, 129, .1);
+  color: var(--c-green);
+  border: 1px solid rgba(16, 185, 129, .2);
+}
+#formStatus.error {
+  background: rgba(255, 107, 53, .1);
+  color: var(--c-accent);
+  border: 1px solid rgba(255, 107, 53, .2);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--c-dark);
+  color: #fff;
+  padding: 60px 0 30px;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-accent), var(--c-blue), var(--c-green));
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand p {
+  color: rgba(255,255,255,.5);
+  margin-top: 12px;
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+.footer h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-links a {
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+  transition: color var(--t-fast);
+}
+.footer-links a:hover { color: #fff; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255,255,255,.3);
+}
+.footer-bottom a {
+  color: rgba(255,255,255,.5);
+  transition: color var(--t-fast);
+}
+.footer-bottom a:hover { color: #fff; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .ctn { padding: 0 20px; }
+  .nav { display: none; }
+  .burger { display: flex; }
+  .hero-content { padding: 120px 0 60px; }
+  .hero-stats { gap: 24px; }
+  .process-grid,
+  .service-grid { grid-template-columns: 1fr; }
+  .info-grid,
+  .form-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="ctn header-inner">
+    <a href="#" class="logo">
+      <div class="logo-box">ELP</div>
+      Cargo
+    </a>
+    <nav class="nav">
+      <a href="#process">Как работаем</a>
+      <a href="#services">Услуги</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a href="#contact" class="header-cta">Получить расчёт</a>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Логистика" loading="eager">
+  </div>
+  <div class="ctn">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <span class="dot"></span>
+        Бесплатный расчёт за 30 минут — работаем 24/7
+      </div>
+      <h1 class="fade-up fade-up-1">
+        Ваш груз из Европы, Китая, США — <em>доставлен за 12 дней</em>
+      </h1>
+      <p class="hero-subtitle fade-up fade-up-2">
+        Оплатим поставщику в евро/долларах, организуем доставку, растаможим. Вы получаете груз и документы — мы решаем всё остальное.
+      </p>
+      <div class="hero-btns fade-up fade-up-3">
+        <a href="#contact" class="btn btn--primary">
+          Получить расчёт <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#process" class="btn btn--ghost">
+          Как это работает
+        </a>
+      </div>
+      <div class="hero-stats fade-up fade-up-3">
+        <div class="stat">
+          <div class="stat-value" data-count="10">0</div>
+          <div class="stat-label">Лет на рынке</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-count="450">0</div>
+          <div class="stat-label">Успешных доставок</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-count="12">0</div>
+          <div class="stat-label">Стран отправки</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-count="0">0</div>
+          <div class="stat-label">Потерянных грузов</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="ctn">
+    <div class="section-header">
+      <div class="section-tag">
+        <i data-lucide="zap"></i> Как это работает
+      </div>
+      <h2 class="section-title">Четыре шага — и груз у вас</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-icon">
+          <i data-lucide="credit-card"></i>
+        </div>
+        <div class="process-number">1</div>
+        <h3>Оплатим</h3>
+        <p>Переведём деньги поставщику с наших европейских контрактов</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">
+          <i data-lucide="truck"></i>
+        </div>
+        <div class="process-number">2</div>
+        <h3>Привезём</h3>
+        <p>Оптимальный маршрут: авто, авиа, море — 2-3 недели</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">
+          <i data-lucide="clipboard-check"></i>
+        </div>
+        <div class="process-number">3</div>
+        <h3>Растаможим</h3>
+        <p>Все пошлины уплачены, декларация оформлена</p>
+      </div>
+      <div class="process-card">
+        <div class="process-icon">
+          <i data-lucide="package-check"></i>
+        </div>
+        <div class="process-number">4</div>
+        <h3>Передадим</h3>
+        <p>Груз + документы для вашей бухгалтерии</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="background: var(--c-surface);">
+  <div class="ctn">
+    <div class="section-header">
+      <div class="section-tag">
+        <i data-lucide="layers"></i> Услуги
+      </div>
+      <h2 class="section-title">Что мы делаем</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="map-pin"></i>
+        </div>
+        <h3>Доставка из Европы</h3>
+        <p>Авто, авиа, сборные перевозки из всех стран ЕС. Оптимальные маршруты.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="ship"></i>
+        </div>
+        <h3>Доставка из Китая</h3>
+        <p>Море, ж/д, авиа. Работаем с крупнейшими портами Китая.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="plane"></i>
+        </div>
+        <h3>Доставка из США</h3>
+        <p>Авиа и морские контейнеры. Экспресс-доставка за 5-7 дней.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="file-check-2"></i>
+        </div>
+        <h3>Таможенное оформление</h3>
+        <p>Полный пакет документов, сертификаты, декларирование.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="banknote"></i>
+        </div>
+        <h3>Оплата поставщику</h3>
+        <p>Переводы в EUR, USD, GBP через наших европейских партнёров.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i data-lucide="warehouse"></i>
+        </div>
+        <h3>Складская логистика</h3>
+        <p>Хранение, консолидация, маркировка на наших складах.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="ctn">
+    <div class="section-header">
+      <div class="section-tag">
+        <i data-lucide="message-circle"></i> FAQ
+      </div>
+      <h2 class="section-title">Частые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Можно ли легально доставить санкционные товары?
+          <div class="faq-toggle"><i data-lucide="plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Да. Реэкспорт через третьи страны, официальная растаможка, полный пакет документов.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Как решаете проблему оплаты поставщикам?
+          <div class="faq-toggle"><i data-lucide="plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Платёжные агенты + наши европейские контракты. Конвертация за 3-4 дня.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Сколько стоит и как долго?
+          <div class="faq-toggle"><i data-lucide="plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Европа — 2-3 недели, Китай/США — ~1,5 месяца. Одна цена «под ключ».
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Как обеспечивается сохранность?
+          <div class="faq-toggle"><i data-lucide="plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Страхование, отслеживание, проверенные партнёры. 10+ лет — ноль потерь.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          С какой суммы можно начать?
+          <div class="faq-toggle"><i data-lucide="plus"></i></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            От 50 000 ₽. Первый заказ — с минимальной предоплатой.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background: var(--c-surface);">
+  <div class="ctn">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-tag">
+          <i data-lucide="send"></i> Получить расчёт
+        </div>
+        <h2>Узнайте стоимость доставки прямо сейчас</h2>
+        <p>Бесплатная консультация и расчёт за 30 минут. Работаем 24/7.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i data-lucide="phone"></i>
+            </div>
+            <div>
+              <h5>Телефон</h5>
+              <a href="tel:+79119200185">+7 911 920-01-85</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i data-lucide="send"></i>
+            </div>
+            <div>
+              <h5>Telegram</h5>
+              <a href="https://t.me/ELP_Cargo" target="_blank" rel="noopener">@ELP_Cargo</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div>
+              <h5>Офис</h5>
+              <span>СПб, Брестский б-р, 8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form-box" id="contactForm" action="https://formspree.io/f/xyzgpyzg" method="POST">
+        <h3>Запросить расчёт</h3>
+        <p>Бесплатная консультация — ответим в течение 30 минут</p>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Имя *</label>
+            <input type="text" id="name" name="name" required minlength="2" placeholder="Ваше имя">
+          </div>
+          <div class="form-field">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-field full">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+          </div>
+          <div class="form-field full">
+            <label for="message">Что доставить? *</label>
+            <textarea id="message" name="message" required minlength="10" placeholder="Опишите груз: название, вес, откуда и куда"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Новая заявка с сайта ELP Cargo">
+        </div>
+        <button type="submit" class="btn btn--primary form-submit">
+          Отправить заявку <i data-lucide="arrow-right"></i>
+        </button>
+        <div id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ctn">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-box" style="width:36px;height:36px;font-size:12px">ELP</div>
+          Cargo
+        </a>
+        <p>European Logistics Path. Международная логистика и таможенное оформление грузов.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <div class="footer-links">
+          <a href="#process">Как работаем</a>
+          <a href="#services">Услуги</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <div class="footer-links">
+          <a href="#services">Из Европы</a>
+          <a href="#services">Из Китая</a>
+          <a href="#services">Из США</a>
+          <a href="#services">Таможня</a>
+        </div>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="footer-links">
+          <a href="tel:+79119200185">+7 911 920-01-85</a>
+          <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a>
+          <a href="https://t.me/ELP_Cargo" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2015–2026 ELP Cargo. ИП Нуров В.В. ИНН 503302248367 | ОГРНИП 315503200033405</span>
+      <a href="#contact">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Init Lucide Icons
+lucide.createIcons();
+
+// Header scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Counter animation
+let counted = false;
+function animateCounters() {
+  if (counted) return;
+  const stats = document.querySelectorAll('.stat-value');
+  const firstStat = stats[0];
+  if (!firstStat) return;
+
+  const rect = firstStat.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    counted = true;
+    stats.forEach(stat => {
+      const target = parseInt(stat.dataset.count);
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.floor(progress * target);
+
+        stat.textContent = target === 0 ? '0' : current.toLocaleString('ru-RU') + (progress === 1 && target > 0 ? '+' : '');
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+      requestAnimationFrame(update);
+    });
+  }
+}
+window.addEventListener('scroll', animateCounters);
+animateCounters();
+
+// FAQ Toggle
+function toggleFaq(element) {
+  const item = element.parentElement;
+  const answer = item.querySelector('.faq-answer');
+  const isActive = item.classList.contains('active');
+
+  // Close all
+  document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+    activeItem.classList.remove('active');
+    activeItem.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+
+  // Open clicked if it wasn't active
+  if (!isActive) {
+    item.classList.add('active');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+
+  lucide.createIcons();
+}
+
+// Phone mask
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+  phoneInput.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    let formatted = '';
+
+    if (value.length > 0) {
+      formatted = '+7';
+      if (value.length > 1) {
+        formatted += ' (' + value.substring(1, 4);
+      }
+      if (value.length >= 4) {
+        formatted += ') ' + value.substring(4, 7);
+      }
+      if (value.length >= 7) {
+        formatted += '-' + value.substring(7, 9);
+      }
+      if (value.length >= 9) {
+        formatted += '-' + value.substring(9, 11);
+      }
+    }
+
+    e.target.value = formatted;
+  });
+
+  phoneInput.addEventListener('focus', function(e) {
+    if (!e.target.value) {
+      e.target.value = '+7 ';
+    }
+  });
+}
+
+// Form submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const statusEl = document.getElementById('formStatus');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Отправка...';
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusEl.textContent = 'Спасибо! Мы свяжемся с вами в течение 30 минут.';
+        statusEl.className = 'success';
+        statusEl.style.display = 'block';
+        contactForm.reset();
+
+        setTimeout(() => {
+          statusEl.style.display = 'none';
+        }, 5000);
+      } else {
+        throw new Error('Ошибка отправки');
+      }
+    } catch (error) {
+      statusEl.textContent = 'Ошибка отправки. Позвоните нам: +7 911 920-01-85';
+      statusEl.className = 'error';
+      statusEl.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      lucide.createIcons();
+    }
+  });
+}
+</script>
+
+</body>
+</html>
