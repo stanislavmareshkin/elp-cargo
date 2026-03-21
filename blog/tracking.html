@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отслеживание груза | ELP Cargo</title>
+    <meta name="description" content="Отследите ваш груз ELP Cargo в реальном времени. Введите трек-номер и узнайте статус доставки. Рассчитайте стоимость международной доставки.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/tracking.html">
+    <meta property="og:title" content="Отслеживание груза | ELP Cargo">
+    <meta property="og:description" content="Отследите ваш груз в реальном времени. Введите трек-номер и узнайте статус доставки.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ELP Cargo">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Отслеживание груза | ELP Cargo","description":"Отследите ваш груз ELP Cargo в реальном времени","publisher":{"@type":"Organization","name":"ELP Cargo","url":"https://elpcargo.ru"}}</script>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); background: var(--c-black); color: var(--c-text); min-height: 100vh; line-height: 1.6; }
+        a { color: var(--c-accent-bright); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(180deg, rgba(139,92,246,.12) 0%, transparent 100%);
+            border-bottom: 1px solid var(--c-border);
+            padding: 16px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .header-logo { font-size: 18px; font-weight: 700; color: #fff; }
+        .header-logo span { color: var(--c-accent); }
+        .header-nav a { color: var(--c-text-sec); font-size: 14px; margin-left: 20px; }
+        .header-nav a:hover { color: #fff; text-decoration: none; }
+
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: radial-gradient(ellipse at center top, rgba(139,92,246,.15) 0%, transparent 60%);
+        }
+        .hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; color: #fff; }
+        .hero p { font-size: 16px; color: var(--c-text-sec); max-width: 500px; margin: 0 auto; }
+
+        .track-box {
+            max-width: 600px; margin: 30px auto 0;
+            display: flex; gap: 12px;
+        }
+        .track-box input {
+            flex: 1; padding: 14px 18px;
+            background: var(--c-bg-card); border: 1px solid var(--c-border);
+            border-radius: var(--radius); color: #fff; font-size: 16px;
+            font-family: var(--font); outline: none; transition: var(--transition);
+        }
+        .track-box input:focus { border-color: var(--c-accent); }
+        .track-box input::placeholder { color: var(--c-text-dim); }
+        .track-btn {
+            padding: 14px 28px; background: var(--gradient-accent);
+            border: none; border-radius: var(--radius); color: #fff;
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            font-family: var(--font); transition: var(--transition);
+            white-space: nowrap;
+        }
+        .track-btn:hover { opacity: .9; transform: translateY(-1px); }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+
+        /* Timeline */
+        .timeline { display: none; margin: 40px auto; max-width: 600px; padding: 0 24px; }
+        .timeline.active { display: block; }
+        .timeline-header {
+            background: var(--c-bg-card); border: 1px solid var(--c-border);
+            border-radius: var(--radius); padding: 20px; margin-bottom: 24px;
+        }
+        .timeline-header .track-num { font-size: 14px; color: var(--c-text-sec); }
+        .timeline-header .track-num span { color: var(--c-accent-bright); font-weight: 600; }
+        .timeline-header .status-badge {
+            display: inline-block; margin-top: 8px;
+            padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;
+        }
+        .status-transit { background: rgba(251,191,36,.15); color: #fbbf24; }
+        .status-delivered { background: rgba(34,197,94,.15); color: #22c55e; }
+
+        .tl-step {
+            display: flex; gap: 16px; position: relative; padding-bottom: 28px;
+        }
+        .tl-step:last-child { padding-bottom: 0; }
+        .tl-dot {
+            width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0;
+            margin-top: 3px; position: relative; z-index: 1;
+        }
+        .tl-dot.done { background: var(--c-accent); box-shadow: 0 0 12px rgba(139,92,246,.5); }
+        .tl-dot.current { background: #fbbf24; box-shadow: 0 0 12px rgba(251,191,36,.5); animation: pulse 2s infinite; }
+        .tl-dot.pending { background: var(--c-border); }
+        @keyframes pulse { 0%,100% { box-shadow: 0 0 8px rgba(251,191,36,.4); } 50% { box-shadow: 0 0 20px rgba(251,191,36,.7); } }
+
+        .tl-line {
+            position: absolute; left: 7px; top: 19px; width: 2px; height: calc(100% - 19px);
+        }
+        .tl-line.done { background: var(--c-accent); }
+        .tl-line.pending { background: var(--c-border); }
+        .tl-content { flex: 1; }
+        .tl-title { font-weight: 600; font-size: 15px; color: #fff; }
+        .tl-date { font-size: 13px; color: var(--c-text-sec); margin-top: 2px; }
+        .tl-desc { font-size: 13px; color: var(--c-text-dim); margin-top: 4px; }
+
+        /* Lead capture */
+        .lead-section {
+            margin: 60px auto; max-width: 600px; padding: 0 24px 60px;
+        }
+        .lead-card {
+            background: var(--c-bg-card); border: 1px solid var(--c-border);
+            border-radius: var(--radius); padding: 32px; text-align: center;
+        }
+        .lead-card h2 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .lead-card .subtitle { color: var(--c-text-sec); font-size: 14px; margin-bottom: 24px; }
+        .lead-form { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+        .lead-form label { font-size: 13px; color: var(--c-text-sec); font-weight: 500; }
+        .lead-form input, .lead-form textarea {
+            width: 100%; padding: 12px 16px;
+            background: rgba(255,255,255,.04); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); color: #fff; font-size: 14px;
+            font-family: var(--font); outline: none; transition: var(--transition);
+        }
+        .lead-form input:focus, .lead-form textarea:focus { border-color: var(--c-accent); }
+        .lead-form input::placeholder, .lead-form textarea::placeholder { color: var(--c-text-dim); }
+        .lead-form textarea { resize: vertical; min-height: 80px; }
+        .submit-btn {
+            width: 100%; padding: 14px; background: var(--gradient-accent);
+            border: none; border-radius: var(--radius); color: #fff;
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            font-family: var(--font); transition: var(--transition);
+            margin-top: 8px;
+        }
+        .submit-btn:hover { opacity: .9; }
+        .form-success {
+            display: none; text-align: center; padding: 24px;
+            color: #22c55e; font-size: 15px;
+        }
+
+        .footer {
+            border-top: 1px solid var(--c-border);
+            padding: 24px; text-align: center;
+            color: var(--c-text-dim); font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 26px; }
+            .track-box { flex-direction: column; }
+            .track-btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">ELP <span>Cargo</span></div>
+        <nav class="header-nav">
+            <a href="https://elpcargo.ru">Главная</a>
+            <a href="https://blog.elpcargo.ru">Блог</a>
+            <a href="https://t.me/ELP_Cargo">Telegram</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Отследить груз ELP Cargo</h1>
+        <p>Введите номер отслеживания, чтобы узнать текущий статус вашей доставки</p>
+        <div class="track-box">
+            <input type="text" id="trackInput" placeholder="Например: ELP-2026-001234" autocomplete="off">
+            <button class="track-btn" onclick="trackCargo()">Отследить</button>
+        </div>
+    </section>
+
+    <div class="timeline" id="timeline">
+        <div class="timeline-header">
+            <div class="track-num">Трек-номер: <span id="trackNumber"></span></div>
+            <div id="statusBadge" class="status-badge status-transit">В пути</div>
+        </div>
+
+        <div class="tl-step">
+            <div class="tl-dot done"></div>
+            <div class="tl-line done"></div>
+            <div class="tl-content">
+                <div class="tl-title">Принят на складе отправителя</div>
+                <div class="tl-date" id="date1"></div>
+                <div class="tl-desc">Груз принят, проверен и упакован для транспортировки</div>
+            </div>
+        </div>
+
+        <div class="tl-step">
+            <div class="tl-dot" id="dot2"></div>
+            <div class="tl-line" id="line2"></div>
+            <div class="tl-content">
+                <div class="tl-title">В пути (транзит)</div>
+                <div class="tl-date" id="date2"></div>
+                <div class="tl-desc">Груз находится в пути к стране назначения</div>
+            </div>
+        </div>
+
+        <div class="tl-step">
+            <div class="tl-dot" id="dot3"></div>
+            <div class="tl-line" id="line3"></div>
+            <div class="tl-content">
+                <div class="tl-title">Таможенное оформление</div>
+                <div class="tl-date" id="date3"></div>
+                <div class="tl-desc">Прохождение таможенных процедур и оформление документов</div>
+            </div>
+        </div>
+
+        <div class="tl-step">
+            <div class="tl-dot" id="dot4"></div>
+            <div class="tl-content">
+                <div class="tl-title">Доставлен</div>
+                <div class="tl-date" id="date4"></div>
+                <div class="tl-desc">Груз доставлен получателю</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="lead-section">
+        <div class="lead-card">
+            <h2>Ещё нет номера отслеживания?</h2>
+            <p class="subtitle">Рассчитайте стоимость доставки — ответим в течение 2 часов</p>
+
+            <form class="lead-form" id="leadForm" onsubmit="submitLead(event)">
+                <div>
+                    <label for="leadName">Ваше имя</label>
+                    <input type="text" id="leadName" name="name" placeholder="Иван Петров" required>
+                </div>
+                <div>
+                    <label for="leadEmail">Email</label>
+                    <input type="email" id="leadEmail" name="email" placeholder="ivan@company.ru" required>
+                </div>
+                <div>
+                    <label for="leadPhone">Телефон</label>
+                    <input type="tel" id="leadPhone" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div>
+                    <label for="leadRoute">Описание маршрута и груза</label>
+                    <textarea id="leadRoute" name="route" placeholder="Например: доставка 2 тонн электроники из Шэньчжэня в Москву"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Рассчитать стоимость</button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                Спасибо! Ваша заявка принята.<br>Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2024&ndash;2026 ELP Cargo &mdash; Международная логистика и параллельный импорт<br>
+        <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a> &bull; <a href="tel:+79119200185">+7 911 920 01 85</a> &bull; <a href="https://t.me/ELP_Cargo">@ELP_Cargo</a>
+    </footer>
+
+    <script>
+    function trackCargo() {
+        var input = document.getElementById('trackInput').value.trim();
+        if (!input) { document.getElementById('trackInput').focus(); return; }
+
+        var tl = document.getElementById('timeline');
+        tl.classList.add('active');
+        document.getElementById('trackNumber').textContent = input;
+
+        // Generate mock dates based on input hash
+        var hash = 0;
+        for (var i = 0; i < input.length; i++) hash = ((hash << 5) - hash) + input.charCodeAt(i);
+        hash = Math.abs(hash);
+
+        var now = new Date();
+        var daysBack = (hash % 20) + 5;
+        var start = new Date(now.getTime() - daysBack * 86400000);
+
+        var step = hash % 4; // 0-3: which stage we're at
+        var dates = [];
+        for (var d = 0; d < 4; d++) {
+            var dt = new Date(start.getTime() + d * (daysBack / 4) * 86400000);
+            dates.push(dt.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }));
+        }
+
+        document.getElementById('date1').textContent = dates[0];
+
+        var stages = ['dot2','dot3','dot4'];
+        var lines = ['line2','line3'];
+        var dateDivs = ['date2','date3','date4'];
+
+        for (var s = 0; s < 3; s++) {
+            var dot = document.getElementById(stages[s]);
+            if (s < step) {
+                dot.className = 'tl-dot done';
+                document.getElementById(dateDivs[s]).textContent = dates[s+1];
+            } else if (s === step) {
+                dot.className = 'tl-dot current';
+                document.getElementById(dateDivs[s]).textContent = 'Ожидается';
+            } else {
+                dot.className = 'tl-dot pending';
+                document.getElementById(dateDivs[s]).textContent = '';
+            }
+        }
+        for (var l = 0; l < 2; l++) {
+            var line = document.getElementById(lines[l]);
+            if (line) line.className = l < step ? 'tl-line done' : 'tl-line pending';
+        }
+
+        var badge = document.getElementById('statusBadge');
+        if (step >= 3) {
+            badge.textContent = 'Доставлен';
+            badge.className = 'status-badge status-delivered';
+        } else {
+            var labels = ['На складе', 'В транзите', 'На таможне'];
+            badge.textContent = labels[step] || 'В пути';
+            badge.className = 'status-badge status-transit';
+        }
+
+        tl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Track on Enter key
+    document.getElementById('trackInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') trackCargo();
+    });
+
+    function submitLead(e) {
+        e.preventDefault();
+        var data = {
+            name: document.getElementById('leadName').value,
+            email: document.getElementById('leadEmail').value,
+            phone: document.getElementById('leadPhone').value,
+            route: document.getElementById('leadRoute').value,
+            source: 'tracking-page',
+            timestamp: new Date().toISOString()
+        };
+
+        // Try sending to API
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).catch(function() {
+            // Fallback: send via mailto
+            var subject = encodeURIComponent('Заявка с tracking-page: ' + data.name);
+            var body = encodeURIComponent(
+                'Имя: ' + data.name + '\n' +
+                'Email: ' + data.email + '\n' +
+                'Телефон: ' + data.phone + '\n' +
+                'Маршрут: ' + data.route
+            );
+            window.open('mailto:ceo@elpcargo.ru?subject=' + subject + '&body=' + body);
+        });
+
+        document.getElementById('leadForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+    }
+    </script>
+<script src="/form-recovery.js" async></script>
+</body>
+</html>

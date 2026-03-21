@@ -6,7 +6,21 @@ Thumbs.db
 # Backups
 *.backup.*
 *-backup.*
+*.bak
 
 # IDE
 .vscode/
 .idea/
+
+# Server-specific
+.htaccess
+.htpasswd
+*.conf
+error_log
+access_log
+
+# Environment / secrets
+.env
+.env.*
+credentials.json
+service-account*.json

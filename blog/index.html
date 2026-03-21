@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог о логистике и импорте | ELP Cargo</title>
+    <meta name="description" content="Статьи о параллельном импорте, доставке санкционных товаров, таможенном оформлении. Экспертный блог ELP Cargo.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-dark: #080e1c; --c-bg-card: #0d1525;
+            --c-bg-card-hover: #111d32; --c-border: rgba(255,255,255,.06);
+            --c-border-hover: rgba(255,255,255,.12);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA; --c-accent-dim: rgba(139,92,246,.15);
+            --c-purple-glow: rgba(139,92,246,.12); --c-purple-glow-strong: rgba(139,92,246,.25);
+            --c-gold: #C084FC; --c-green: #22C55E; --c-blue: #3B82F6;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.50);
+            --c-text-dim: rgba(255,255,255,.28);
+            --shadow-card: 0 4px 24px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.03) inset;
+            --shadow-card-hover: 0 20px 50px rgba(139,92,246,.12), 0 1px 0 rgba(255,255,255,.06) inset;
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --gradient-hero: radial-gradient(ellipse at center, rgba(139,92,246,.10) 0%, transparent 65%);
+            --radius: 14px; --radius-sm: 8px; --radius-lg: 20px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        /* Subtle noise overlay */
+        body::after { content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+            opacity: .4; }
+
+        /* Header — glass morphism */
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.6); backdrop-filter: blur(24px) saturate(1.8); -webkit-backdrop-filter: blur(24px) saturate(1.8); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 1240px; margin: 0 auto; padding: 15px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 900; font-size: 1.25em; letter-spacing: 1px; }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav { display: flex; gap: 8px; }
+        .nav a { padding: 6px 14px; border-radius: var(--radius-sm); color: var(--c-text-sec); font-size: .88em; font-weight: 500; transition: all var(--transition); }
+        .nav a:hover { color: var(--c-accent-bright); background: var(--c-accent-dim); }
+
+        /* Hero */
+        .hero { text-align: center; padding: 90px 28px 70px; position: relative; }
+        .hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 600px; background: var(--gradient-hero); pointer-events: none; }
+        .hero-badge { display: inline-block; background: var(--c-accent-dim); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 30px; font-size: .78em; font-weight: 600; letter-spacing: .5px; margin-bottom: 24px; }
+        .hero h1 { font-family: var(--font-serif); font-size: 3em; font-weight: 700; letter-spacing: -.02em; margin-bottom: 18px; line-height: 1.2; }
+        .hero h1 span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--c-text-sec); font-size: 1.15em; max-width: 560px; margin: 0 auto; line-height: 1.75; }
+
+        /* Stats bar */
+        .stats { max-width: 1240px; margin: -20px auto 50px; padding: 0 28px; }
+        .stats-inner { display: flex; justify-content: center; gap: 48px; padding: 20px 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); }
+        .stat { text-align: center; }
+        .stat-num { font-size: 1.6em; font-weight: 800; background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-label { color: var(--c-text-dim); font-size: .78em; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; margin-top: 2px; }
+
+        /* Grid */
+        .grid { max-width: 1240px; margin: 0 auto; padding: 0 28px 60px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 22px; }
+
+        /* Cards */
+        .card { background: linear-gradient(145deg, rgba(255,255,255,.035) 0%, rgba(255,255,255,.008) 100%); background-color: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 30px 28px 26px; display: flex; flex-direction: column; transition: all var(--transition); box-shadow: var(--shadow-card); position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient-accent); opacity: 0; transition: opacity var(--transition); }
+        .card:hover { border-color: rgba(139,92,246,.2); transform: translateY(-5px); box-shadow: var(--shadow-card-hover); }
+        .card:hover::before { opacity: 1; }
+        .card-tag { display: inline-block; align-self: flex-start; padding: 4px 12px; border-radius: 6px; font-size: .7em; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 18px; }
+        .tag-case { background: var(--c-accent-dim); color: var(--c-accent-bright); }
+        .tag-guide { background: rgba(59,130,246,.12); color: #60A5FA; }
+        .tag-price { background: rgba(34,197,94,.12); color: #22C55E; }
+        .tag-sanction { background: rgba(239,68,68,.1); color: #F87171; }
+        .tag-equip { background: rgba(201,167,78,.12); color: var(--c-gold); }
+        .tag-auto { background: rgba(236,72,153,.1); color: #F472B6; }
+        .tag-customs { background: rgba(14,165,233,.1); color: #38BDF8; }
+        .tag-logistics { background: rgba(255,255,255,.05); color: var(--c-text-sec); }
+        .card h2 { font-size: 1.08em; font-weight: 600; line-height: 1.48; margin-bottom: 12px; color: var(--c-text); }
+        .card h2 a { transition: color var(--transition); color: var(--c-text); }
+        .card h2 a:hover { color: var(--c-accent-bright); }
+        .card p { color: var(--c-text-sec); font-size: .86em; line-height: 1.7; flex-grow: 1; }
+        .card .read { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: var(--c-accent); font-size: .86em; font-weight: 600; transition: gap var(--transition), color var(--transition); }
+        .card:hover .read { gap: 12px; color: var(--c-accent-bright); }
+
+        /* CTA */
+        .cta { max-width: 1240px; margin: 0 auto 60px; padding: 0 28px; }
+        .cta-inner { background: var(--c-bg-card); border: 1px solid rgba(139,92,246,.15); border-radius: var(--radius-lg); padding: 52px 44px; text-align: center; position: relative; overflow: hidden; }
+        .cta-inner::before { content: ''; position: absolute; top: -60%; left: -25%; width: 150%; height: 220%; background: radial-gradient(ellipse at top, rgba(139,92,246,.08) 0%, transparent 55%); pointer-events: none; }
+        .cta-inner h2 { font-family: var(--font-serif); font-size: 1.7em; margin-bottom: 14px; }
+        .cta-inner p { color: var(--c-text-sec); margin-bottom: 28px; font-size: 1.05em; }
+        .cta-btn { display: inline-block; background: var(--gradient-accent); color: #fff; padding: 15px 40px; border-radius: var(--radius-sm); font-weight: 700; font-size: 1.02em; box-shadow: 0 4px 24px rgba(139,92,246,.35); transition: all var(--transition); letter-spacing: .3px; }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 44px rgba(139,92,246,.5); }
+        .cta-contacts { color: var(--c-text-dim); margin-top: 18px; font-size: .84em; }
+
+        /* Footer */
+        .footer { border-top: 1px solid var(--c-border); padding: 30px 28px; text-align: center; color: var(--c-text-dim); font-size: .84em; }
+        .footer a { color: var(--c-accent); }
+
+        /* Reveal animation */
+        .card { opacity: 0; transform: translateY(30px); animation: cardReveal .6s ease forwards; }
+        @keyframes cardReveal { to { opacity: 1; transform: translateY(0); } }
+        .card:nth-child(1) { animation-delay: .05s; } .card:nth-child(2) { animation-delay: .1s; }
+        .card:nth-child(3) { animation-delay: .15s; } .card:nth-child(4) { animation-delay: .2s; }
+        .card:nth-child(5) { animation-delay: .25s; } .card:nth-child(6) { animation-delay: .3s; }
+        .card:nth-child(7) { animation-delay: .35s; } .card:nth-child(8) { animation-delay: .4s; }
+        .card:nth-child(9) { animation-delay: .45s; } .card:nth-child(10) { animation-delay: .5s; }
+
+        @media (max-width: 740px) {
+            .grid { grid-template-columns: 1fr; padding: 0 16px 40px; }
+            .hero h1 { font-size: 2em; }
+            .hero { padding: 60px 16px 50px; }
+            .cta-inner { padding: 36px 24px; }
+            .stats-inner { gap: 24px; flex-wrap: wrap; }
+            .header-inner { padding: 12px 16px; }
+            .nav a { padding: 6px 10px; font-size: .82em; }
+        }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+</head>
+<body>
+    <div class="header">
+        <div class="header-inner">
+            <div class="logo"><span>ELP</span> CARGO</div>
+            <div class="nav">
+                <a href="https://elpcargo.ru">Главная</a>
+                <a href="/">Блог</a>
+                <a href="/prices.html">Цены</a>
+                <a href="mailto:ceo@elpcargo.ru">Связаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-badge">Экспертный блог</div>
+        <h1>Логистика и <span>импорт</span></h1>
+        <p>Реальные кейсы доставок, практические руководства и аналитика рынка санкционных товаров</p>
+    </div>
+
+    <div class="stats">
+        <div class="stats-inner">
+            <div class="stat"><div class="stat-num">100+</div><div class="stat-label">тонн в месяц</div></div>
+            <div class="stat"><div class="stat-num">2-3</div><div class="stat-label">недели из ЕС</div></div>
+            <div class="stat"><div class="stat-num">0</div><div class="stat-label">потерянных грузов</div></div>
+            <div class="stat"><div class="stat-num">с 2012</div><div class="stat-label">года работаем</div></div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <span class="card-tag tag-auto">Автозапчасти</span>
+            <h2><a href="/blog/import-avtozapchastey-iz-korei-skhemy-dostavki-v-rossiyu-2024.html">Импорт автозапчастей из Кореи: схемы доставки в Россию 2024</a></h2>
+            <p>Как организовать импорт автозапчастей из Кореи в Россию. Актуальные маршруты, документы, сроки 14-25 дней. Расчёт стоимости доставки.</p>
+            <a href="/blog/import-avtozapchastey-iz-korei-skhemy-dostavki-v-rossiyu-2024.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-guide">Руководство</span>
+            <h2><a href="/blog/kak-dostavit-promyshlennye-podshipniki-iz-evropy-v-rossiyu.html">Как доставить промышленные подшипники из Европы в Россию</a></h2>
+            <p>Пошаговое руководство по импорту подшипников из ЕС: документооборот, логистические маршруты, сроки 7-21 день. Опыт ELP Cargo в доставке.</p>
+            <a href="/blog/kak-dostavit-promyshlennye-podshipniki-iz-evropy-v-rossiyu.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-logistics">Логистика</span>
+            <h2><a href="/blog/dostavka-khrupkikh-gruzov-avia-iz-kitaya-tekhnologii-elp-cargo.html">Доставка хрупких грузов авиа из Китая: технологии ELP Cargo</a></h2>
+            <p>Реальный кейс ELP Cargo: как мы достигли 0% боя при авиадоставке стеклянных флаконов из Китая. Технологии упаковки и контроля.</p>
+            <a href="/blog/dostavka-khrupkikh-gruzov-avia-iz-kitaya-tekhnologii-elp-cargo.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-sanction">Санкции</span>
+            <h2><a href="/blog/import-sanktsionnykh-tovarov-reshenie-problemy-oplaty-v-2026.html">Импорт санкционных товаров: решение проблемы оплаты в 2026</a></h2>
+            <p>Как решить проблему оплаты поставщикам в Европе в 2026 году. Легальные схемы через европейские юрлица. Полный документооборот.</p>
+            <a href="/blog/import-sanktsionnykh-tovarov-reshenie-problemy-oplaty-v-2026.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-case">Кейс</span>
+            <h2><a href="/blog/dostavka-negabaritnogo-gruza-iz-oae-keys-led-paneli-6-metrov.html">Доставка негабаритного груза из ОАЭ: кейс LED-панели 6 метров</a></h2>
+            <p>Реальный кейс доставки негабаритных LED-панелей длиной 6 метров из Дубая. Как ELP Cargo решила задачу за 4 дня через чартерный ИЛ-96.</p>
+            <a href="/blog/dostavka-negabaritnogo-gruza-iz-oae-keys-led-paneli-6-metrov.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-case">Кейс</span>
+            <h2><a href="/blog/konsolidatsiya-gruzov-iz-evropy-ekonomiya-40-na-primere-keysa.html">Консолидация грузов из Европы: экономия 40% на примере кейса</a></h2>
+            <p>Как консолидация помогла сэкономить 40% на доставке мебели от 3 поставщиков. Процедура T-1, единая декларация, сроки 14 дней.</p>
+            <a href="/blog/konsolidatsiya-gruzov-iz-evropy-ekonomiya-40-na-primere-keysa.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-case">Кейс</span>
+            <h2><a href="/blog/proektnaya-logistika-keys-dostavki-6-konteynerov-s-blizhnego-vostoka.html">Проектная логистика: кейс доставки 6 контейнеров с Ближнего Востока</a></h2>
+            <p>Реальный кейс проектной логистики ELP Cargo: синхронизация 6 контейнеров из ОАЭ и Саудовской Аравии за 33 дня с точностью до 48 часов.</p>
+            <a href="/blog/proektnaya-logistika-keys-dostavki-6-konteynerov-s-blizhnego-vostoka.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-customs">Таможня</span>
+            <h2><a href="/blog/dokumenty-dlya-importa-iz-evropy-5-klyuchevykh-shagov.html">Документы для импорта из Европы: 5 ключевых шагов</a></h2>
+            <p>Какие документы нужны для импорта из Европы? УПД, ГТД, сертификаты — разбираем 5 ключевых шагов с ELP Cargo. Узнайте!</p>
+            <a href="/blog/dokumenty-dlya-importa-iz-evropy-5-klyuchevykh-shagov.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-guide">Руководство</span>
+            <h2><a href="/blog/dostavka-avtozapchastey-iz-evropy-kak-sekonomit-40.html">Доставка автозапчастей из Европы: как сэкономить 40%</a></h2>
+            <p>Хотите узнать, как сэкономить до 40% на доставке автозапчастей из Европы? Читайте наш совет!</p>
+            <a href="/blog/dostavka-avtozapchastey-iz-evropy-kak-sekonomit-40.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-equip">Оборудование</span>
+            <h2><a href="/blog/dostavka-gidravliki-iz-evropy-v-rossiyu-marshruty-i-dokumenty.html">Доставка гидравлики из Европы в Россию: маршруты и документы</a></h2>
+            <p>Организуем доставку гидравлического оборудования из Европы в Россию. Сроки 7-21 день, полное таможенное оформление, альтернативные маршруты.</p>
+            <a href="/blog/dostavka-gidravliki-iz-evropy-v-rossiyu-marshruty-i-dokumenty.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-price">Цены</span>
+            <h2><a href="/blog/dostavka-iz-germanii-v-rossiyu-sroki-i-stoimost.html">Доставка из Германии в Россию: сроки и стоимость</a></h2>
+            <p>Как быстро и выгодно доставить товары из Германии в Россию? Узнайте все о сроках, стоимости и необходимых документах!</p>
+            <a href="/blog/dostavka-iz-germanii-v-rossiyu-sroki-i-stoimost.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-equip">Оборудование</span>
+            <h2><a href="/blog/dostavka-nasosov-iz-italii-v-rossiyu-skhemy-i-sroki-2024.html">Доставка насосов из Италии в Россию: схемы и сроки 2024</a></h2>
+            <p>Профессиональная доставка итальянских насосов в РФ. Опыт работы с промышленным оборудованием. Сроки 10-18 дней. Расчет стоимости.</p>
+            <a href="/blog/dostavka-nasosov-iz-italii-v-rossiyu-skhemy-i-sroki-2024.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-equip">Оборудование</span>
+            <h2><a href="/blog/dostavka-promyshlennogo-oborudovaniya-iz-germanii-v-rossiyu.html">Доставка промышленного оборудования из Германии в Россию</a></h2>
+            <p>Профессиональная доставка промышленного оборудования из Германии в Россию. Сроки 7-21 день, полное таможенное оформление, надежные маршруты.</p>
+            <a href="/blog/dostavka-promyshlennogo-oborudovaniya-iz-germanii-v-rossiyu.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-price">Цены</span>
+            <h2><a href="/blog/dostavka-chpu-stankov-iz-yaponii-v-rossiyu-skhemy-i-tseny.html">Доставка ЧПУ станков из Японии в Россию: схемы и цены</a></h2>
+            <p>Профессиональная доставка ЧПУ станков из Японии в Россию. Альтернативные маршруты, оформление документов, сроки 15-30 дней. Расчет стоимости</p>
+            <a href="/blog/dostavka-chpu-stankov-iz-yaponii-v-rossiyu-skhemy-i-tseny.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-auto">Автозапчасти</span>
+            <h2><a href="/blog/zapchasti-bmw-iz-evropy-dostavka-v-rossiyu-cherez-elp-cargo.html">Запчасти BMW из Европы: доставка в Россию через ELP Cargo</a></h2>
+            <p>Доставка оригинальных запчастей BMW из Европы в Россию. Сроки 7-21 день, полное таможенное оформление. Расчёт стоимости от ELP Cargo.</p>
+            <a href="/blog/zapchasti-bmw-iz-evropy-dostavka-v-rossiyu-cherez-elp-cargo.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-equip">Оборудование</span>
+            <h2><a href="/blog/import-kompressorov-iz-germanii-dostavka-promyshlennogo-oborudovaniya.html">Импорт компрессоров из Германии: доставка промышленного оборудования</a></h2>
+            <p>Профессиональный импорт компрессоров из Германии в Россию. Доставка промышленного оборудования за 7-21 день. Полное документальное сопровожд</p>
+            <a href="/blog/import-kompressorov-iz-germanii-dostavka-promyshlennogo-oborudovaniya.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-logistics">Логистика</span>
+            <h2><a href="/blog/import-podshipnikov-iz-evropy-novye-logisticheskie-resheniya.html">Импорт подшипников из Европы: новые логистические решения</a></h2>
+            <p>Импорт подшипников из Европы через альтернативные маршруты. Профессиональная логистика, документооборот, сроки 7-21 день. Консультация ELP C</p>
+            <a href="/blog/import-podshipnikov-iz-evropy-novye-logisticheskie-resheniya.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-guide">Руководство</span>
+            <h2><a href="/blog/kak-privezti-meditsinskoe-oborudovanie-iz-evropy-v-2024-godu.html">Как привезти медицинское оборудование из Европы в 2024 году</a></h2>
+            <p>Пошаговое руководство по доставке медицинского оборудования из Европы. Документы, сроки, стоимость. Опыт ELP Cargo.</p>
+            <a href="/blog/kak-privezti-meditsinskoe-oborudovanie-iz-evropy-v-2024-godu.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-guide">Руководство</span>
+            <h2><a href="/blog/kak-rastamozhit-stanok-iz-evropy-poshagovoe-rukovodstvo-2024.html">Как растаможить станок из Европы: пошаговое руководство 2024</a></h2>
+            <p>Полное руководство по растаможке станков из Европы: документы, процедуры, сроки и расходы. Экспертные советы от ELP Cargo.</p>
+            <a href="/blog/kak-rastamozhit-stanok-iz-evropy-poshagovoe-rukovodstvo-2024.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-sanction">Санкции</span>
+            <h2><a href="/blog/parallelnyy-import-avtozapchastey-v-2026-aktualnye-skhemy.html">Параллельный импорт автозапчастей в 2026: актуальные схемы</a></h2>
+            <p>Параллельный импорт автозапчастей в 2026 году: новые возможности, документооборот, сроки доставки. Профессиональные логистические решения от</p>
+            <a href="/blog/parallelnyy-import-avtozapchastey-v-2026-aktualnye-skhemy.html" class="read">Читать &rarr;</a>
+        </div>
+        <div class="card">
+            <span class="card-tag tag-sanction">Санкции</span>
+            <h2><a href="/blog/parallelnyy-import-zapchastey-mercedes-v-2026-novye-vozmozhnosti.html">Параллельный импорт запчастей Mercedes в 2026: новые возможности</a></h2>
+            <p>Параллельный импорт запчастей Mercedes в 2026 году. Актуальные схемы поставок, документооборот и сроки доставки от ELP Cargo.</p>
+            <a href="/blog/parallelnyy-import-zapchastey-mercedes-v-2026-novye-vozmozhnosti.html" class="read">Читать &rarr;</a>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="cta-inner">
+            <h2>Нужна доставка из Европы, Китая или ОАЭ?</h2>
+            <p>Заполните форму — рассчитаем стоимость за 1 час. Одна цена «под ключ».</p>
+            <form id="contactForm" onsubmit="submitForm(event)" style="max-width:420px;margin:0 auto;text-align:left;">
+                <div style="margin-bottom:14px;">
+                    <input type="text" id="f-name" placeholder="Ваше имя" required
+                        style="width:100%;padding:12px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#fff;font-size:.95em;font-family:inherit;outline:none;transition:border-color .3s;">
+                </div>
+                <div style="margin-bottom:14px;">
+                    <input type="text" id="f-company" placeholder="Компания"
+                        style="width:100%;padding:12px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#fff;font-size:.95em;font-family:inherit;outline:none;">
+                </div>
+                <div style="margin-bottom:14px;">
+                    <input type="text" id="f-contact" placeholder="Email или телефон" required
+                        style="width:100%;padding:12px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#fff;font-size:.95em;font-family:inherit;outline:none;">
+                </div>
+                <div style="margin-bottom:18px;">
+                    <textarea id="f-message" placeholder="Что нужно доставить? Откуда?" rows="3"
+                        style="width:100%;padding:12px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#fff;font-size:.95em;font-family:inherit;outline:none;resize:vertical;"></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width:100%;border:none;cursor:pointer;font-family:inherit;font-size:1em;">Запросить расчёт</button>
+                <div id="formResult" style="margin-top:14px;text-align:center;font-size:.9em;"></div>
+            </form>
+            <div class="cta-contacts" style="margin-top:20px;">ceo@elpcargo.ru &nbsp;&middot;&nbsp; +7 911 920 01 85 &nbsp;&middot;&nbsp; Telegram: @ELP_Cargo</div>
+        </div>
+    </div>
+
+    <div class="footer">&copy; 2012&ndash;2026 <a href="https://elpcargo.ru">ELP Cargo</a> &mdash; Доставка санкционных товаров из Европы, Китая, ОАЭ</div>
+
+    <script>
+    async function submitForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const result = document.getElementById('formResult');
+        btn.textContent = 'Отправляем...';
+        btn.disabled = true;
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    name: document.getElementById('f-name').value,
+                    company: document.getElementById('f-company').value,
+                    contact: document.getElementById('f-contact').value,
+                    message: document.getElementById('f-message').value,
+                })
+            });
+            if (res.ok) {
+                result.style.color = '#22C55E';
+                result.textContent = 'Отправлено! Ответим в течение часа.';
+                e.target.reset();
+            } else {
+                throw new Error('Server error');
+            }
+        } catch (err) {
+            result.style.color = '#EF4444';
+            result.textContent = 'Ошибка. Напишите на ceo@elpcargo.ru';
+        }
+        btn.textContent = 'Запросить расчёт';
+        btn.disabled = false;
+    }
+    </script>
+    
+    <div id="tg-widget" style="position:fixed;bottom:24px;right:24px;z-index:9998;">
+        <div id="tg-popup" style="display:none;position:absolute;bottom:70px;right:0;width:320px;background:#0d1525;border:1px solid rgba(139,92,246,.2);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden;animation:slideUp .3s ease;">
+            <div style="background:linear-gradient(135deg,#8B5CF6,#A78BFA);padding:20px 22px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div>
+                        <div style="font-weight:700;font-size:1.05em;color:#fff;">ELP Cargo</div>
+                        <div style="font-size:.82em;color:rgba(255,255,255,.8);margin-top:2px;">Обычно отвечаем за 30 минут</div>
+                    </div>
+                    <div onclick="toggleChat()" style="cursor:pointer;color:rgba(255,255,255,.7);font-size:1.4em;line-height:1;">&times;</div>
+                </div>
+            </div>
+            <div style="padding:20px 22px;">
+                <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:14px 16px;margin-bottom:16px;">
+                    <p style="color:rgba(255,255,255,.7);font-size:.88em;margin:0;line-height:1.5;">Здравствуйте! Напишите нам в Telegram — ответим в течение 30 минут.</p>
+                </div>
+                <a href="https://t.me/ELP_Cargo" target="_blank" style="display:block;text-align:center;background:linear-gradient(135deg,#8B5CF6,#A78BFA);color:#fff;padding:12px;border-radius:10px;font-weight:700;font-size:.92em;text-decoration:none;box-shadow:0 4px 16px rgba(139,92,246,.3);">
+                    Написать в Telegram
+                </a>
+                <div style="display:flex;gap:10px;margin-top:12px;">
+                    <a href="tel:+79119200185" style="flex:1;text-align:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);padding:10px;border-radius:8px;font-size:.82em;text-decoration:none;">Позвонить</a>
+                    <a href="mailto:ceo@elpcargo.ru" style="flex:1;text-align:center;background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);padding:10px;border-radius:8px;font-size:.82em;text-decoration:none;">Email</a>
+                </div>
+            </div>
+        </div>
+        <div onclick="toggleChat()" style="width:60px;height:60px;background:linear-gradient(135deg,#8B5CF6,#A78BFA);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px rgba(139,92,246,.4);transition:all .3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <svg id="tg-icon" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.88.03-.24.37-.49 1.02-.74 3.98-1.73 6.64-2.88 7.97-3.44 3.79-1.58 4.58-1.85 5.09-1.86.11 0 .37.03.54.17.14.12.18.28.2.45-.01.06.01.24 0 .37z"/></svg>
+            <svg id="tg-close" width="24" height="24" viewBox="0 0 24 24" fill="white" style="display:none;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </div>
+    </div>
+    <style>@keyframes slideUp { from { opacity:0;transform:translateY(10px); } to { opacity:1;transform:translateY(0); } }
+    @media(max-width:480px){#tg-popup{width:calc(100vw - 48px);right:-4px;}}</style>
+    <script>let chatOpen=false;function toggleChat(){chatOpen=!chatOpen;document.getElementById('tg-popup').style.display=chatOpen?'block':'none';document.getElementById('tg-icon').style.display=chatOpen?'none':'block';document.getElementById('tg-close').style.display=chatOpen?'block':'none';}</script>
+
+<script src="/popup.js"></script>
+</body>
+</html>

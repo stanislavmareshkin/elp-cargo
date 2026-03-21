@@ -1,0 +1,2613 @@
+{
+  "generated": "2026-03-21 02:30:03",
+  "total": 103,
+  "skills": [
+    {
+      "name": "agent_orchestrator",
+      "file": "agent_orchestrator.py",
+      "description": "Multi-Agent Orchestrator for ClaudeClaw / ELP system. Routes tasks to specialized sub-agents, collects results, sends to Telegram.",
+      "category": "outreach",
+      "flags": [
+        "--agent",
+        "--args",
+        "--bus-stats",
+        "--cleanup",
+        "--command",
+        "--module",
+        "--notify",
+        "--process-bus",
+        "--status"
+      ],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:58",
+      "size_kb": 11.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "agent_router",
+      "file": "agent_router.py",
+      "description": "Intent classifier for multi-agent routing. Uses keyword matching first, falls back to Claude Haiku for ambiguous queries.",
+      "category": "outreach",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [
+        "claude_api"
+      ],
+      "last_modified": "2026-03-20 17:01",
+      "size_kb": 9.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "ai_scoring",
+      "file": "ai_scoring.py",
+      "description": "AI Lead Scoring — uses Claude API to prioritize leads in the Google Sheet.",
+      "category": "enrichment",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit",
+        "--rescore"
+      ],
+      "schedule": "daily 20:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 09:55",
+      "size_kb": 12.1,
+      "has_log": true,
+      "last_run": "2026-03-20 17:02",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "arbitrage_cosmetics",
+      "file": "arbitrage_cosmetics.py",
+      "description": "Cosmetics Arbitrage Bot — curated EU prices vs WB/Ozon monitoring.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-17 17:21",
+      "size_kb": 14.7,
+      "has_log": true,
+      "last_run": "2026-03-17 17:25",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "attribution_tracker",
+      "file": "attribution_tracker.py",
+      "description": "Multi-Touch Attribution Tracker — builds attribution paths for leads.",
+      "category": "enrichment",
+      "flags": [],
+      "schedule": "Monday 08:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:54",
+      "size_kb": 13.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "auto_proposal",
+      "file": "auto_proposal.py",
+      "description": "Auto Commercial Proposal Generator — creates personalized KP for ELP Cargo leads.",
+      "category": "outreach",
+      "flags": [
+        "--auto",
+        "--cargo",
+        "--city",
+        "--company",
+        "--dry",
+        "--industry",
+        "--route"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:55",
+      "size_kb": 12.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "avito_leads",
+      "file": "avito_leads.py",
+      "description": "Avito Lead Scanner — finds delivery/logistics requests on Avito.",
+      "category": "leadgen",
+      "flags": [
+        "--once"
+      ],
+      "schedule": "Mon-Fri 08:30 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 12:13",
+      "size_kb": 18.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "b2b_scraper",
+      "file": "b2b_scraper.py",
+      "description": "B2B Company Scraper — finds logistics/import companies via 2GIS and Yandex Maps, then pushes them to the Google Sheet for cold email outreach.",
+      "category": "leadgen",
+      "flags": [
+        "--city",
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Monday 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 15:48",
+      "size_kb": 21.9,
+      "has_log": true,
+      "last_run": "2026-03-18 18:19",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "backtester",
+      "file": "backtester.py",
+      "description": "Backtest engine for the momentum breakout strategy.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "numpy",
+        "pandas"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 14:47",
+      "size_kb": 15.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "backup_sheets",
+      "file": "backup_sheets.py",
+      "description": "Auto-backup Google Sheets to CSV on server.",
+      "category": "trading",
+      "flags": [],
+      "schedule": "daily 05:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets"
+      ],
+      "last_modified": "2026-03-20 13:34",
+      "size_kb": 2.0,
+      "has_log": true,
+      "last_run": "2026-03-21 02:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "behavioral_scoring",
+      "file": "behavioral_scoring.py",
+      "description": "Behavioral Lead Scoring v2 — combines multiple engagement signals into a 0-100 score.",
+      "category": "enrichment",
+      "flags": [
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "daily 21:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:54",
+      "size_kb": 18.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "blog_poster",
+      "file": "blog_poster.py",
+      "description": "Blog → Telegram Channel Auto-Poster for @elp_cargo_case.",
+      "category": "content",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "feedparser",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:28",
+      "size_kb": 11.0,
+      "has_log": true,
+      "last_run": "2026-03-21 01:30",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "blog_publisher",
+      "file": "blog_publisher.py",
+      "description": "Auto-publish SEO articles to elpcargo.ru/blog/.",
+      "category": "content",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "telethon"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-19 05:28",
+      "size_kb": 39.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "call_scripts",
+      "file": "call_scripts.py",
+      "description": "Warm Call Script Generator — creates personalized phone scripts for hot leads.",
+      "category": "outreach",
+      "flags": [
+        "--auto",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:58",
+      "size_kb": 12.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "case_generator",
+      "file": "case_generator.py",
+      "description": "Auto Case Study Generator — generates SEO blog articles from delivery data.",
+      "category": "content",
+      "flags": [
+        "--auto",
+        "--cargo",
+        "--days",
+        "--result",
+        "--route",
+        "--weight"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 25.3,
+      "has_log": true,
+      "last_run": "2026-03-20 16:17",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "catalog_parser",
+      "file": "catalog_parser.py",
+      "description": "B2B Catalog Parser — scrapes industry directories for logistics/import companies.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit",
+        "--source"
+      ],
+      "schedule": "Wednesday 12:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 12:33",
+      "size_kb": 14.2,
+      "has_log": true,
+      "last_run": "2026-03-20 12:37",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_account",
+      "file": "check_account.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 18:24",
+      "size_kb": 1.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_all",
+      "file": "check_all.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:47",
+      "size_kb": 1.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_balance",
+      "file": "check_balance.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:47",
+      "size_kb": 1.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_full",
+      "file": "check_full.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-18 07:24",
+      "size_kb": 2.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_pairs",
+      "file": "check_pairs.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:19",
+      "size_kb": 1.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "check_perms",
+      "file": "check_perms.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:19",
+      "size_kb": 0.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "competitor_ads",
+      "file": "competitor_ads.py",
+      "description": "Competitor Ad Spy — searches for competitor ad copies in search engines.",
+      "category": "trading",
+      "flags": [],
+      "schedule": "monthly 1th 16:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:01",
+      "size_kb": 16.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "competitor_monitor",
+      "file": "competitor_monitor.py",
+      "description": "Competitor Monitor — weekly scrape of competitor websites for changes.",
+      "category": "analytics",
+      "flags": [
+        "--telegram"
+      ],
+      "schedule": "Friday 12:00 MSK",
+      "dependencies": [
+        "difflib",
+        "dotenv"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 18:48",
+      "size_kb": 7.3,
+      "has_log": true,
+      "last_run": "2026-03-20 09:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "config",
+      "file": "config.py",
+      "description": "Strategy configuration — all tunable parameters in one place.",
+      "category": "infrastructure",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-18 07:28",
+      "size_kb": 3.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "library",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "content_distributor",
+      "file": "content_distributor.py",
+      "description": "Content Distributor — reposts blog articles to multiple platforms.",
+      "category": "content",
+      "flags": [
+        "--once"
+      ],
+      "schedule": "Monday 10:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:29",
+      "size_kb": 10.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "coordinator",
+      "file": "coordinator.py",
+      "description": "Bot Coordinator — manages margin allocation across all 6 trading bots.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-17 18:43",
+      "size_kb": 13.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "copy_bot",
+      "file": "copy_bot.py",
+      "description": "Copy Trading Bot — monitors top Bybit traders and copies their moves.",
+      "category": "content",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit",
+        "requests"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:49",
+      "size_kb": 16.2,
+      "has_log": true,
+      "last_run": "2026-03-18 20:47",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "cross_sell",
+      "file": "cross_sell.py",
+      "description": "Cross-Sell Detector — suggests additional ELP Cargo services to existing clients.",
+      "category": "enrichment",
+      "flags": [
+        "--auto-send",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "monthly 15th 11:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "googleapiclient",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:58",
+      "size_kb": 13.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "customs_parser",
+      "file": "customs_parser.py",
+      "description": "Customs Declarations Parser — finds top importers via public search data.",
+      "category": "leadgen",
+      "flags": [
+        "--dry",
+        "--industry",
+        "--limit"
+      ],
+      "schedule": "monthly 1,15th 11:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:49",
+      "size_kb": 14.4,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "data_fetcher",
+      "file": "data_fetcher.py",
+      "description": "Fetch historical kline data from Bybit for backtesting.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "ccxt",
+        "pandas"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 14:47",
+      "size_kb": 3.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "deliverability_monitor",
+      "file": "deliverability_monitor.py",
+      "description": "Email Deliverability Monitor — checks SPF, DKIM, DMARC, blacklists, bounce/open rates.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "Monday 07:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:00",
+      "size_kb": 11.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "drip_campaign",
+      "file": "drip_campaign.py",
+      "description": "Drip Campaign for ELP Cargo — 3-step follow-up email sequence.",
+      "category": "outreach",
+      "flags": [
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 12:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:48",
+      "size_kb": 16.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "email_analytics",
+      "file": "email_analytics.py",
+      "description": "Email Campaign Analytics — A/B testing, open rates, conversion tracking.",
+      "category": "analytics",
+      "flags": [
+        "--telegram"
+      ],
+      "schedule": "daily 18:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 18:02",
+      "size_kb": 10.0,
+      "has_log": true,
+      "last_run": "2026-03-20 15:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "email_enrichment",
+      "file": "email_enrichment.py",
+      "description": "Email Enrichment — finds emails for contacts without them using public sources.",
+      "category": "enrichment",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Friday 13:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:35",
+      "size_kb": 6.8,
+      "has_log": true,
+      "last_run": "2026-03-20 15:53",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "email_leads",
+      "file": "email_leads.py",
+      "description": "Email Lead Generator — cold outreach for ELP Cargo.",
+      "category": "outreach",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 10:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-19 05:28",
+      "size_kb": 13.6,
+      "has_log": true,
+      "last_run": "2026-03-20 07:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "email_open_tracker",
+      "file": "email_open_tracker.py",
+      "description": "Email Open Tracker — reads nginx logs + .email_tracks.json to report who opened emails.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily 10:00 MSK",
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-18 16:51",
+      "size_kb": 2.3,
+      "has_log": true,
+      "last_run": "2026-03-20 07:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "email_warmup",
+      "file": "email_warmup.py",
+      "description": "Email warmup script for info@elpcargo.ru Gradually builds sending reputation by exchanging natural emails with 777spb7777@gmail.com over 3 weeks.",
+      "category": "infrastructure",
+      "flags": [],
+      "schedule": "daily 07:00 MSK",
+      "dependencies": [
+        "imaplib"
+      ],
+      "uses": [
+        "smtp"
+      ],
+      "last_modified": "2026-03-19 05:29",
+      "size_kb": 14.8,
+      "has_log": true,
+      "last_run": "2026-03-20 11:53",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "emergency_close",
+      "file": "emergency_close.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-18 07:25",
+      "size_kb": 1.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "enrich_contacts",
+      "file": "enrich_contacts.py",
+      "description": "Enrich Contacts — fills industry/city for contacts by scraping company websites.",
+      "category": "enrichment",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "daily 07:30 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 11:52",
+      "size_kb": 12.7,
+      "has_log": true,
+      "last_run": "2026-03-20 11:12",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "exhibition_parser",
+      "file": "exhibition_parser.py",
+      "description": "Exhibition & Conference Parser — finds logistics exhibitors and pushes to lead sheet.",
+      "category": "leadgen",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Monday 09:00 MSK",
+      "dependencies": [
+        "bs4",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:48",
+      "size_kb": 13.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "fix_bots",
+      "file": "fix_bots.py",
+      "description": "Fix and optimize all bots based on audit findings.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 18:25",
+      "size_kb": 1.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "followup_bot",
+      "file": "followup_bot.py",
+      "description": "Auto Follow-Up Bot — multi-step escalation sequence for cold leads.",
+      "category": "outreach",
+      "flags": [],
+      "schedule": "Mon-Fri 14:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 15:41",
+      "size_kb": 13.1,
+      "has_log": true,
+      "last_run": "2026-03-20 11:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "form_handler",
+      "file": "form_handler.py",
+      "description": "Form handler — receives blog contact form submissions via HTTP POST.",
+      "category": "infrastructure",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv"
+      ],
+      "uses": [
+        "proxy",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 19:44",
+      "size_kb": 5.4,
+      "has_log": true,
+      "last_run": "2026-03-18 19:46",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "funding_bot",
+      "file": "funding_bot.py",
+      "description": "Funding Rate Farming Bot — futures-only strategy.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-18 07:28",
+      "size_kb": 11.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gmail_realtime",
+      "file": "gmail_realtime.py",
+      "description": "Gmail Realtime — IMAP IDLE daemon for instant email processing.",
+      "category": "leadgen",
+      "flags": [
+        "--once",
+        "--test-idle"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "imapclient",
+        "imaplib",
+        "requests",
+        "signal"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 17:30",
+      "size_kb": 23.0,
+      "has_log": true,
+      "last_run": "2026-03-21 02:28",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gmail_responder",
+      "file": "gmail_responder.py",
+      "description": "Gmail auto-responder for ELP Cargo delivery/import inquiries.",
+      "category": "infrastructure",
+      "flags": [
+        "--daemon",
+        "--dry-run"
+      ],
+      "schedule": "every 30 min (6-16:*/30 UTC)",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "imaplib",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:51",
+      "size_kb": 17.7,
+      "has_log": true,
+      "last_run": "2026-03-20 16:30",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gmail_watch_setup",
+      "file": "gmail_watch_setup.py",
+      "description": "Gmail Watch Setup — configures Gmail push notifications via Pub/Sub.",
+      "category": "leadgen",
+      "flags": [
+        "--renew",
+        "--status",
+        "--stop"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "google",
+        "googleapiclient",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:58",
+      "size_kb": 6.2,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gmail_webhook",
+      "file": "gmail_webhook.py",
+      "description": "Gmail Webhook Server — receives Google Pub/Sub notifications for new emails.",
+      "category": "uncategorized",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "flask",
+        "google",
+        "gspread",
+        "imaplib",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:58",
+      "size_kb": 13.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gmaps_parser",
+      "file": "gmaps_parser.py",
+      "description": "Google Maps Parser — finds logistics/import companies via Google Maps search.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Thursday 11:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:37",
+      "size_kb": 7.9,
+      "has_log": true,
+      "last_run": "2026-03-20 13:40",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "google_business",
+      "file": "google_business.py",
+      "description": "Google Business Profile Optimization — generates optimized GBP content via Claude.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 9.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "gov_parsers",
+      "file": "gov_parsers.py",
+      "description": "Government & Public Data Parsers — RusProfile, Zakupki.gov.ru, FNS lead extraction.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--source"
+      ],
+      "schedule": "Tuesday 11:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 10:14",
+      "size_kb": 19.8,
+      "has_log": true,
+      "last_run": "2026-03-20 10:27",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "grid_bot",
+      "file": "grid_bot.py",
+      "description": "Grid Trading Bot — earns on every price oscillation.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 16:15",
+      "size_kb": 10.3,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "hh_scraper",
+      "file": "hh_scraper.py",
+      "description": "HeadHunter Vacancy Scraper — finds import/VED companies hiring logistics staff.",
+      "category": "leadgen",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Wednesday 09:00 MSK",
+      "dependencies": [
+        "dotenv"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 18:13",
+      "size_kb": 7.1,
+      "has_log": true,
+      "last_run": "2026-03-18 18:16",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "indicators",
+      "file": "indicators.py",
+      "description": "Technical indicators for the momentum breakout strategy.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "numpy",
+        "pandas"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 14:48",
+      "size_kb": 2.4,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "industry_report",
+      "file": "industry_report.py",
+      "description": "Monthly Industry Report Generator — creates a PDF-ready HTML import market report.",
+      "category": "content",
+      "flags": [
+        "--month"
+      ],
+      "schedule": "monthly 1th 09:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:57",
+      "size_kb": 11.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "inter_agent_bus",
+      "file": "inter_agent_bus.py",
+      "description": "Inter-agent message bus. File-based event queue for agent-to-agent communication.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-20 16:57",
+      "size_kb": 7.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_gen",
+      "file": "lead_gen.py",
+      "description": "Lead Generator for ELP Cargo — scans Telegram chats for delivery requests.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "telegram",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:56",
+      "size_kb": 19.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_nurture",
+      "file": "lead_nurture.py",
+      "description": "Lead Nurture — weekly industry news digest for warm leads.",
+      "category": "leadgen",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Thursday 11:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 13.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_pipeline",
+      "file": "lead_pipeline.py",
+      "description": "Lead Pipeline — pushes qualified leads from lead_gen.py into the Google Sheet.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 15:41",
+      "size_kb": 5.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_recycler",
+      "file": "lead_recycler.py",
+      "description": "Lead Recycler — re-engages dead leads with a fresh approach.",
+      "category": "leadgen",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Tuesday 14:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:01",
+      "size_kb": 14.2,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_responder",
+      "file": "lead_responder.py",
+      "description": "Auto-responder for VED/logistics Telegram chats.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 18:38",
+      "size_kb": 18.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "lead_tracker",
+      "file": "lead_tracker.py",
+      "description": "Lead Tracking Dashboard — unified view of all leads across systems.",
+      "category": "leadgen",
+      "flags": [
+        "--telegram"
+      ],
+      "schedule": "daily 09:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:49",
+      "size_kb": 11.2,
+      "has_log": true,
+      "last_run": "2026-03-20 06:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "linkedin_prep",
+      "file": "linkedin_prep.py",
+      "description": "LinkedIn Outreach Preparation — finds VED/logistics decision-makers via search.",
+      "category": "outreach",
+      "flags": [
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Friday 16:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:52",
+      "size_kb": 15.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "liquidation_bot",
+      "file": "liquidation_bot.py",
+      "description": "Liquidation Hunter Bot — trades toward liquidation clusters.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 16:15",
+      "size_kb": 10.7,
+      "has_log": true,
+      "last_run": "2026-03-21 02:27",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "live_bot",
+      "file": "live_bot.py",
+      "description": "Live trading bot for Bybit — Momentum Breakout on FLOKI/USDT.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "pandas",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-18 07:27",
+      "size_kb": 12.5,
+      "has_log": true,
+      "last_run": "2026-03-21 02:02",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "mass_mailer",
+      "file": "mass_mailer.py",
+      "description": "Mass Mailer for ELP Cargo — safe bulk email from large contact base.",
+      "category": "outreach",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 11:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 16:23",
+      "size_kb": 34.4,
+      "has_log": true,
+      "last_run": "2026-03-20 11:13",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "meanrev_bot",
+      "file": "meanrev_bot.py",
+      "description": "Mean Reversion Bot — buy oversold, sell overbought.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "numpy",
+        "pandas",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 16:15",
+      "size_kb": 11.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "morning_dashboard",
+      "file": "morning_dashboard.py",
+      "description": "Morning Dashboard — daily system health check + metrics summary.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily 09:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:55",
+      "size_kb": 12.4,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "multilang_outreach",
+      "file": "multilang_outreach.py",
+      "description": "Multi-Language Outreach — generates English and Chinese email templates via Claude Haiku.",
+      "category": "outreach",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api"
+      ],
+      "last_modified": "2026-03-20 16:00",
+      "size_kb": 12.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "partnership_outreach",
+      "file": "partnership_outreach.py",
+      "description": "Partnership Outreach — find and email potential B2B partners.",
+      "category": "outreach",
+      "flags": [
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "monthly 15th 14:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "proxy",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 15.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "qr_generator",
+      "file": "qr_generator.py",
+      "description": "QR Code Generator — generates QR codes for ELP Cargo marketing materials.",
+      "category": "content",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "PIL",
+        "qrcode"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-20 14:55",
+      "size_kb": 8.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "referral_program",
+      "file": "referral_program.py",
+      "description": "Referral Program — sends referral emails to engaged contacts.",
+      "category": "trading",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "monthly 1th 10:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 12.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "reply_parser",
+      "file": "reply_parser.py",
+      "description": "Email Reply Parser — classifies replies to ELP Cargo outreach emails.",
+      "category": "leadgen",
+      "flags": [
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "every 30 min (6-16:*/30 UTC)",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "imaplib",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 15.6,
+      "has_log": true,
+      "last_run": "2026-03-20 16:30",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "retarget",
+      "file": "retarget.py",
+      "description": "Retarget — automatic re-engagement for contacts who opened email but didn't reply.",
+      "category": "outreach",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 16:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:26",
+      "size_kb": 19.9,
+      "has_log": true,
+      "last_run": "2026-03-20 13:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "review_monitor",
+      "file": "review_monitor.py",
+      "description": "Competitor Review Monitor — finds negative reviews of competitor logistics companies.",
+      "category": "analytics",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Wednesday 17:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 12.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "sales_bot",
+      "file": "sales_bot.py",
+      "description": "@SalesBybitBot — Telegram bot for trade notifications + dashboard.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "pybit",
+        "requests",
+        "telegram"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-17 18:42",
+      "size_kb": 13.6,
+      "has_log": true,
+      "last_run": "2026-03-18 14:42",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "seasonal_triggers",
+      "file": "seasonal_triggers.py",
+      "description": "Seasonal Campaign Triggers — selects active campaign based on current date.",
+      "category": "trading",
+      "flags": [],
+      "schedule": "daily 06:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 11.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "seo_gap_analyzer",
+      "file": "seo_gap_analyzer.py",
+      "description": "SEO Keyword Gap Analysis — finds topic gaps vs competitor websites.",
+      "category": "content",
+      "flags": [
+        "--auto-generate",
+        "--dry"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:50",
+      "size_kb": 15.0,
+      "has_log": true,
+      "last_run": "2026-03-20 13:56",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "seo_generator",
+      "file": "seo_generator.py",
+      "description": "SEO Article Generator for elpcargo.ru blog.",
+      "category": "content",
+      "flags": [
+        "--count",
+        "--topic"
+      ],
+      "schedule": "Tue+Thu 08:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:50",
+      "size_kb": 14.2,
+      "has_log": true,
+      "last_run": "2026-03-19 05:29",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "smart_segmentation",
+      "file": "smart_segmentation.py",
+      "description": "Smart Email Segmentation — segments contacts by industry for targeted mailer campaigns.",
+      "category": "enrichment",
+      "flags": [
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "monthly 1th 12:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:53",
+      "size_kb": 12.4,
+      "has_log": true,
+      "last_run": "2026-03-20 13:56",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "smart_send_time",
+      "file": "smart_send_time.py",
+      "description": "Smart Send Time Optimizer — analyzes email open patterns to find optimal send times.",
+      "category": "enrichment",
+      "flags": [],
+      "schedule": "Sunday 22:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:55",
+      "size_kb": 12.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "social_sharer",
+      "file": "social_sharer.py",
+      "description": "Auto Blog Social Sharing — publishes new blog articles to Telegram and X/Twitter.",
+      "category": "content",
+      "flags": [],
+      "schedule": "daily 13:00 MSK",
+      "dependencies": [
+        "dotenv"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:59",
+      "size_kb": 12.2,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "test_api",
+      "file": "test_api.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 14:47",
+      "size_kb": 0.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "test_prices",
+      "file": "test_prices.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "requests"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 17:16",
+      "size_kb": 3.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "test_prices2",
+      "file": "test_prices2.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "requests"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 17:18",
+      "size_kb": 3.2,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "test_ru_prices",
+      "file": "test_ru_prices.py",
+      "description": "",
+      "category": "infrastructure",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "requests"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 17:24",
+      "size_kb": 2.4,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "test_symbols",
+      "file": "test_symbols.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 14:47",
+      "size_kb": 1.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "testimonial_collector",
+      "file": "testimonial_collector.py",
+      "description": "Testimonial Collector — requests reviews from satisfied clients.",
+      "category": "content",
+      "flags": [
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "monthly 1th 15:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 20.1,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_channels_parser",
+      "file": "tg_channels_parser.py",
+      "description": "Telegram Channels Parser — monitors logistics/import groups for buyer requests.",
+      "category": "leadgen",
+      "flags": [
+        "--days",
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 14:00 MSK",
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:37",
+      "size_kb": 16.8,
+      "has_log": true,
+      "last_run": "2026-03-20 12:48",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_escalation",
+      "file": "tg_escalation.py",
+      "description": "Telegram Escalation Bot — when email follow-ups fail, reach out via Telegram DM.",
+      "category": "outreach",
+      "flags": [
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 15:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "google",
+        "gspread",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 16:51",
+      "size_kb": 15.7,
+      "has_log": true,
+      "last_run": "2026-03-20 12:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_funnel",
+      "file": "tg_funnel.py",
+      "description": "Telegram Sales Funnel — generates and publishes a content sequence.",
+      "category": "infrastructure",
+      "flags": [
+        "--channel",
+        "--generate",
+        "--publish"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 15.3,
+      "has_log": true,
+      "last_run": "2026-03-20 15:01",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_outreach",
+      "file": "tg_outreach.py",
+      "description": "Telegram Direct Outreach — sends personalized DMs to hot leads found in TG channels.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit",
+        "--source"
+      ],
+      "schedule": "Mon-Fri 15:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:25",
+      "size_kb": 15.1,
+      "has_log": true,
+      "last_run": "2026-03-20 13:26",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_qualifier_bot",
+      "file": "tg_qualifier_bot.py",
+      "description": "Telegram Bot Lead Qualification — interactive qualification flow for @ELP_Cargobot.",
+      "category": "trading",
+      "flags": [
+        "--dry"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "telegram"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:56",
+      "size_kb": 14.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "trade_notifier",
+      "file": "trade_notifier.py",
+      "description": "Trade Notifier — sends all bot trades to @SalesBybitBot Telegram channel.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-17 18:20",
+      "size_kb": 13.2,
+      "has_log": true,
+      "last_run": "2026-03-17 18:42",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "transfer",
+      "file": "transfer.py",
+      "description": "",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-17 15:48",
+      "size_kb": 1.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "video_pitch",
+      "file": "video_pitch.py",
+      "description": "Video Pitch Script Generator — creates video scripts for ELP Cargo.",
+      "category": "content",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:54",
+      "size_kb": 10.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "visitor_tracker",
+      "file": "visitor_tracker.py",
+      "description": "Website Visitor Tracking — analyzes nginx logs for blog.elpcargo.ru.",
+      "category": "leadgen",
+      "flags": [
+        "--dry",
+        "--log-file",
+        "--realtime"
+      ],
+      "schedule": "daily 19:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:54",
+      "size_kb": 11.3,
+      "has_log": true,
+      "last_run": "2026-03-20 16:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "vk_parser",
+      "file": "vk_parser.py",
+      "description": "VK Community Parser — finds logistics/import companies via VK Groups & Pages.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--keyword",
+        "--limit"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 09:17",
+      "size_kb": 15.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "weekly_report",
+      "file": "weekly_report.py",
+      "description": "Weekly Lead Generation Performance Report.",
+      "category": "analytics",
+      "flags": [
+        "--telegram"
+      ],
+      "schedule": "Monday 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-18 17:15",
+      "size_kb": 7.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "whatsapp_responder",
+      "file": "whatsapp_responder.py",
+      "description": "WhatsApp Auto-Responder for ELP Cargo — Telegram bridge with future WA API support.",
+      "category": "outreach",
+      "flags": [
+        "--daemon",
+        "--dry"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 13:48",
+      "size_kb": 14.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "yandex_audiences",
+      "file": "yandex_audiences.py",
+      "description": "Yandex Audiences Export — exports segmented email lists for Yandex Direct retargeting.",
+      "category": "trading",
+      "flags": [],
+      "schedule": "monthly 1th 08:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "googleapiclient",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 15:59",
+      "size_kb": 8.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "yandex_direct_prep",
+      "file": "yandex_direct_prep.py",
+      "description": "Yandex Direct Campaign Prep — generates keywords, negatives, and ad copies.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-20 14:59",
+      "size_kb": 10.9,
+      "has_log": true,
+      "last_run": "2026-03-20 16:17",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    }
+  ],
+  "summary": {
+    "total": 103,
+    "active": 63,
+    "by_category": {
+      "analytics": 7,
+      "content": 12,
+      "enrichment": 8,
+      "infrastructure": 6,
+      "leadgen": 22,
+      "outreach": 14,
+      "trading": 33,
+      "uncategorized": 1
+    },
+    "by_status": {
+      "active": 63,
+      "dormant": 39,
+      "library": 1
+    },
+    "by_dependency": {
+      "dotenv": 89,
+      "requests": 53,
+      "google": 33,
+      "anthropic": 32,
+      "gspread": 30,
+      "pybit": 19,
+      "asyncio": 10,
+      "telethon": 8,
+      "pandas": 5,
+      "imaplib": 5,
+      "numpy": 3,
+      "googleapiclient": 3,
+      "telegram": 3,
+      "feedparser": 1,
+      "difflib": 1,
+      "ccxt": 1,
+      "bs4": 1,
+      "imapclient": 1,
+      "signal": 1,
+      "flask": 1
+    }
+  }
+}

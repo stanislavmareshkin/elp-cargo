@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-коды ELP Cargo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .qr-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .qr-card img {
+            margin-bottom: 16px;
+            image-rendering: pixelated;
+        }
+        .qr-card h3 {
+            margin-bottom: 8px;
+            color: #1a1a2e;
+        }
+        .qr-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .qr-card code {
+            font-size: 11px;
+            color: #999;
+            word-break: break-all;
+        }
+        @media print {
+            body { background: white; padding: 10px; }
+            .qr-card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+            .grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR-коды ELP Cargo</h1>
+    <p class="subtitle">Для печати: визитки, выставки, маркетинговые материалы</p>
+
+    <div class="grid">
+        <div class="qr-card">
+            <img src="qr/business_card.png" alt="Визитка" width="250" height="250">
+            <h3>Визитка</h3>
+            <p>Ссылка на сайт (для визитной карточки)</p>
+            <code>https://elpcargo.ru/?utm_source=card&utm_medium=qr</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/exhibition.png" alt="Выставка" width="250" height="250">
+            <h3>Выставка</h3>
+            <p>Калькулятор доставки (для стенда на выставке)</p>
+            <code>https://blog.elpcargo.ru/calculator.html?utm_source=exhibition&utm_medium=qr</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/vcard.png" alt="vCard" width="250" height="250">
+            <h3>vCard</h3>
+            <p>Контакт (vCard для сохранения в телефон)</p>
+            <code>BEGIN:VCARD
+VERSION:3.0
+FN:Станислав Марешкин
+N:Марешкин;Станислав;;;
+ORG:ELP Ca...</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/case_china.png" alt="Кейс: Китай" width="250" height="250">
+            <h3>Кейс: Китай</h3>
+            <p>Кейс доставки из Китая</p>
+            <code>https://blog.elpcargo.ru/case-china.html?utm_source=print&utm_medium=qr&utm_camp...</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/case_europe.png" alt="Кейс: Европа" width="250" height="250">
+            <h3>Кейс: Европа</h3>
+            <p>Кейс доставки из Европы</p>
+            <code>https://blog.elpcargo.ru/case-europe.html?utm_source=print&utm_medium=qr&utm_cam...</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/case_sanctions.png" alt="Кейс: Санкции" width="250" height="250">
+            <h3>Кейс: Санкции</h3>
+            <p>Кейс доставки санкционных товаров</p>
+            <code>https://blog.elpcargo.ru/case-sanctions.html?utm_source=print&utm_medium=qr&utm_...</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/blog.png" alt="Блог" width="250" height="250">
+            <h3>Блог</h3>
+            <p>Блог ELP Cargo</p>
+            <code>https://blog.elpcargo.ru/?utm_source=print&utm_medium=qr</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/crm.png" alt="CRM / Заявка" width="250" height="250">
+            <h3>CRM / Заявка</h3>
+            <p>Форма заявки</p>
+            <code>https://blog.elpcargo.ru/crm.html?utm_source=print&utm_medium=qr</code>
+        </div>
+        <div class="qr-card">
+            <img src="qr/guide_import.png" alt="Гайд по импорту" width="250" height="250">
+            <h3>Гайд по импорту</h3>
+            <p>Полный гайд по импорту 2026</p>
+            <code>https://blog.elpcargo.ru/guide-import-2026.html?utm_source=print&utm_medium=qr&u...</code>
+        </div>
+    </div>
+
+    <p class="footer">ELP Cargo | elpcargo.ru | ceo@elpcargo.ru | +7 911 920 01 85</p>
+</body>
+</html>

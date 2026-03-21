@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор таможенных платежей | ELP Cargo</title>
+    <meta name="description" content="Рассчитайте таможенные пошлины, НДС и сборы для импорта товаров в Россию. Бесплатный онлайн-калькулятор от ELP Cargo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        header h1 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        header h1 span { color: #8B5CF6; }
+        header p { color: #999; font-size: 1rem; }
+
+        .calc-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 24px auto;
+        }
+        .calc-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ccc;
+            margin-bottom: 6px;
+        }
+        .form-group .hint {
+            font-size: 0.78rem;
+            color: #777;
+            margin-bottom: 6px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #8B5CF6;
+        }
+        .form-group select option { background: #1a1a1a; }
+
+        .btn-calc {
+            width: 100%;
+            padding: 14px;
+            background: #8B5CF6;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'Inter', sans-serif;
+            margin-top: 8px;
+        }
+        .btn-calc:hover { background: #7c3aed; }
+
+        .results {
+            display: none;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid #2a2a2a;
+        }
+        .results h3 {
+            font-size: 1.1rem;
+            color: #8B5CF6;
+            margin-bottom: 16px;
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #1f1f1f;
+            font-size: 0.95rem;
+        }
+        .result-row .label { color: #aaa; }
+        .result-row .value { color: #fff; font-weight: 600; }
+        .result-row.total {
+            border-top: 2px solid #8B5CF6;
+            border-bottom: none;
+            margin-top: 8px;
+            padding-top: 14px;
+        }
+        .result-row.total .label { color: #fff; font-size: 1.05rem; }
+        .result-row.total .value { color: #8B5CF6; font-size: 1.2rem; }
+
+        .disclaimer {
+            margin-top: 16px;
+            padding: 14px;
+            background: #1f1020;
+            border: 1px solid #8B5CF633;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            color: #b09ad0;
+        }
+
+        /* Lead capture */
+        .lead-section {
+            margin-top: 32px;
+            padding: 28px;
+            background: linear-gradient(135deg, #1a1028, #1a1a1a);
+            border: 1px solid #8B5CF644;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .lead-section h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+        .lead-section p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .lead-form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 0 auto; }
+        .lead-form input {
+            padding: 12px 16px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .lead-form input:focus { outline: none; border-color: #8B5CF6; }
+        .btn-lead {
+            padding: 14px;
+            background: #8B5CF6;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-lead:hover { background: #7c3aed; }
+        .lead-success {
+            display: none;
+            color: #22c55e;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 0.82rem;
+        }
+        footer a { color: #8B5CF6; text-decoration: none; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            .calc-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Калькулятор <span>таможенных платежей</span></h1>
+    <p>Оцените примерные расходы на импорт товаров в Россию</p>
+</header>
+
+<div class="container">
+    <div class="calc-card">
+        <h2>Параметры груза</h2>
+
+        <div class="form-group">
+            <label for="tnved">Код ТН ВЭД (первые 4 цифры)</label>
+            <div class="hint">Примеры: 8708 — запчасти, 8479 — оборудование, 3304 — косметика, 8541 — электроника</div>
+            <input type="text" id="tnved" placeholder="например, 8708" maxlength="10">
+        </div>
+
+        <div class="form-group">
+            <label for="value">Стоимость товара (USD)</label>
+            <input type="number" id="value" placeholder="10000" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Вес нетто (кг)</label>
+            <input type="number" id="weight" placeholder="500" min="0.1" step="0.1">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Страна происхождения</label>
+            <select id="country">
+                <option value="CN">Китай</option>
+                <option value="DE">Германия</option>
+                <option value="TR">Турция</option>
+                <option value="KR">Южная Корея</option>
+                <option value="JP">Япония</option>
+                <option value="IT">Италия</option>
+                <option value="AE">ОАЭ</option>
+                <option value="FR">Франция</option>
+                <option value="US">США</option>
+                <option value="OTHER">Другая</option>
+            </select>
+        </div>
+
+        <button class="btn-calc" onclick="calculate()">Рассчитать</button>
+
+        <div class="results" id="results">
+            <h3>Примерный расчёт таможенных платежей</h3>
+            <div class="result-row">
+                <span class="label">Стоимость товара</span>
+                <span class="value" id="r-value">—</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Стоимость в рублях (курс ЦБ ≈)</span>
+                <span class="value" id="r-rub">—</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Таможенная пошлина (<span id="r-duty-pct">10</span>%)</span>
+                <span class="value" id="r-duty">—</span>
+            </div>
+            <div class="result-row">
+                <span class="label">НДС (20%)</span>
+                <span class="value" id="r-nds">—</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Таможенный сбор</span>
+                <span class="value" id="r-sbor">—</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Услуги ELP Cargo (ориентир)</span>
+                <span class="value" id="r-service">—</span>
+            </div>
+            <div class="result-row total">
+                <span class="label">Итого «под ключ»</span>
+                <span class="value" id="r-total">—</span>
+            </div>
+
+            <div class="disclaimer">
+                ⚠ Расчёт является приблизительным. Ставка пошлины зависит от точного кода ТН ВЭД.
+                Для получения точного расчёта оставьте заявку ниже — это бесплатно.
+            </div>
+        </div>
+    </div>
+
+    <div class="lead-section" id="lead-section">
+        <h3>Точный расчёт с учётом вашего кода ТН ВЭД — бесплатно</h3>
+        <p>Наш специалист подготовит детальную калькуляцию всех таможенных платежей и стоимости доставки</p>
+        <div class="lead-form" id="lead-form">
+            <input type="text" id="lead-name" placeholder="Имя / компания">
+            <input type="email" id="lead-email" placeholder="Email">
+            <input type="tel" id="lead-phone" placeholder="Телефон">
+            <button class="btn-lead" onclick="submitLead()">Получить точный расчёт</button>
+        </div>
+        <div class="lead-success" id="lead-success">Заявка отправлена! Мы свяжемся с вами в течение 2 часов.</div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 <a href="https://elpcargo.ru">ELP Cargo</a> — логистика полного цикла
+</footer>
+
+<script>
+const USD_RUB = 92;
+
+// Approximate duty rates by first 4 digits of HS code
+const DUTY_RATES = {
+    '8708': 5,   // auto parts
+    '8479': 0,   // machinery
+    '8471': 0,   // computers
+    '8541': 0,   // semiconductors
+    '3304': 12,  // cosmetics
+    '6902': 15,  // construction ceramics
+    '7308': 12,  // steel structures
+    '8517': 0,   // telecom equipment
+    '0901': 8,   // coffee
+    '2106': 12,  // food preparations
+    '8481': 5,   // valves
+    '8413': 5,   // pumps
+    '8501': 5,   // motors
+};
+
+function getDutyRate(code) {
+    const c4 = (code || '').replace(/\D/g, '').substring(0, 4);
+    if (DUTY_RATES[c4] !== undefined) return DUTY_RATES[c4];
+    return 10; // default
+}
+
+function getSbor(rubValue) {
+    if (rubValue <= 200000) return 1060;
+    if (rubValue <= 450000) return 2120;
+    if (rubValue <= 1200000) return 5900;
+    if (rubValue <= 2700000) return 12000;
+    if (rubValue <= 4200000) return 16000;
+    if (rubValue <= 5500000) return 20000;
+    if (rubValue <= 7000000) return 23000;
+    if (rubValue <= 8000000) return 25000;
+    if (rubValue <= 9000000) return 27000;
+    if (rubValue <= 10000000) return 30000;
+    return 30000;
+}
+
+function getServiceFee(usdValue) {
+    // Approximate ELP Cargo service estimate
+    if (usdValue <= 5000) return 35000;
+    if (usdValue <= 15000) return 55000;
+    if (usdValue <= 50000) return 85000;
+    if (usdValue <= 100000) return 120000;
+    return 180000;
+}
+
+function fmt(n) {
+    return Math.round(n).toLocaleString('ru-RU');
+}
+
+function calculate() {
+    const code = document.getElementById('tnved').value;
+    const usdValue = parseFloat(document.getElementById('value').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+
+    if (!usdValue || usdValue <= 0) {
+        alert('Укажите стоимость товара');
+        return;
+    }
+
+    const dutyPct = getDutyRate(code);
+    const rubValue = usdValue * USD_RUB;
+    const duty = rubValue * dutyPct / 100;
+    const ndsBase = rubValue + duty;
+    const nds = ndsBase * 0.20;
+    const sbor = getSbor(rubValue);
+    const service = getServiceFee(usdValue);
+    const total = duty + nds + sbor + service;
+
+    document.getElementById('r-value').textContent = '$' + fmt(usdValue);
+    document.getElementById('r-rub').textContent = fmt(rubValue) + ' ₽';
+    document.getElementById('r-duty-pct').textContent = dutyPct;
+    document.getElementById('r-duty').textContent = fmt(duty) + ' ₽';
+    document.getElementById('r-nds').textContent = fmt(nds) + ' ₽';
+    document.getElementById('r-sbor').textContent = fmt(sbor) + ' ₽';
+    document.getElementById('r-service').textContent = fmt(service) + ' ₽';
+    document.getElementById('r-total').textContent = fmt(total) + ' ₽';
+
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('lead-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function submitLead() {
+    const name = document.getElementById('lead-name').value;
+    const email = document.getElementById('lead-email').value;
+    const phone = document.getElementById('lead-phone').value;
+
+    if (!email && !phone) {
+        alert('Укажите email или телефон');
+        return;
+    }
+
+    const data = {
+        source: 'duty-calculator',
+        name: name,
+        email: email,
+        phone: phone,
+        tnved: document.getElementById('tnved').value,
+        value_usd: document.getElementById('value').value,
+        weight: document.getElementById('weight').value,
+        country: document.getElementById('country').value,
+        timestamp: new Date().toISOString(),
+    };
+
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+    }).catch(() => {});
+
+    document.getElementById('lead-form').style.display = 'none';
+    document.getElementById('lead-success').style.display = 'block';
+}
+</script>
+</body>
+</html>

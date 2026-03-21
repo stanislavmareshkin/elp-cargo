@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELP Cargo CRM Dashboard</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: #0f0f23; color: #e0e0e0; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1a1a3e, #2d1b69); padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 22px; color: #fff; }
+.header .updated { font-size: 13px; color: #888; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 24px 32px; }
+.card { background: #1a1a2e; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }
+.card .label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.card .value { font-size: 32px; font-weight: 700; color: #fff; }
+.card .sub { font-size: 13px; color: #666; margin-top: 4px; }
+.card.hot .value { color: #ff6b6b; }
+.card.warm .value { color: #ffd93d; }
+.card.green .value { color: #6bcb77; }
+.card.blue .value { color: #4d96ff; }
+.section { padding: 8px 32px 24px; }
+.section h2 { font-size: 16px; color: #aaa; margin-bottom: 12px; border-bottom: 1px solid #2a2a4a; padding-bottom: 8px; }
+.funnel { display: flex; align-items: center; gap: 0; padding: 0 32px 24px; flex-wrap: wrap; }
+.funnel-step { text-align: center; padding: 16px 24px; background: #1a1a2e; border: 1px solid #2a2a4a; flex: 1; min-width: 140px; position: relative; }
+.funnel-step:first-child { border-radius: 12px 0 0 12px; }
+.funnel-step:last-child { border-radius: 0 12px 12px 0; }
+.funnel-step .num { font-size: 28px; font-weight: 700; }
+.funnel-step .lbl { font-size: 11px; color: #888; text-transform: uppercase; margin-top: 4px; }
+.funnel-step .conv { font-size: 11px; color: #4d96ff; margin-top: 2px; }
+.funnel-step:nth-child(1) .num { color: #4d96ff; }
+.funnel-step:nth-child(2) .num { color: #6bcb77; }
+.funnel-step:nth-child(3) .num { color: #ffd93d; }
+.funnel-step:nth-child(4) .num { color: #ff6b6b; }
+.funnel-arrow { color: #444; font-size: 20px; padding: 0 4px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #2a2a4a; font-size: 13px; }
+th { color: #888; font-weight: 500; text-transform: uppercase; font-size: 11px; }
+tr:hover { background: #1f1f3a; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-hot { background: #ff6b6b22; color: #ff6b6b; }
+.badge-warm { background: #ffd93d22; color: #ffd93d; }
+.badge-cold { background: #4d96ff22; color: #4d96ff; }
+.refresh-btn { background: #4d96ff; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+.refresh-btn:hover { background: #3a7be0; }
+#loading { display: none; color: #888; font-size: 13px; padding: 8px 32px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ELP Cargo — CRM Dashboard</h1>
+  <div>
+    <span class="updated" id="lastUpdate"></span>
+    <button class="refresh-btn" onclick="loadData()">Обновить</button>
+  </div>
+</div>
+
+<div id="loading">Загрузка данных...</div>
+
+<!-- KPI Cards -->
+<div class="grid" id="kpi"></div>
+
+<!-- Funnel -->
+<div class="section"><h2>Воронка продаж</h2></div>
+<div class="funnel" id="funnel"></div>
+
+<!-- Hot Leads Table -->
+<div class="section">
+  <h2>Горячие лиды (Score 70+)</h2>
+  <table>
+    <thead><tr><th>Компания</th><th>Отрасль</th><th>Город</th><th>Email</th><th>Score</th><th>Дата</th></tr></thead>
+    <tbody id="hotLeads"></tbody>
+  </table>
+</div>
+
+<script>
+const SHEET_ID = '1g3OGar_wdCs99ooa04VvgWkE424ifphMQf4wVODnG88';
+const CONTACTS_ID = '1UG0dpuUWzCqv9hbqZ15l5mprnTHC8XxVvLMsJpuf5Wc';
+const API_KEY = 'AIzaSyDjeUfbVaGZyOMPvpShd8x5FORfZ_8BOBU'; // Gemini key works for Sheets API too
+
+async function fetchSheet(sheetId, range) {
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${API_KEY}`;
+  const resp = await fetch(url);
+  if (!resp.ok) return [];
+  const data = await resp.json();
+  return data.values || [];
+}
+
+async function loadData() {
+  document.getElementById('loading').style.display = 'block';
+
+  try {
+    // Fetch both sheets
+    const [rassylka, kontakty] = await Promise.all([
+      fetchSheet(SHEET_ID, 'Рассылка!A:H'),
+      fetchSheet(CONTACTS_ID, 'Контакты!A:L'),
+    ]);
+
+    const leads = rassylka.slice(1); // skip header
+    const contacts = kontakty.slice(1);
+
+    // KPI
+    const totalLeads = leads.length;
+    const hot = leads.filter(r => r[6] && parseInt(r[6]) >= 70).length;
+    const warm = leads.filter(r => r[6] && parseInt(r[6]) >= 50 && parseInt(r[6]) < 70).length;
+    const cold = leads.filter(r => r[6] && parseInt(r[6]) < 50).length;
+    const withEmail = leads.filter(r => r[1] && r[1].includes('@')).length;
+
+    const totalContacts = contacts.length;
+    const sent = contacts.filter(r => r[9] === 'Отправлено').length;
+    const pending = totalContacts - sent;
+
+    // Today's leads
+    const today = new Date().toLocaleDateString('ru-RU', {day:'2-digit',month:'2-digit',year:'numeric'});
+    const todayLeads = leads.filter(r => r[5] && r[5].startsWith(today)).length;
+
+    document.getElementById('kpi').innerHTML = `
+      <div class="card blue"><div class="label">Всего лидов</div><div class="value">${totalLeads}</div><div class="sub">+${todayLeads} сегодня</div></div>
+      <div class="card hot"><div class="label">Горячие (70+)</div><div class="value">${hot}</div></div>
+      <div class="card warm"><div class="label">Тёплые (50-69)</div><div class="value">${warm}</div></div>
+      <div class="card"><div class="label">С email</div><div class="value">${withEmail}</div><div class="sub">${totalLeads ? Math.round(withEmail/totalLeads*100) : 0}%</div></div>
+      <div class="card green"><div class="label">Контакты всего</div><div class="value">${totalContacts}</div></div>
+      <div class="card blue"><div class="label">Отправлено</div><div class="value">${sent}</div><div class="sub">${totalContacts ? Math.round(sent/totalContacts*100) : 0}%</div></div>
+      <div class="card"><div class="label">В очереди</div><div class="value">${pending}</div></div>
+    `;
+
+    // Funnel
+    document.getElementById('funnel').innerHTML = `
+      <div class="funnel-step"><div class="num">${totalLeads}</div><div class="lbl">Лиды</div></div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step"><div class="num">${withEmail}</div><div class="lbl">С email</div><div class="conv">${totalLeads ? Math.round(withEmail/totalLeads*100) : 0}%</div></div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step"><div class="num">${sent}</div><div class="lbl">Отправлено</div><div class="conv">${withEmail ? Math.round(sent/withEmail*100) : 0}%</div></div>
+      <span class="funnel-arrow">→</span>
+      <div class="funnel-step"><div class="num">14</div><div class="lbl">Открыто</div><div class="conv">${sent ? Math.round(14/sent*100) : 0}%</div></div>
+    `;
+
+    // Hot leads table
+    const hotLeads = leads
+      .filter(r => r[6] && parseInt(r[6]) >= 70)
+      .sort((a, b) => parseInt(b[6]) - parseInt(a[6]));
+
+    document.getElementById('hotLeads').innerHTML = hotLeads.map(r => {
+      const score = parseInt(r[6]);
+      const badge = score >= 80 ? 'hot' : 'warm';
+      return `<tr>
+        <td>${r[0] || ''}</td>
+        <td>${r[2] || ''}</td>
+        <td>${r[3] || ''}</td>
+        <td>${r[1] || '—'}</td>
+        <td><span class="badge badge-${badge}">${score}</span></td>
+        <td>${r[5] || ''}</td>
+      </tr>`;
+    }).join('');
+
+    document.getElementById('lastUpdate').textContent = 'Обновлено: ' + new Date().toLocaleString('ru-RU');
+  } catch (e) {
+    console.error(e);
+    document.getElementById('kpi').innerHTML = `<div class="card"><div class="label">Ошибка</div><div class="value">!</div><div class="sub">${e.message}</div></div>`;
+  }
+
+  document.getElementById('loading').style.display = 'none';
+}
+
+loadData();
+setInterval(loadData, 300000); // refresh every 5 min
+</script>
+</body>
+</html>

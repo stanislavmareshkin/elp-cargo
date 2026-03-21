@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База проверенных поставщиков для импорта | ELP Cargo</title>
+    <meta name="description" content="База проверенных поставщиков: автозапчасти, оборудование, электроника, косметика из Европы, Китая, Кореи, Турции. Помощь с поиском и доставкой.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/suppliers.html">
+    <meta property="og:title" content="База проверенных поставщиков для импорта | ELP Cargo">
+    <meta property="og:description" content="Каталог проверенных типов поставщиков по категориям: автозапчасти, оборудование, электроника, косметика, стройматериалы, продукты.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ELP Cargo">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --c-green: #34D399;
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.85); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; }
+        .nav a:hover { color: var(--c-accent); text-decoration: none; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+        .hero { padding: 60px 0 40px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-size: 2em; font-weight: 800; line-height: 1.25; margin-bottom: 14px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.05em; max-width: 650px; margin: 0 auto; }
+
+        /* Categories */
+        .category { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+        .cat-header { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background var(--transition); }
+        .cat-header:hover { background: rgba(139,92,246,.04); }
+        .cat-title { font-size: 1.1em; font-weight: 700; }
+        .cat-count { color: var(--c-text-sec); font-size: .85em; }
+        .cat-arrow { color: var(--c-accent); font-size: 1.2em; transition: transform var(--transition); }
+        .category.open .cat-arrow { transform: rotate(180deg); }
+        .cat-body { display: none; border-top: 1px solid var(--c-border); }
+        .category.open .cat-body { display: block; }
+
+        .supplier { padding: 20px 24px; border-bottom: 1px solid var(--c-border); }
+        .supplier:last-child { border-bottom: none; }
+        .sup-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+        .sup-flag { font-size: 1.4em; }
+        .sup-name { font-weight: 700; font-size: .95em; }
+        .sup-tag { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 2px 10px; border-radius: 4px; font-size: .75em; font-weight: 600; }
+        .sup-desc { color: var(--c-text-sec); font-size: .9em; margin-bottom: 10px; line-height: 1.6; }
+        .sup-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+        .sup-meta-item { font-size: .82em; color: var(--c-text-dim); }
+        .sup-meta-item span { color: var(--c-text-sec); font-weight: 600; }
+
+        /* CTA */
+        .cta-section { background: var(--c-bg-card); border: 1px solid rgba(139,92,246,.25); border-radius: var(--radius); padding: 40px; margin: 40px 0; text-align: center; }
+        .cta-section h2 { font-size: 1.4em; font-weight: 700; margin-bottom: 8px; }
+        .cta-section .sub { color: var(--c-text-sec); margin-bottom: 24px; font-size: .95em; max-width: 550px; margin-left: auto; margin-right: auto; }
+        .lead-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 600px; margin: 0 auto; }
+        @media (max-width: 600px) { .lead-form { grid-template-columns: 1fr; } }
+        .lead-form input, .lead-form select, .lead-form textarea {
+            background: rgba(255,255,255,.05); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); padding: 12px 14px; color: var(--c-text);
+            font-family: var(--font); font-size: .95em; outline: none; transition: border-color var(--transition);
+        }
+        .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { border-color: var(--c-accent); }
+        .lead-form .full { grid-column: 1 / -1; }
+        .lead-form textarea { resize: vertical; min-height: 80px; }
+        .btn-submit {
+            grid-column: 1 / -1; background: var(--gradient-accent); color: #fff; border: none;
+            border-radius: var(--radius-sm); padding: 14px 32px;
+            font-family: var(--font); font-size: 1em; font-weight: 700; cursor: pointer;
+        }
+        .btn-submit:hover { opacity: .9; }
+        .form-ok { display: none; color: var(--c-green); font-weight: 600; margin-top: 12px; grid-column: 1 / -1; }
+
+        .footer { border-top: 1px solid var(--c-border); padding: 40px 0; text-align: center; color: var(--c-text-dim); font-size: .85em; margin-top: 40px; }
+        .footer a { color: var(--c-accent); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-inner">
+        <div class="logo">ELP <span>Cargo</span></div>
+        <nav class="nav">
+            <a href="/blog/">Блог</a>
+            <a href="/blog/prices.html">Цены</a>
+            <a href="/blog/calculator.html">Калькулятор</a>
+            <a href="/blog/compare.html">Сравнение</a>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badge">Для импортёров</div>
+        <h1>База проверенных поставщиков</h1>
+        <p class="hero-sub">Каталог типов поставщиков по категориям и странам. Мы помогаем найти надёжного партнёра и организовать доставку от двери до двери.</p>
+    </section>
+
+    <!-- Автозапчасти -->
+    <div class="category open" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Автозапчасти</span> <span class="cat-count">10 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127465;&#127466;</span><span class="sup-name">Оригинальные запчасти из Германии</span><span class="sup-tag">Премиум</span></div>
+                <div class="sup-desc">Поставщики оригинальных запчастей BMW, Mercedes, Audi, VW. Прямые закупки у авторизованных дилеров и оптовых складов в Германии.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 500 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>10-14 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто/Авиа</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127465;&#127466;</span><span class="sup-name">Aftermarket запчасти из Германии</span><span class="sup-tag">Оптимальный</span></div>
+                <div class="sup-desc">Аналоги от ведущих производителей: Bosch, Sachs, Lemforder, Febi. Качество OEM при более низкой цене. Оптовые склады в Штутгарте и Мюнхене.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 300 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>10-14 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127472;&#127479;</span><span class="sup-name">Запчасти Hyundai/Kia из Кореи</span><span class="sup-tag">Оригинал</span></div>
+                <div class="sup-desc">Прямые поставки оригинальных запчастей Hyundai и Kia. Работа с дистрибьюторами в Сеуле и Пусане. Сертификаты соответствия.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $500</span></div><div class="sup-meta-item">Срок поставки: <span>14-21 день</span></div><div class="sup-meta-item">Доставка: <span>Море/Авиа</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127464;&#127475;</span><span class="sup-name">Универсальные запчасти из Китая</span><span class="sup-tag">Бюджет</span></div>
+                <div class="sup-desc">Аналоги для массовых моделей: фильтры, тормозные колодки, подвеска, расходники. Фабрики Гуанчжоу и Шанхая с контролем качества.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $300</span></div><div class="sup-meta-item">Срок поставки: <span>15-25 дней</span></div><div class="sup-meta-item">Доставка: <span>Море/Авто</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Промышленное оборудование -->
+    <div class="category" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Промышленное оборудование</span> <span class="cat-count">9 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127465;&#127466;</span><span class="sup-name">Станки и ЧПУ из Германии</span><span class="sup-tag">Премиум</span></div>
+                <div class="sup-desc">Токарные, фрезерные, шлифовальные станки. Бренды уровня DMG Mori, Trumpf. Полный пакет документов для импорта.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 1 ед.</span></div><div class="sup-meta-item">Срок поставки: <span>30-60 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто/Проект</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127470;&#127481;</span><span class="sup-name">Насосы и компрессоры из Италии</span><span class="sup-tag">Качество</span></div>
+                <div class="sup-desc">Промышленные насосы, компрессоры, гидравлика. Поставщики из промышленных кластеров Ломбардии и Эмилии-Романьи.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 2000 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>14-30 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127471;&#127477;</span><span class="sup-name">Робототехника и автоматизация из Японии</span><span class="sup-tag">Хай-тек</span></div>
+                <div class="sup-desc">Промышленные роботы, системы автоматизации, прецизионное оборудование. Уровень Fanuc, Yaskawa, Mitsubishi Electric.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 1 ед.</span></div><div class="sup-meta-item">Срок поставки: <span>30-45 дней</span></div><div class="sup-meta-item">Доставка: <span>Море/Авиа</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Электроника -->
+    <div class="category" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Электроника и комплектующие</span> <span class="cat-count">9 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127464;&#127475;</span><span class="sup-name">Электронные компоненты из Китая</span><span class="sup-tag">Опт</span></div>
+                <div class="sup-desc">Микросхемы, платы, LED-модули, датчики. Фабрики Шэньчжэня и дельты Жемчужной реки. Контроль качества на месте.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $500</span></div><div class="sup-meta-item">Срок поставки: <span>12-20 дней</span></div><div class="sup-meta-item">Доставка: <span>Авиа/Море</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127472;&#127479;</span><span class="sup-name">Дисплеи и полупроводники из Кореи</span><span class="sup-tag">Технологии</span></div>
+                <div class="sup-desc">OLED/LCD панели, полупроводники, память. Поставщики уровня Samsung, LG Display, SK Hynix. Сертификация и таможня включены.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $2000</span></div><div class="sup-meta-item">Срок поставки: <span>14-21 день</span></div><div class="sup-meta-item">Доставка: <span>Авиа</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127471;&#127477;</span><span class="sup-name">Оптика и точная электроника из Японии</span><span class="sup-tag">Премиум</span></div>
+                <div class="sup-desc">Оптические системы, датчики высокой точности, медицинская электроника. Японское качество с полной документацией.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $1000</span></div><div class="sup-meta-item">Срок поставки: <span>14-28 дней</span></div><div class="sup-meta-item">Доставка: <span>Авиа</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Косметика -->
+    <div class="category" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Косметика и парфюмерия</span> <span class="cat-count">9 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127467;&#127479;</span><span class="sup-name">Люксовая косметика из Франции</span><span class="sup-tag">Люкс</span></div>
+                <div class="sup-desc">Уходовая косметика, парфюмерия, профессиональная косметология. Поставщики из Парижа и Прованса. Сертификаты ЕС.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 1000 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>12-18 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто/Авиа</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127470;&#127481;</span><span class="sup-name">Профессиональная косметика из Италии</span><span class="sup-tag">Проф</span></div>
+                <div class="sup-desc">Средства для салонов красоты, spa-продукция, профессиональные линейки. Итальянское производство с документами для Роспотребнадзора.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 800 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>12-18 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127472;&#127479;</span><span class="sup-name">K-Beauty из Кореи</span><span class="sup-tag">Тренд</span></div>
+                <div class="sup-desc">Корейская косметика: маски, сыворотки, BB-кремы, солнцезащита. Популярные бренды для российского рынка. Быстрая сертификация.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $500</span></div><div class="sup-meta-item">Срок поставки: <span>14-21 день</span></div><div class="sup-meta-item">Доставка: <span>Авиа/Море</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Стройматериалы -->
+    <div class="category" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Стройматериалы</span> <span class="cat-count">6 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127464;&#127475;</span><span class="sup-name">Отделочные материалы из Китая</span><span class="sup-tag">Опт</span></div>
+                <div class="sup-desc">Керамогранит, плитка, сантехника, фурнитура, LED-освещение. Фабрики Фошаня и Чжэцзяна. Контейнерные поставки.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 1 контейнера</span></div><div class="sup-meta-item">Срок поставки: <span>25-40 дней</span></div><div class="sup-meta-item">Доставка: <span>Море</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127481;&#127479;</span><span class="sup-name">Мрамор и натуральный камень из Турции</span><span class="sup-tag">Премиум</span></div>
+                <div class="sup-desc">Мрамор, травертин, оникс. Каменоломни Афьона и Денизли. Порезка по размерам, полировка, упаковка под проект.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 500 м²</span></div><div class="sup-meta-item">Срок поставки: <span>14-25 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто/Море</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127481;&#127479;</span><span class="sup-name">Текстиль и ткани из Турции</span><span class="sup-tag">Качество</span></div>
+                <div class="sup-desc">Интерьерный текстиль, мебельные ткани, шторы, домашний текстиль. Фабрики Бурсы и Денизли. Хлопок, синтетика, смесовые.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $1000</span></div><div class="sup-meta-item">Срок поставки: <span>10-18 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Продукты питания -->
+    <div class="category" onclick="toggleCat(this)">
+        <div class="cat-header">
+            <div><span class="cat-title">Продукты питания</span> <span class="cat-count">9 типов поставщиков</span></div>
+            <span class="cat-arrow">&#9660;</span>
+        </div>
+        <div class="cat-body">
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127470;&#127481;</span><span class="sup-name">Деликатесы из Италии</span><span class="sup-tag">Премиум</span></div>
+                <div class="sup-desc">Оливковое масло, пармезан, прошутто, паста, вина. Фермерские хозяйства Тосканы, Эмилии-Романьи, Сицилии. Сертификаты DOP/IGP.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 500 EUR</span></div><div class="sup-meta-item">Срок поставки: <span>12-20 дней</span></div><div class="sup-meta-item">Доставка: <span>Рефрижератор</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127481;&#127479;</span><span class="sup-name">Сухофрукты и орехи из Турции</span><span class="sup-tag">Опт</span></div>
+                <div class="sup-desc">Фундук, фисташки, курага, инжир, изюм. Фермерские кооперативы Газиантепа и Трабзона. Фитосанитарные сертификаты.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от 1 тонны</span></div><div class="sup-meta-item">Срок поставки: <span>10-18 дней</span></div><div class="sup-meta-item">Доставка: <span>Авто</span></div></div>
+            </div>
+            <div class="supplier">
+                <div class="sup-header"><span class="sup-flag">&#127464;&#127475;</span><span class="sup-name">Чай и специи из Китая</span><span class="sup-tag">Традиции</span></div>
+                <div class="sup-desc">Элитный чай (пуэр, улун, зелёный), специи, соусы, лапша. Плантации Юньнани и Фуцзяни. Декларации соответствия ТР ТС.</div>
+                <div class="sup-meta"><div class="sup-meta-item">MOQ: <span>от $300</span></div><div class="sup-meta-item">Срок поставки: <span>18-30 дней</span></div><div class="sup-meta-item">Доставка: <span>Море/Авто</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Нужна помощь с поиском поставщика?</h2>
+        <p class="sub">ELP Cargo поможет — от поиска надёжного поставщика до доставки товара на ваш склад. Полный цикл: поиск, проверка, оплата, доставка, растаможка.</p>
+        <form class="lead-form" id="supplierForm" onsubmit="submitSupplier(event)">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Телефон">
+            <select name="category">
+                <option value="">Категория товара</option>
+                <option value="auto">Автозапчасти</option>
+                <option value="equipment">Промышленное оборудование</option>
+                <option value="electronics">Электроника</option>
+                <option value="cosmetics">Косметика</option>
+                <option value="construction">Стройматериалы</option>
+                <option value="food">Продукты питания</option>
+                <option value="other">Другое</option>
+            </select>
+            <textarea class="full" name="details" placeholder="Что ищете? Опишите товар, объём, страну..."></textarea>
+            <button type="submit" class="btn-submit">Найти поставщика</button>
+            <div class="form-ok" id="formOk">Спасибо! Мы подберём поставщиков и свяжемся с вами в течение 24 часов.</div>
+        </form>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024-2026 ELP Cargo. Международная доставка грузов под ключ.</p>
+        <p style="margin-top:8px"><a href="/blog/">Блог</a> &nbsp;|&nbsp; <a href="/blog/prices.html">Цены</a> &nbsp;|&nbsp; <a href="https://elpcargo.ru">Главная</a></p>
+    </div>
+</footer>
+
+<script>
+function toggleCat(el) {
+    if (el.classList.contains('open')) {
+        el.classList.remove('open');
+    } else {
+        el.classList.add('open');
+    }
+}
+
+function submitSupplier(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        category: form.category.value,
+        details: form.details.value,
+        source: 'supplier-db',
+        timestamp: new Date().toISOString()
+    };
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }).catch(function(){});
+    form.style.display = 'none';
+    document.getElementById('formOk').style.display = 'block';
+}
+</script>
+</body>
+</html>
