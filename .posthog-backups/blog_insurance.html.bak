@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор страхования грузов | ELP Cargo</title>
+    <meta name="description" content="Онлайн-калькулятор страхования международных грузов. Рассчитайте стоимость страховки за 30 секунд. ELP Cargo — надёжная защита ваших грузов.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/insurance.html">
+    <meta property="og:title" content="Калькулятор страхования грузов | ELP Cargo">
+    <meta property="og:description" content="Рассчитайте стоимость страхования международного груза онлайн. Все типы грузов и маршрутов.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ELP Cargo">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --c-green: #34D399;
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.85); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; }
+        .nav a:hover { color: var(--c-accent); text-decoration: none; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+        .hero { padding: 60px 0 40px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-size: 2em; font-weight: 800; line-height: 1.25; margin-bottom: 14px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.05em; max-width: 600px; margin: 0 auto; }
+
+        /* Calculator */
+        .calc-card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 36px; margin-bottom: 40px; }
+        .calc-card h2 { font-size: 1.3em; font-weight: 700; margin-bottom: 24px; color: var(--c-accent-bright); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: .88em; font-weight: 600; color: var(--c-text-sec); }
+        .form-group input, .form-group select {
+            background: rgba(255,255,255,.05); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); padding: 12px 14px; color: var(--c-text);
+            font-family: var(--font); font-size: .95em; outline: none; transition: border-color var(--transition);
+        }
+        .form-group input:focus, .form-group select:focus { border-color: var(--c-accent); }
+        .form-group select { cursor: pointer; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B5CF6' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+        }
+        .form-group select option { background: #0d1525; color: var(--c-text); }
+
+        .btn-calc {
+            grid-column: 1 / -1; margin-top: 8px;
+            background: var(--gradient-accent); color: #fff; border: none;
+            border-radius: var(--radius-sm); padding: 14px 32px;
+            font-family: var(--font); font-size: 1em; font-weight: 700;
+            cursor: pointer; transition: opacity var(--transition);
+        }
+        .btn-calc:hover { opacity: .9; }
+
+        /* Result */
+        .result-card { display: none; background: rgba(139,92,246,.08); border: 1px solid rgba(139,92,246,.25); border-radius: var(--radius); padding: 32px; margin: 24px 0; }
+        .result-card.visible { display: block; }
+        .result-header { text-align: center; margin-bottom: 24px; }
+        .result-premium { font-size: 2.8em; font-weight: 800; background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .result-label { color: var(--c-text-sec); font-size: .9em; margin-top: 4px; }
+        .result-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 640px) { .result-details { grid-template-columns: 1fr; } }
+        .detail-item { background: rgba(255,255,255,.03); border-radius: var(--radius-sm); padding: 16px; }
+        .detail-item .label { color: var(--c-text-sec); font-size: .82em; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+        .detail-item .value { font-size: 1.1em; font-weight: 700; margin-top: 4px; }
+        .detail-item .value.green { color: var(--c-green); }
+        .includes { margin-top: 20px; }
+        .includes h4 { font-size: .95em; font-weight: 700; margin-bottom: 10px; color: var(--c-accent-bright); }
+        .includes ul { list-style: none; }
+        .includes li { padding: 6px 0; color: var(--c-text-sec); font-size: .9em; }
+        .includes li::before { content: '\2713'; color: var(--c-green); margin-right: 10px; font-weight: 700; }
+
+        /* Lead form */
+        .lead-section { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 40px; margin: 40px 0; text-align: center; }
+        .lead-section h2 { font-size: 1.4em; font-weight: 700; margin-bottom: 8px; }
+        .lead-section .sub { color: var(--c-text-sec); margin-bottom: 24px; font-size: .95em; }
+        .lead-form { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 700px; margin: 0 auto; }
+        @media (max-width: 700px) { .lead-form { grid-template-columns: 1fr; } }
+        .lead-form input {
+            background: rgba(255,255,255,.05); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); padding: 12px 14px; color: var(--c-text);
+            font-family: var(--font); font-size: .95em; outline: none; transition: border-color var(--transition);
+        }
+        .lead-form input:focus { border-color: var(--c-accent); }
+        .btn-lead {
+            grid-column: 1 / -1; background: var(--gradient-accent); color: #fff; border: none;
+            border-radius: var(--radius-sm); padding: 14px 32px;
+            font-family: var(--font); font-size: 1em; font-weight: 700; cursor: pointer;
+        }
+        .btn-lead:hover { opacity: .9; }
+        .form-ok { display: none; color: var(--c-green); font-weight: 600; margin-top: 12px; grid-column: 1 / -1; }
+
+        .footer { border-top: 1px solid var(--c-border); padding: 40px 0; text-align: center; color: var(--c-text-dim); font-size: .85em; margin-top: 40px; }
+        .footer a { color: var(--c-accent); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-inner">
+        <div class="logo">ELP <span>Cargo</span></div>
+        <nav class="nav">
+            <a href="/blog/">Блог</a>
+            <a href="/blog/prices.html">Цены</a>
+            <a href="/blog/calculator.html">Калькулятор</a>
+            <a href="/blog/compare.html">Сравнение</a>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badge">Страхование грузов</div>
+        <h1>Калькулятор страхования<br>международных грузов</h1>
+        <p class="hero-sub">Рассчитайте стоимость страховки за 30 секунд. Полное покрытие рисков на всём маршруте доставки.</p>
+    </section>
+
+    <div class="calc-card">
+        <h2>Параметры груза</h2>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Стоимость груза (USD)</label>
+                <input type="number" id="cargoValue" placeholder="10000" min="100" step="100">
+            </div>
+            <div class="form-group">
+                <label>Тип груза</label>
+                <select id="cargoType">
+                    <option value="standard">Стандартный</option>
+                    <option value="fragile">Хрупкий</option>
+                    <option value="oversized">Негабаритный</option>
+                    <option value="hazardous">Опасный</option>
+                    <option value="perishable">Скоропортящийся</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Маршрут</label>
+                <select id="route">
+                    <option value="eu">Европа (Германия, Италия, Франция)</option>
+                    <option value="china">Китай</option>
+                    <option value="usa">США</option>
+                    <option value="turkey">Турция</option>
+                    <option value="uae">ОАЭ</option>
+                    <option value="korea">Южная Корея</option>
+                    <option value="japan">Япония</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Тип транспорта</label>
+                <select id="transportType">
+                    <option value="air">Авиа</option>
+                    <option value="sea">Море</option>
+                    <option value="auto">Авто</option>
+                    <option value="multi">Мультимодальный</option>
+                </select>
+            </div>
+            <button class="btn-calc" onclick="calculate()">Рассчитать страховку</button>
+        </div>
+    </div>
+
+    <div class="result-card" id="resultCard">
+        <div class="result-header">
+            <div class="result-label">Страховая премия</div>
+            <div class="result-premium" id="premiumAmount">$0</div>
+            <div class="result-label" id="rateInfo"></div>
+        </div>
+        <div class="result-details">
+            <div class="detail-item">
+                <div class="label">Покрытие</div>
+                <div class="value green" id="coverage">$0</div>
+            </div>
+            <div class="detail-item">
+                <div class="label">Тип груза</div>
+                <div class="value" id="typeLabel">—</div>
+            </div>
+            <div class="detail-item">
+                <div class="label">Маршрут</div>
+                <div class="value" id="routeLabel">—</div>
+            </div>
+            <div class="detail-item">
+                <div class="label">Транспорт</div>
+                <div class="value" id="transportLabel">—</div>
+            </div>
+        </div>
+        <div class="includes">
+            <h4>Что входит в страховку:</h4>
+            <ul>
+                <li>Полная стоимость груза + 10% на непредвиденные расходы</li>
+                <li>Повреждение при транспортировке</li>
+                <li>Утеря груза</li>
+                <li>Повреждение при погрузке/разгрузке</li>
+                <li>Стихийные бедствия и форс-мажор</li>
+                <li>Таможенные задержки (компенсация убытков)</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="lead-section">
+        <h2>Застраховать груз</h2>
+        <p class="sub">Оставьте заявку — мы оформим страховку и организуем доставку под ключ</p>
+        <form class="lead-form" id="insuranceForm" onsubmit="submitInsurance(event)">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+            <button type="submit" class="btn-lead">Застраховать груз</button>
+            <div class="form-ok" id="formOk">Спасибо! Наш менеджер свяжется с вами для оформления страховки.</div>
+        </form>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024-2026 ELP Cargo. Международная доставка грузов под ключ.</p>
+        <p style="margin-top:8px"><a href="/blog/">Блог</a> &nbsp;|&nbsp; <a href="/blog/prices.html">Цены</a> &nbsp;|&nbsp; <a href="https://elpcargo.ru">Главная</a></p>
+    </div>
+</footer>
+
+<script>
+var BASE_RATES = { standard: 0.003, fragile: 0.005, oversized: 0.005, hazardous: 0.007, perishable: 0.004 };
+var ROUTE_MULT = { eu: 1.0, china: 1.1, usa: 1.2, turkey: 0.9, uae: 1.0, korea: 1.05, japan: 1.05 };
+var TRANSPORT_MULT = { air: 0.8, sea: 1.2, auto: 1.0, multi: 1.1 };
+var TYPE_LABELS = { standard: 'Стандартный', fragile: 'Хрупкий', oversized: 'Негабаритный', hazardous: 'Опасный', perishable: 'Скоропортящийся' };
+var ROUTE_LABELS = { eu: 'Европа', china: 'Китай', usa: 'США', turkey: 'Турция', uae: 'ОАЭ', korea: 'Южная Корея', japan: 'Япония' };
+var TRANSPORT_LABELS = { air: 'Авиа', sea: 'Море', auto: 'Авто', multi: 'Мультимодальный' };
+var MIN_PREMIUM = 50;
+
+function calculate() {
+    var value = parseFloat(document.getElementById('cargoValue').value);
+    if (!value || value < 100) { alert('Укажите стоимость груза (минимум $100)'); return; }
+    var type = document.getElementById('cargoType').value;
+    var route = document.getElementById('route').value;
+    var transport = document.getElementById('transportType').value;
+
+    var baseRate = BASE_RATES[type];
+    var routeMult = ROUTE_MULT[route];
+    var transportMult = TRANSPORT_MULT[transport];
+
+    var premium = value * baseRate * routeMult * transportMult;
+    if (premium < MIN_PREMIUM) premium = MIN_PREMIUM;
+    premium = Math.ceil(premium);
+
+    var coverage = Math.round(value * 1.1);
+    var effectiveRate = ((premium / value) * 100).toFixed(2);
+
+    document.getElementById('premiumAmount').textContent = '$' + premium.toLocaleString();
+    document.getElementById('rateInfo').textContent = 'Эффективная ставка: ' + effectiveRate + '% от стоимости груза';
+    document.getElementById('coverage').textContent = '$' + coverage.toLocaleString();
+    document.getElementById('typeLabel').textContent = TYPE_LABELS[type];
+    document.getElementById('routeLabel').textContent = ROUTE_LABELS[route];
+    document.getElementById('transportLabel').textContent = TRANSPORT_LABELS[transport];
+
+    var card = document.getElementById('resultCard');
+    card.classList.add('visible');
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function submitInsurance(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        source: 'insurance-calc',
+        cargo_value: document.getElementById('cargoValue').value,
+        cargo_type: document.getElementById('cargoType').value,
+        route: document.getElementById('route').value,
+        transport: document.getElementById('transportType').value,
+        premium: document.getElementById('premiumAmount').textContent,
+        timestamp: new Date().toISOString()
+    };
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }).catch(function(){});
+    form.style.display = 'none';
+    document.getElementById('formOk').style.display = 'block';
+}
+</script>
+</body>
+</html>

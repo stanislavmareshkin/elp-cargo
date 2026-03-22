@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELP Cargo — Доставка грузов под ключ | Европа, Китай, США → Россия</title>
+    <meta name="description"
+        content="Международная логистика с 2011 года. Оплатим, привезём за 2-3 недели, растаможим. 0 потерь.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">
+                <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <path d="M12 2L22 12L12 22L2 12Z" />
+                        <circle cx="12" cy="12" r="2.5" fill="#fff" stroke="none" />
+                    </svg></div>
+                <span class="logo-text">ELP <span>Cargo</span></span>
+            </a>
+            <nav class="header__nav" id="nav">
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#guarantees" class="nav-link">Гарантии</a>
+                <a href="#geography" class="nav-link">География</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <div class="header__right">
+                <a href="tel:+79119200185" class="header__phone">+7 (911) 920‑01‑85</a>
+                <a href="#contacts" class="btn btn--primary btn--sm header__cta">Получить расчёт</a>
+                <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__bg"><canvas id="heroCanvas"></canvas>
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+            <span class="hero__badge reveal">Международная логистика с 2011 года</span>
+            <h1 class="hero__title reveal">Доставка грузов <span class="accent">под&nbsp;ключ</span> из&nbsp;Европы,
+                Китая и&nbsp;США</h1>
+            <p class="hero__subtitle reveal">Оплатим поставщику, привезём за&nbsp;2‑3&nbsp;недели, растаможим
+                и&nbsp;передадим с&nbsp;полным пакетом документов.</p>
+            <div class="hero__features reveal">
+                <div class="hero__feature">
+                    <div class="hero__feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg></div>
+                    <span>Оплатим поставщику с&nbsp;европейских контрактов</span>
+                </div>
+                <div class="hero__feature">
+                    <div class="hero__feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg></div>
+                    <span>Оптимальный маршрут — 2‑3&nbsp;недели из&nbsp;Европы</span>
+                </div>
+                <div class="hero__feature">
+                    <div class="hero__feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg></div>
+                    <span>Растаможим официально — документы для бухгалтерии</span>
+                </div>
+                <div class="hero__feature">
+                    <div class="hero__feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg></div>
+                    <span>0 потерянных грузов за&nbsp;13+ лет работы</span>
+                </div>
+            </div>
+            <div class="hero__actions reveal">
+                <a href="#contacts" class="btn btn--primary btn--lg">Рассчитать доставку <span
+                        class="btn-arrow">→</span></a>
+                <a href="#services" class="btn btn--outline btn--lg">Наши услуги</a>
+            </div>
+            <div class="hero__stats reveal">
+                <div class="stat">
+                    <div class="stat__value"><span class="counter" data-target="13">0</span>+</div><span
+                        class="stat__label">лет на рынке</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__value"><span class="counter" data-target="100">0</span>+</div><span
+                        class="stat__label">поставок / мес</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__value"><span class="counter" data-target="15">0</span>+</div><span
+                        class="stat__label">стран</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__value"><span class="counter" data-target="0">0</span></div><span
+                        class="stat__label">потерь грузов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section section--alt" id="problem">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Проблема</span>
+                <h2 class="section__title">Главная проблема импорта в&nbsp;<em>2026</em></h2>
+                <p class="section__subtitle">Товар есть, поставщик готов — а&nbsp;оплатить и&nbsp;привезти невозможно
+                </p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card reveal">
+                    <div class="icon-box icon-box--accent"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke-width="1.8" stroke-linecap="round">
+                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" />
+                            <line x1="4" y1="4" x2="20" y2="20" stroke="#ef4444" stroke-width="2.5" />
+                        </svg></div>
+                    <h3>Невозможно оплатить</h3>
+                    <p>Европейские компании не&nbsp;принимают оплату из&nbsp;России. Банки блокируют переводы.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="icon-box icon-box--accent"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg></div>
+                    <h3>Долгие сроки</h3>
+                    <p>Маршруты через Среднюю Азию — до&nbsp;1,5‑2&nbsp;месяцев ожидания.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="icon-box icon-box--accent"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg></div>
+                    <h3>Схемы не&nbsp;работают</h3>
+                    <p>Маршруты через Казахстан и&nbsp;ОАЭ всё менее надёжны.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="icon-box icon-box--accent"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 2v6h6" />
+                            <line x1="12" y1="18" x2="12" y2="12" />
+                            <path d="M9 15l3-3 3 3" />
+                        </svg></div>
+                    <h3>Непонятная таможня</h3>
+                    <p>Оформить документы легально для бухгалтерии — задача со звёздочкой.</p>
+                </div>
+            </div>
+            <div class="problem-cta reveal">
+                <div class="problem-cta__inner">⚡ Нужен партнёр, который решит <strong>ВСЕ</strong> эти задачи сразу
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="section section--deep" id="solution">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Наш подход</span>
+                <h2 class="section__title">Полный цикл на&nbsp;<em>своём контракте</em></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline__item reveal">
+                    <div class="timeline__num">1</div>
+                    <div class="timeline__body">
+                        <h3>Оплачиваем поставщику</h3>
+                        <p>С европейских контрактов с&nbsp;банковской историей</p>
+                    </div>
+                </div>
+                <div class="timeline__item reveal">
+                    <div class="timeline__num">2</div>
+                    <div class="timeline__body">
+                        <h3>Забираем груз</h3>
+                        <p>Логистика от&nbsp;двери производителя</p>
+                    </div>
+                </div>
+                <div class="timeline__item reveal">
+                    <div class="timeline__num">3</div>
+                    <div class="timeline__body">
+                        <h3>Доставляем быстро</h3>
+                        <p>Оптимальный маршрут: 2‑3&nbsp;недели из&nbsp;Европы</p>
+                    </div>
+                </div>
+                <div class="timeline__item reveal">
+                    <div class="timeline__num">4</div>
+                    <div class="timeline__body">
+                        <h3>Растаможиваем официально</h3>
+                        <p>На свою компанию. Все пошлины, все документы</p>
+                    </div>
+                </div>
+                <div class="timeline__item reveal">
+                    <div class="timeline__num">5</div>
+                    <div class="timeline__body">
+                        <h3>Передаём вам</h3>
+                        <p>Груз + полный пакет для бухгалтерии и&nbsp;налоговой</p>
+                    </div>
+                </div>
+            </div>
+            <div class="solution-result reveal">
+                <p>Вы выбираете товар — <strong>получаете его в&nbsp;своём городе</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section--alt" id="services">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Услуги</span>
+                <h2 class="section__title">Комплексные <em>логистические</em> решения</h2>
+            </div>
+            <div class="tabs reveal">
+                <div class="tabs__nav">
+                    <button class="tabs__btn active" data-tab="delivery">Доставка</button>
+                    <button class="tabs__btn" data-tab="customs">Таможня</button>
+                    <button class="tabs__btn" data-tab="extra">Дополнительно</button>
+                </div>
+                <div id="tab-delivery" class="tabs__panel active">
+                    <div class="services-grid">
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=360&fit=crop"
+                                alt="Доставка из Европы">
+                            <div class="service-card__body">
+                                <h3>Доставка из&nbsp;Европы</h3>
+                                <p>Авто, авиа, сборные грузы. Германия, Франция, Италия, Чехия, Польша.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=600&h=360&fit=crop"
+                                alt="Доставка из Китая">
+                            <div class="service-card__body">
+                                <h3>Доставка из&nbsp;Китая</h3>
+                                <p>Море, ж/д, авиа из&nbsp;всех провинций. Полный контроль.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=360&fit=crop"
+                                alt="Доставка из США">
+                            <div class="service-card__body">
+                                <h3>Доставка из&nbsp;США</h3>
+                                <p>Авиа, море, экспресс. Любые категории товаров.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-customs" class="tabs__panel">
+                    <div class="services-grid">
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=360&fit=crop"
+                                alt="Таможенное оформление">
+                            <div class="service-card__body">
+                                <h3>Таможенное оформление</h3>
+                                <p>Декларирование, классификация, расчёт пошлин и&nbsp;НДС.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=360&fit=crop"
+                                alt="Сертификация">
+                            <div class="service-card__body">
+                                <h3>Сертификация</h3>
+                                <p>EAC, ГОСТ, разрешительные документы для любых категорий.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=360&fit=crop"
+                                alt="Консультации ВЭД">
+                            <div class="service-card__body">
+                                <h3>Консультации ВЭД</h3>
+                                <p>Таможенное право, оптимизация, снижение рисков.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-extra" class="tabs__panel">
+                    <div class="services-grid">
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=360&fit=crop"
+                                alt="Складская логистика">
+                            <div class="service-card__body">
+                                <h3>Складская логистика</h3>
+                                <p>Консолидация, хранение, маркировка, перегруппировка.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=360&fit=crop"
+                                alt="Страхование">
+                            <div class="service-card__body">
+                                <h3>Страхование</h3>
+                                <p>Полное страхование от&nbsp;всех рисков на&nbsp;весь маршрут.</p>
+                            </div>
+                        </div>
+                        <div class="service-card"><img class="service-card__img"
+                                src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&h=360&fit=crop"
+                                alt="Оплата поставщику">
+                            <div class="service-card__body">
+                                <h3>Оплата поставщику</h3>
+                                <p>EUR, USD с&nbsp;действующих контрактов. Оплата за&nbsp;3‑4&nbsp;дня.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="section section--deep" id="cases">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Портфолио</span>
+                <h2 class="section__title">Реальные <em>проекты</em></h2>
+                <p class="section__subtitle">1200+ успешных поставок за 13 лет</p>
+            </div>
+            <div class="cases-slider" id="casesSlider">
+                <div class="cases-slider__track">
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=400&fit=crop"
+                            alt="Стеклянные флаконы">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Китай → Москва</div>
+                            <h3>Стеклянные флаконы</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Хрупкий груз 10‑20 паллет</p>
+                            <div class="case-card__result"><span class="case-card__tag">0% боя</span><span
+                                    class="case-card__tag">Регулярно</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=400&fit=crop"
+                            alt="LED-панели">
+                        <div class="case-card__body">
+                            <div class="case-card__route">ОАЭ → Москва</div>
+                            <h3>LED-панели 6&nbsp;м</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Негабарит 6&nbsp;м, все отказали</p>
+                            <div class="case-card__result"><span class="case-card__tag">5 дней</span><span
+                                    class="case-card__tag">Авиа</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=400&fit=crop"
+                            alt="Дизайнерская мебель">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Италия + Швейцария → Москва</div>
+                            <h3>Дизайнерская мебель</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Консолидация от 3 поставщиков</p>
+                            <div class="case-card__result"><span class="case-card__tag">0 повреждений</span><span
+                                    class="case-card__tag">White-glove</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=500&h=400&fit=crop"
+                            alt="Контейнеры">
+                        <div class="case-card__body">
+                            <div class="case-card__route">ОАЭ + Сауд.Аравия → Москва</div>
+                            <h3>Проектная логистика</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 6‑7 контейнеров с 3‑4 складов</p>
+                            <div class="case-card__result"><span class="case-card__tag">0 срывов</span><span
+                                    class="case-card__tag">Координатор</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=500&h=400&fit=crop"
+                            alt="МРТ-сканер">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Германия → Казань</div>
+                            <h3>МРТ-сканер €1,2&nbsp;млн</h3>
+                            <p class="case-card__problem"><strong>Вес:</strong> 7 500 кг, высокоточное</p>
+                            <div class="case-card__result"><span class="case-card__tag">3,5 нед.</span><span
+                                    class="case-card__tag">€1.2M</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=500&h=400&fit=crop"
+                            alt="Шампанское">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Франция → СПб</div>
+                            <h3>Винтажное шампанское</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 800 бутылок, +12°C, акцизы</p>
+                            <div class="case-card__result"><span class="case-card__tag">0 потерь</span><span
+                                    class="case-card__tag">12 дней</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?w=500&h=400&fit=crop"
+                            alt="Пивоваренное оборудование">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Чехия → Новосибирск</div>
+                            <h3>Пивоваренное оборудование</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 4 ёмкости по 3т, негабарит</p>
+                            <div class="case-card__result"><span class="case-card__tag">0 повреждений</span><span
+                                    class="case-card__tag">18 дней</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&h=400&fit=crop"
+                            alt="Лабораторное оборудование">
+                        <div class="case-card__body">
+                            <div class="case-card__route">США → Москва</div>
+                            <h3>Лабораторное оборудование</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Санкционная электроника, $340K</p>
+                            <div class="case-card__result"><span class="case-card__tag">$340K</span><span
+                                    class="case-card__tag">5 нед.</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop"
+                            alt="Керамическая плитка">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Польша → Краснодар</div>
+                            <h3>Керамическая плитка 120т</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 6 фур синхронно</p>
+                            <div class="case-card__result"><span class="case-card__tag">120 тонн</span><span
+                                    class="case-card__tag">11 дней</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&h=400&fit=crop"
+                            alt="3D-принтеры">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Китай → Москва</div>
+                            <h3>3D-принтеры промышл.</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 8 единиц по €45K</p>
+                            <div class="case-card__result"><span class="case-card__tag">€360K</span><span
+                                    class="case-card__tag">22 дня</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=500&h=400&fit=crop"
+                            alt="Линия розлива">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Германия → Екатеринбург</div>
+                            <h3>Линия розлива Krones</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 14 тонн, 3 негабаритных модуля</p>
+                            <div class="case-card__result"><span class="case-card__tag">14 тонн</span><span
+                                    class="case-card__tag">19 дней</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&h=400&fit=crop"
+                            alt="Премиальная сантехника">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Италия → Москва</div>
+                            <h3>Премиальная сантехника</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 340 позиций от 5 фабрик</p>
+                            <div class="case-card__result"><span class="case-card__tag">€180K</span><span
+                                    class="case-card__tag">0 боя</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=500&h=400&fit=crop"
+                            alt="Электромоторы">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Китай → Воронеж</div>
+                            <h3>Электромоторы 200&nbsp;шт</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Регулярно каждые 6 недель</p>
+                            <div class="case-card__result"><span class="case-card__tag">6 парт/год</span><span
+                                    class="case-card__tag">0 срывов</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&h=400&fit=crop"
+                            alt="Стомат. кресла">
+                        <div class="case-card__body">
+                            <div class="case-card__route">США → СПб</div>
+                            <h3>Стоматологические кресла</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> 12 кресел, санкционная медтехника</p>
+                            <div class="case-card__result"><span class="case-card__tag">$96K</span><span
+                                    class="case-card__tag">6 нед.</span></div>
+                        </div>
+                    </div>
+                    <div class="case-card"><img class="case-card__img"
+                            src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&h=400&fit=crop"
+                            alt="Горнолыжное оборудование">
+                        <div class="case-card__body">
+                            <div class="case-card__route">Германия + Австрия → Сочи</div>
+                            <h3>Горнолыжное оборудование</h3>
+                            <p class="case-card__problem"><strong>Задача:</strong> Подъёмники 28т, спецтранспорт</p>
+                            <div class="case-card__result"><span class="case-card__tag">28 тонн</span><span
+                                    class="case-card__tag">24 дня</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases-slider__nav"><button class="slider-btn" id="casesPrev">←</button><button
+                        class="slider-btn" id="casesNext">→</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section class="section section--alt" id="guarantees">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Надёжность</span>
+                <h2 class="section__title">Гарантии <em>безопасности</em></h2>
+            </div>
+            <div class="guarantees-grid">
+                <div class="guarantee-card reveal">
+                    <div class="guarantee-card__num">01</div>
+                    <h3>Договор с&nbsp;российским юрлицом</h3>
+                    <p>С обычным ООО, которое можно проверить.</p>
+                </div>
+                <div class="guarantee-card reveal">
+                    <div class="guarantee-card__num">02</div>
+                    <h3>Минимальная предоплата</h3>
+                    <p>Остаток — когда груз в&nbsp;Беларуси.</p>
+                </div>
+                <div class="guarantee-card reveal">
+                    <div class="guarantee-card__num">03</div>
+                    <h3>Отчёт на&nbsp;каждом этапе</h3>
+                    <p>Фото, сканы, трекинг в&nbsp;реальном времени.</p>
+                </div>
+                <div class="guarantee-card reveal">
+                    <div class="guarantee-card__num">04</div>
+                    <h3>Полный пакет документов</h3>
+                    <p>УПД, договор, спецификация — для проверок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEOGRAPHY -->
+    <section class="section section--deep" id="geography">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Маршруты</span>
+                <h2 class="section__title">География и&nbsp;<em>сроки</em></h2>
+            </div>
+            <div class="geo-content reveal">
+                <div class="geo-map"><canvas id="geoCanvas"></canvas>
+                    <div class="geo-tooltip" id="geoTooltip"></div>
+                </div>
+                <div class="geo-routes">
+                    <div class="geo-route">
+                        <div class="geo-route__flag">🇪🇺</div>
+                        <div class="geo-route__info">
+                            <h3>Европа</h3>
+                            <p>Германия, Франция, Италия, Чехия</p>
+                        </div>
+                        <div class="geo-route__time">2‑3 нед.</div>
+                    </div>
+                    <div class="geo-route">
+                        <div class="geo-route__flag">🇨🇳</div>
+                        <div class="geo-route__info">
+                            <h3>Китай</h3>
+                            <p>Все провинции</p>
+                        </div>
+                        <div class="geo-route__time">~1,5 мес.</div>
+                    </div>
+                    <div class="geo-route">
+                        <div class="geo-route__flag">🇺🇸</div>
+                        <div class="geo-route__info">
+                            <h3>США</h3>
+                            <p>Авиа, море, экспресс</p>
+                        </div>
+                        <div class="geo-route__time">~1,5 мес.</div>
+                    </div>
+                    <div class="geo-route">
+                        <div class="geo-route__flag">🇦🇪</div>
+                        <div class="geo-route__info">
+                            <h3>ОАЭ</h3>
+                            <p>Дубай, Абу-Даби</p>
+                        </div>
+                        <div class="geo-route__time">1‑2 нед.</div>
+                    </div>
+                    <div class="geo-route geo-route--compare">
+                        <p>Обычные маршруты: <strong>1,5‑2 месяца</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOODS -->
+    <section class="section section--alt" id="goods">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Каталог</span>
+                <h2 class="section__title">Какие товары <em>доставляем</em></h2>
+            </div>
+            <div class="goods-grid">
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=320&fit=crop"
+                        alt="Стройматериалы">
+                    <div class="goods-card__body">
+                        <h3>Стройматериалы</h3>
+                        <p>Плитка, сантехника</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=500&h=320&fit=crop"
+                        alt="Строительная химия">
+                    <div class="goods-card__body">
+                        <h3>Строительная химия</h3>
+                        <p>Клеи, герметики</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=320&fit=crop"
+                        alt="Мебель">
+                    <div class="goods-card__body">
+                        <h3>Мебель</h3>
+                        <p>Комплектующие</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=500&h=320&fit=crop"
+                        alt="Светотехника">
+                    <div class="goods-card__body">
+                        <h3>Светотехника</h3>
+                        <p>Люстры, LED</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500&h=320&fit=crop"
+                        alt="Автозапчасти">
+                    <div class="goods-card__body">
+                        <h3>Автозапчасти</h3>
+                        <p>Оригинал и аналоги</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&h=320&fit=crop"
+                        alt="Оборудование">
+                    <div class="goods-card__body">
+                        <h3>Оборудование</h3>
+                        <p>Станки, промышл.</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=320&fit=crop"
+                        alt="Электроника">
+                    <div class="goods-card__body">
+                        <h3>Электроника</h3>
+                        <p>Бытовая техника</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=320&fit=crop"
+                        alt="Товары для дома">
+                    <div class="goods-card__body">
+                        <h3>Товары для дома</h3>
+                        <p>Декор, текстиль</p>
+                    </div>
+                </div>
+                <div class="goods-card reveal">
+                    <img class="goods-card__img"
+                        src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&h=320&fit=crop"
+                        alt="Проф. химия">
+                    <div class="goods-card__body">
+                        <h3>Проф.&nbsp;химия</h3>
+                        <p>Клининг, косметика</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO START -->
+    <section class="section section--deep" id="howto">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__eyebrow">Старт</span>
+                <h2 class="section__title">Как начать <em>работу</em></h2>
+            </div>
+            <div class="steps-row">
+                <div class="step-card reveal">
+                    <div class="step-card__num">1</div>
+                    <h3>Присылаете запрос</h3>
+                    <p>Ссылка + количество + город</p>
+                </div>
+                <div class="step-arrow reveal">→</div>
+                <div class="step-card reveal">
+                    <div class="step-card__num">2</div>
+                    <h3>Получаете расчёт</h3>
+                    <p>Одна цифра «под ключ»</p>
+                </div>
+                <div class="step-arrow reveal">→</div>
+                <div class="step-card reveal">
+                    <div class="step-card__num">3</div>
+                    <h3>Оплачиваете</h3>
+                    <p>На российское юрлицо, в рублях</p>
+                </div>
+                <div class="step-arrow reveal">→</div>
+                <div class="step-card reveal">
+                    <div class="step-card__num">4</div>
+                    <h3>Мы делаем всё</h3>
+                    <p>Вы получаете груз + документы</p>
+                </div>
+            </div>
+            <div class="steps-note reveal">Расчёт бесплатный. Обязательств — ноль.</div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__eyebrow">FAQ</span>
+                <h2 class="section__title">Частые <em>вопросы</em></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal"><button class="faq-item__q">Можно ли легально доставить санкционные
+                        товары?<span class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>Да. Реэкспортные схемы через третьи страны. Официальная растаможка, все пошлины, полный пакет
+                            документов.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal"><button class="faq-item__q">Как решаете проблему оплаты европейским
+                        поставщикам?<span class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>Платёжные агенты в&nbsp;дружественных странах. Конвертация за&nbsp;3‑4&nbsp;дня. Действующие
+                            контракты.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal"><button class="faq-item__q">Сколько стоит и&nbsp;как долго?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>Европа — 2‑3&nbsp;недели, Китай/США — ~1,5&nbsp;месяца. Стоимость индивидуальна — одна цифра
+                            «под ключ».</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal"><button class="faq-item__q">Как обеспечивается сохранность груза?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>Проверенные партнёры, страхование. За&nbsp;13+ лет — 0 потерянных грузов.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal"><button class="faq-item__q">С какой суммы можно начать?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>От 50 000 руб. Первый заказ с&nbsp;минимальной предоплатой.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal"><button class="faq-item__q">Какие документы для бухгалтерии?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-item__a">
+                        <p>УПД, договор, спецификация, ТД. С&nbsp;НДС и&nbsp;без. Отсрочка до&nbsp;30&nbsp;дней.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section section--deep" id="contacts">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__eyebrow">Связь</span>
+                <h2 class="section__title">Свяжитесь с&nbsp;<em>экспертом</em></h2>
+                <p class="section__subtitle">Подготовим расчёт в&nbsp;течение дня</p>
+            </div>
+            <div class="contacts-grid reveal">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <div class="contact-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg></div>
+                        <div><strong>Телефон</strong><a href="tel:+79119200185">+7 (911) 920-01-85</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg></div>
+                        <div><strong>Email</strong><a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg></div>
+                        <div><strong>Telegram</strong><a href="https://t.me/ELP_Cargo" target="_blank">@ELP_Cargo</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg></div>
+                        <div><strong>Офис</strong>СПб, Брестский бульвар, 8, оф.&nbsp;719</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#F07A1A" stroke-width="2" stroke-linecap="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg></div>
+                        <div><strong>Режим работы</strong>Пн‑Пт 09:00 — 18:00 МСК</div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group"><input type="text" placeholder="Ваше имя *" required></div>
+                    <div class="form-group"><input type="tel" placeholder="Телефон *" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email"></div>
+                    <div class="form-group"><textarea rows="4" placeholder="Что нужно доставить?"></textarea></div>
+                    <div class="form-group form-group--checkbox"><label><input type="checkbox" required> Согласен
+                            с&nbsp;<a href="#">политикой конфиденциальности</a></label></div>
+                    <button type="submit" class="btn btn--primary btn--lg btn--full">Отправить запрос <span
+                            class="btn-arrow">→</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col"><a href="#" class="header__logo">
+                    <div class="logo-mark" style="width:36px;height:36px"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="20" height="20">
+                            <path d="M12 2L22 12L12 22L2 12Z" />
+                            <circle cx="12" cy="12" r="2.5" fill="#fff" stroke="none" />
+                        </svg></div><span class="logo-text">ELP <span>Cargo</span></span>
+                </a>
+                <p class="footer__desc">Международная логистика с&nbsp;2011&nbsp;года.<br>European Logistics Path</p>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4><a href="#services">Услуги</a><a href="#cases">Кейсы</a><a
+                    href="#guarantees">Гарантии</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4><a href="tel:+79119200185">+7 (911) 920-01-85</a><a
+                    href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a><a href="https://t.me/ELP_Cargo">Telegram</a>
+            </div>
+            <div class="footer__col">
+                <h4>Реквизиты</h4>
+                <p>ИП Нуров В.В.<br>ИНН 503302248367</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2011–2026 ELP Cargo</p><a href="#">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <a href="https://t.me/ELP_Cargo" class="tg-float" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+            fill="#fff">
+            <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+        </svg></a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

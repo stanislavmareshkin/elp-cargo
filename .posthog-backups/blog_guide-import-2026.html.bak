@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 рабочих схем импорта в Россию в 2026 году | Гайд ELP Cargo</title>
+    <meta name="description" content="Полный гайд по импорту товаров в Россию: параллельный импорт, карго из Китая, прямой импорт из ЕС, маршруты через Турцию и ОАЭ, фулфилмент для маркетплейсов.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 28px; }
+        .hero { padding: 60px 0 40px; text-align: center; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-family: var(--font-serif); font-size: 2.2em; font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1em; }
+
+        .chapter { margin: 50px 0; padding: 32px; background: var(--c-bg-card); border-radius: 14px; border: 1px solid var(--c-border); }
+        .chapter-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+        .chapter-num { min-width: 44px; height: 44px; border-radius: 50%; background: rgba(139,92,246,.15); color: var(--c-accent-bright); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1em; }
+        .chapter h2 { font-family: var(--font-serif); font-size: 1.5em; font-weight: 700; line-height: 1.3; }
+        .chapter p { margin-bottom: 14px; color: rgba(255,255,255,.8); }
+        .chapter ul { margin: 12px 0; padding-left: 24px; }
+        .chapter li { margin-bottom: 8px; color: rgba(255,255,255,.75); }
+
+        .cta-box { background: rgba(139,92,246,.08); border: 1px solid rgba(139,92,246,.2); border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+        .cta-box p { color: var(--c-accent-bright); font-weight: 600; margin-bottom: 0; font-size: .95em; }
+
+        .final-cta { text-align: center; padding: 60px 0; }
+        .final-cta h2 { font-family: var(--font-serif); font-size: 1.8em; margin-bottom: 16px; }
+        .final-cta p { color: var(--c-text-sec); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .btn-cta { display: inline-block; padding: 16px 40px; background: var(--gradient-accent); border-radius: 10px; color: #fff; font-weight: 700; font-size: 1.05em; text-decoration: none; transition: opacity .2s; }
+        .btn-cta:hover { opacity: .9; text-decoration: none; }
+        .print-btn { display: inline-block; margin-top: 12px; padding: 10px 24px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 8px; color: var(--c-text-sec); font-size: .88em; cursor: pointer; font-family: var(--font); }
+        .print-btn:hover { background: rgba(255,255,255,.12); color: var(--c-text); }
+
+        .footer { text-align: center; padding: 30px 0; border-top: 1px solid var(--c-border); color: var(--c-text-sec); font-size: .82em; }
+
+        @media print {
+            body { background: #fff; color: #111; }
+            .header, .print-btn, .btn-cta { display: none; }
+            .chapter { background: #f9f9f9; border: 1px solid #ddd; break-inside: avoid; }
+            .cta-box { background: #f0f0ff; border-color: #8B5CF6; }
+            .chapter h2, .hero h1 { color: #111; }
+            .chapter p, .chapter li { color: #333; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">ELP <span>Cargo</span></div>
+            <nav class="nav">
+                <a href="/">Блог</a>
+                <a href="https://elpcargo.ru">Сайт</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-badge">Гайд ELP Cargo 2026</div>
+            <h1>5 рабочих схем импорта в Россию</h1>
+            <p class="hero-sub">Практическое руководство для бизнеса. Актуально на 2026 год.</p>
+            <button class="print-btn" onclick="window.print()">Сохранить как PDF (Ctrl+P)</button>
+        </section>
+
+        <!-- Chapter 1 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">1</div>
+                <h2>Параллельный импорт через Беларусь</h2>
+            </div>
+            <p>Параллельный импорт остаётся одной из самых востребованных схем ввоза санкционных товаров в Россию. Суть проста: товар закупается в ЕС или других странах, проходит таможенное оформление в Беларуси и далее перемещается в Россию в рамках единого таможенного пространства ЕАЭС. Это полностью легальная схема, закреплённая нормативными актами.</p>
+            <p>Ключевое преимущество — скорость. Пока большинство компаний везут европейские товары через Китай или Турцию (1.5-2 месяца), через Беларусь доставка занимает 2-3 недели. При этом вы получаете полный пакет таможенных документов: ДТ, сертификаты соответствия, инвойсы.</p>
+            <p>Важный нюанс: не все товары входят в перечень параллельного импорта. Перед закупкой необходимо проверить товар по кодам ТН ВЭД и убедиться, что он включён в актуальный список Минпромторга. Также стоит учитывать, что некоторые бренды активно борются с параллельным импортом — выбирайте надёжного логистического партнёра с опытом работы по этой схеме.</p>
+            <ul>
+                <li>Срок доставки: 2-3 недели из ЕС (vs 1.5-2 месяца через Азию)</li>
+                <li>Полный пакет таможенных документов</li>
+                <li>Работает для промышленного оборудования, запчастей, электроники</li>
+            </ul>
+            <div class="cta-box">
+                <p>ELP Cargo имеет собственные контракты в ЕС и оформляет параллельный импорт через Беларусь «под ключ». Рассчитать стоимость: ceo@elpcargo.ru</p>
+            </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">2</div>
+                <h2>Карго-доставка из Китая (1688, Alibaba)</h2>
+            </div>
+            <p>Китай — крупнейший поставщик товаров для российского рынка. Карго-доставка (сборный груз) — самый экономичный способ привезти товар из Китая для малого и среднего бизнеса. Вы закупаете на площадках 1688.com, Alibaba или напрямую у фабрик, а карго-компания собирает грузы на складе в Китае и отправляет консолидированную партию.</p>
+            <p>Авиадоставка из Китая занимает 7-14 дней, морская — 30-45 дней. Для хрупких грузов (стекло, парфюмерия, электроника) критически важна спецупаковка. В нашей практике мы доставили более 100 тонн стеклянной упаковки для парфюмерии с 0% боя — благодаря индивидуальной упаковке каждого паллета и контролю погрузки на месте.</p>
+            <p>При карго-доставке из Китая обратите внимание на: выкуп товара (не все карго-компании это делают), страхование груза, прозрачность ценообразования (спрашивайте «всё включено» — доставка + растаможка + доставка до склада). Избегайте компаний, которые называют цену только за «перевозку» — потом добавятся таможня, склад, доставка по России.</p>
+            <ul>
+                <li>Авиа: 7-14 дней, морем: 30-45 дней</li>
+                <li>Выкуп товара на 1688/Alibaba + консолидация</li>
+                <li>Критично: спецупаковка для хрупких грузов</li>
+            </ul>
+            <div class="cta-box">
+                <p>ELP Cargo доставляет из Китая авиа и морем, включая выкуп на 1688. Спецупаковка хрупких грузов — 0% боя. Запрос: ceo@elpcargo.ru</p>
+            </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">3</div>
+                <h2>Прямой импорт из ЕС (оплата через евроконтракты)</h2>
+            </div>
+            <p>Главная проблема импорта из Европы в 2026 году — не логистика, а оплата. Большинство европейских поставщиков не принимают оплату из России напрямую: банки блокируют переводы, SWIFT-платежи возвращаются. Решение — оплата через европейские контракты: ваш логистический партнёр имеет юридическое лицо в ЕС и оплачивает поставщику от своего имени.</p>
+            <p>Эта схема полностью легальна. Товар закупается по контракту европейской компании, проходит экспортное оформление в ЕС, перевозится через Беларусь или другой транзитный пункт, и импортируется в Россию с полным пакетом документов. Вы получаете одну цену «под ключ»: товар + логистика + таможня.</p>
+            <p>Особенно актуально для промышленного оборудования из Германии, Италии, Швейцарии — станков, компрессоров, запчастей для автопрома (BMW, Mercedes, Audi). Также работает для дизайнерской мебели, медицинского оборудования, строительных материалов. Ключевое — найти партнёра с реальными контрактами в ЕС, а не посредника посредника.</p>
+            <ul>
+                <li>Решение проблемы оплаты европейским поставщикам</li>
+                <li>Одна цена «под ключ»: товар + доставка + растаможка</li>
+                <li>Полный комплект документов для бухгалтерии</li>
+            </ul>
+            <div class="cta-box">
+                <p>ELP Cargo имеет собственные контракты в ЕС — оплачиваем поставщикам напрямую. 2-3 недели из Европы. Расчёт: ceo@elpcargo.ru</p>
+            </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">4</div>
+                <h2>Импорт из Турции и ОАЭ (альтернативные маршруты)</h2>
+            </div>
+            <p>Турция и ОАЭ стали ключевыми хабами для реэкспорта в Россию. Через Дубай идут электроника, серверное оборудование, LED-панели, автозапчасти. Через Стамбул — текстиль, продукты питания, строительные материалы, бытовая техника. Оба направления работают без санкционных ограничений на банковские переводы.</p>
+            <p>Из ОАЭ доставка занимает 10-20 дней морем и 3-5 дней авиа. Из Турции — 7-14 дней автотранспортом. При проектной логистике (большие объёмы, несколько точек загрузки) важна координация: мы доставляли 6-7 контейнеров из ОАЭ и Саудовской Аравии одновременно, координируя 3-4 точки загрузки с единым таможенным оформлением.</p>
+            <p>Нюанс с ОАЭ: многие товары в Дубае дороже, чем напрямую из Европы, потому что уже прошли через посредника. Если ваш товар производится в ЕС — сравните стоимость прямого импорта через Беларусь (глава 1) и закупки через ОАЭ. Часто прямой маршрут дешевле и быстрее.</p>
+            <ul>
+                <li>ОАЭ: 3-5 дней авиа, 10-20 дней морем</li>
+                <li>Турция: 7-14 дней автотранспортом</li>
+                <li>Нет санкционных ограничений на оплату</li>
+            </ul>
+            <div class="cta-box">
+                <p>ELP Cargo работает с Турцией и ОАЭ, включая проектную логистику крупных объёмов. Нашли борт ИЛ-96 для 6-метровых LED-панелей. Запрос: ceo@elpcargo.ru</p>
+            </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">5</div>
+                <h2>Фулфилмент для маркетплейсов (WB/Ozon)</h2>
+            </div>
+            <p>Wildberries и Ozon — два крупнейших маркетплейса России. Для продавцов, которые импортируют товары из-за рубежа, критична связка «закупка + доставка + фулфилмент». Идеальная схема: товар приходит на склад в России, маркируется, упаковывается по стандартам маркетплейса и отправляется на склад WB/Ozon.</p>
+            <p>Ключевые требования маркетплейсов: штрихкоды на каждую единицу, честный знак для определённых категорий (одежда, парфюмерия, обувь), сертификаты соответствия. Если ваш товар импортный — все эти документы оформляются на этапе таможни. Важно, чтобы логистическая компания работала «до полки» — то есть не просто привезла товар, а подготовила его к отгрузке на маркетплейс.</p>
+            <p>Совет: при карго-доставке из Китая для маркетплейсов — заказывайте маркировку ещё на китайском складе. Это дешевле, чем маркировать в России, и экономит 2-3 дня. Для европейских товаров маркировка делается на этапе консолидации в Беларуси.</p>
+            <ul>
+                <li>Связка: импорт + растаможка + маркировка + фулфилмент</li>
+                <li>Маркировка на складе в Китае или Беларуси</li>
+                <li>Подготовка документов для Честного знака</li>
+            </ul>
+            <div class="cta-box">
+                <p>ELP Cargo доставляет товары для маркетплейсов «под ключ»: от закупки до отгрузки на склад WB/Ozon. Расчёт: ceo@elpcargo.ru</p>
+            </div>
+        </div>
+
+        <section class="final-cta">
+            <h2>Нужен расчёт доставки?</h2>
+            <p>Отправьте список товаров — подготовим расчёт по оптимальному маршруту в течение часа. Бесплатно.</p>
+            <a href="mailto:ceo@elpcargo.ru?subject=Запрос расчёта из гайда" class="btn-cta">Запросить расчёт</a>
+            <br>
+            <button class="print-btn" onclick="window.print()" style="margin-top:20px;">Сохранить как PDF</button>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2026 ELP Cargo. ceo@elpcargo.ru | +7 911 920 01 85 | Telegram: @ELP_Cargo
+        </div>
+    </footer>
+<script src="/popup.js"></script>
+</body>
+</html>

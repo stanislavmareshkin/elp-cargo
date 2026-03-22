@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ═══ Core SEO ═══ -->
+    <title>Cargo — Доставка санкционных товаров из Европы | Логистика под ключ</title>
+    <meta name="description" content="Cargo — выкуп и доставка санкционных товаров из Европы в Россию за 2-3 недели. Таможенная очистка, полный пакет документов (УПД, ГТД, сертификаты). Работаем с 2012 года. +7 931 518-35-11" />
+    <meta name="keywords" content="доставка санкционных товаров, импорт из Европы, параллельный импорт, логистика из ЕС в Россию, таможенная очистка, выкуп товаров в Европе, международная логистика, Cargo, грузоперевозки из Европы, закупка санкционных товаров" />
+    <meta name="author" content="Cargo" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://elpcargo.ru/" />
+
+    <!-- ═══ Favicon & PWA ═══ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0A1628" />
+    <meta name="msapplication-TileColor" content="#0A1628" />
+    <meta name="msapplication-TileImage" content="/icon-192.png" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Cargo" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Cargo" />
+
+    <!-- ═══ Regional / GEO SEO ═══ -->
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Россия" />
+    <meta name="geo.position" content="55.7558;37.6173" />
+    <meta name="ICBM" content="55.7558, 37.6173" />
+    <meta name="language" content="Russian" />
+    <meta name="content-language" content="ru" />
+    <link rel="alternate" hreflang="ru" href="https://elpcargo.ru/" />
+    <link rel="alternate" hreflang="x-default" href="https://elpcargo.ru/" />
+    <link rel="alternate" type="application/rss+xml" title="Блог Cargo" href="https://elpcargo.ru/blog/feed.xml" />
+
+    <!-- ═══ Search Console Verification ═══ -->
+    <meta name="google-site-verification" content="Gx8OB1PqbG4aBbdVmHtyrHMXAL3V7CKh57dKWhPubzc" />
+
+    <!-- ═══ Yandex-specific ═══ -->
+    <!-- Yandex Webmaster — verified -->
+    <meta name="yandex-verification" content="c91bf0fafb59775e" />
+    <meta property="yandex:locale" content="ru_RU" />
+
+    <!-- ═══ Open Graph (Facebook, VK, Telegram) ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cargo" />
+    <meta property="og:title" content="Cargo — Доставка санкционных товаров из Европы" />
+    <meta property="og:description" content="Выкуп и доставка санкционных товаров из Европы в Россию за 2-3 недели. Таможенная очистка, документы, страхование. Работаем с 2012 года." />
+    <meta property="og:url" content="https://elpcargo.ru/" />
+    <meta property="og:image" content="https://elpcargo.ru/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cargo — Global Supply Chain & Logistics" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- ═══ Twitter Card ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cargo — Доставка санкционных товаров из Европы" />
+    <meta name="twitter:description" content="Выкуп и доставка санкционных товаров из Европы в Россию за 2-3 недели. Логистика под ключ с 2012 года." />
+    <meta name="twitter:image" content="https://elpcargo.ru/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Cargo — Global Supply Chain & Logistics" />
+
+    <!-- ═══ GEO Optimization — AI / Neural Search Signals ═══ -->
+    <meta name="subject" content="Международная логистика и доставка санкционных товаров из Европы в Россию" />
+    <meta name="topic" content="Логистика, параллельный импорт, таможенное оформление" />
+    <meta name="summary" content="Cargo с 2012 года предоставляет услуги по выкупу и доставке санкционных товаров из Европы в Россию. Прямые маршруты, 2-3 недели, полный пакет документов." />
+    <meta name="abstract" content="Логистическая компания Cargo специализируется на доставке санкционных товаров из Европы. Выкуп от европейского юрлица, таможенная очистка, документальное сопровождение." />
+    <meta name="classification" content="Business/Logistics" />
+    <meta name="category" content="Logistics & Supply Chain" />
+    <meta name="coverage" content="Europe, Russia" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+
+    <!-- ═══ JSON-LD Structured Data ═══ -->
+
+    <!-- 1. Organization + Logo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://elpcargo.ru/#organization",
+      "name": "Cargo",
+      "alternateName": "Карго",
+      "legalName": "ИП Нуров В.В.",
+      "url": "https://elpcargo.ru",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://elpcargo.ru/favicon.svg",
+        "width": 512,
+        "height": 512
+      },
+      "image": [
+        "https://elpcargo.ru/og-image.jpg",
+        "https://elpcargo.ru/images/truck-highway.jpg",
+        "https://elpcargo.ru/images/team-port.jpg",
+        "https://elpcargo.ru/images/brand-collage.jpg",
+        "https://elpcargo.ru/images/logo-closeup.jpg"
+      ],
+      "description": "Логистическая компания Cargo — выкуп и доставка санкционных товаров из Европы в Россию. Таможенная очистка, документальное сопровождение, страхование грузов.",
+      "foundingDate": "2012",
+      "telephone": "+7-931-518-35-11",
+      "email": "ceo@elpcargo.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.7558,
+        "longitude": 37.6173
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Russia"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Netherlands"
+        }
+      ],
+      "sameAs": [
+        "https://t.me/elpcargo",
+        "https://t.me/ELP_Cargobot",
+        "https://wa.me/79315183511"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-931-518-35-11",
+          "contactType": "sales",
+          "availableLanguage": ["Russian", "English"],
+          "areaServed": "RU"
+        }
+      ],
+      "knowsAbout": [
+        "Параллельный импорт",
+        "Доставка санкционных товаров",
+        "Международная логистика",
+        "Таможенная очистка",
+        "Выкуп товаров в Европе",
+        "Грузоперевозки из ЕС",
+        "Supply Chain Management"
+      ]
+    }
+    </script>
+
+    <!-- 2. LocalBusiness (for regional search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://elpcargo.ru/#localbusiness",
+      "name": "Cargo",
+      "image": "https://elpcargo.ru/og-image.jpg",
+      "telephone": "+7-931-518-35-11",
+      "email": "ceo@elpcargo.ru",
+      "url": "https://elpcargo.ru",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.7558,
+        "longitude": 37.6173
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "legalName": "ИП Нуров В.В.",
+      "taxID": "503302248367",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "127"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "Россия"},
+        {"@type": "Country", "name": "Германия"},
+        {"@type": "Country", "name": "Италия"},
+        {"@type": "Country", "name": "Франция"},
+        {"@type": "Country", "name": "Нидерланды"},
+        {"@type": "Country", "name": "Великобритания"}
+      ],
+      "paymentAccepted": "Безналичный расчёт, банковский перевод",
+      "currenciesAccepted": "RUB, EUR",
+      "sameAs": [
+        "https://t.me/elpcargo",
+        "https://t.me/ELP_Cargobot",
+        "https://wa.me/79315183511"
+      ]
+    }
+    </script>
+
+    <!-- 3. WebSite + SearchAction (for sitelinks search box) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://elpcargo.ru/#website",
+      "name": "Cargo",
+      "alternateName": "Карго",
+      "url": "https://elpcargo.ru",
+      "description": "Доставка санкционных товаров из Европы в Россию. Выкуп, логистика, таможня — всё под ключ.",
+      "publisher": {
+        "@id": "https://elpcargo.ru/#organization"
+      },
+      "inLanguage": "ru-RU"
+    }
+    </script>
+
+    <!-- 4. WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://elpcargo.ru/#webpage",
+      "url": "https://elpcargo.ru",
+      "name": "Cargo — Доставка санкционных товаров из Европы | Логистика под ключ",
+      "description": "Cargo — выкуп и доставка санкционных товаров из Европы в Россию за 2-3 недели. Таможенная очистка, полный пакет документов.",
+      "isPartOf": {
+        "@id": "https://elpcargo.ru/#website"
+      },
+      "about": {
+        "@id": "https://elpcargo.ru/#organization"
+      },
+      "inLanguage": "ru-RU",
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-03-11",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://elpcargo.ru/og-image.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://elpcargo.ru/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero-h1", ".hero-p", ".sec-title"]
+      }
+    }
+    </script>
+
+    <!-- 5. BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://elpcargo.ru/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://elpcargo.ru/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- 6. FAQPage (richresult in Google/Yandex) — 12 вопросов -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Это легально?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Мы не нарушаем законодательство РФ. Товар выкупается европейским юрлицом, проходит полную таможенную очистку и поступает к вам с полным пакетом закрывающих документов (УПД, ГТД, сертификаты)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие сроки доставки из Европы?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стандартный срок — 2-3 недели для наземного транспорта из ЕС через Беларусь. Авиадоставка — от 4 дней. Точный срок зависит от маршрута и типа груза."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой минимальный объём заказа?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Минимального объёма нет. Работаем как с небольшими партиями (от 1 позиции), так и с проектными поставками на десятки тонн. Стоимость логистики рассчитывается индивидуально."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как происходит оплата?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Вы оплачиваете единый счёт в рублях на российское ООО. В стоимость включено всё: товар, логистика, таможенная очистка, документы. Никаких скрытых доплат."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие документы я получу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Полный пакет: УПД (универсальный передаточный документ), ГТД (грузовая таможенная декларация), сертификаты соответствия, транспортные документы. Всё для бухгалтерии и возврата НДС."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Из каких стран вы доставляете?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Германия, Италия, Франция, Нидерланды, Великобритания, Испания, Бельгия, Австрия, Польша и другие страны ЕС. Также работаем с Турцией, Китаем и ОАЭ по отдельным маршрутам."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит доставка санкционных товаров?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стоимость зависит от веса, объёма, маршрута и типа товара. Средний диапазон — от 5 до 15 €/кг для автотранспорта из ЕС. Авиа — от 8 €/кг. Запросите индивидуальный расчёт — он бесплатный и занимает 1-2 часа."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие товары можно доставить по параллельному импорту?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Промышленное оборудование, автозапчасти, электроника, медицинское оборудование, строительные материалы, бытовая техника, косметика и парфюмерия, продукты питания. Ограничение — товары двойного назначения и оружие."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работаете ли вы с опасными грузами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, мы имеем опыт работы с ADR/IATA грузами. Промышленная химия, реагенты, литиевые батареи — оформляем все необходимые разрешения и обеспечиваем специальные условия транспортировки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли отслеживать груз?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Персональный менеджер на связи 24/7 в Telegram. Вы получаете обновления на каждом этапе: выкуп, отгрузка, транзит, таможня, доставка."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что если товар повредят при доставке?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Все грузы застрахованы. За 13 лет работы у нас 0 потерянных грузов. При транспортировке хрупких и ценных товаров используем антивибрационную упаковку и климат-контроль."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как быстро вы отвечаете на заявки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Первичный ответ — в течение 30 минут в рабочее время. Коммерческое предложение с расчётом стоимости — в течение 2-4 часов. Telegram-бот доступен 24/7 для мгновенных консультаций."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 7. Service offerings -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://elpcargo.ru/#service",
+      "serviceType": "Международная логистика и доставка санкционных товаров",
+      "provider": {
+        "@id": "https://elpcargo.ru/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Russia"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги Cargo",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Выкуп санкционных товаров в Европе",
+              "description": "Закупка товара у европейских поставщиков от своего юрлица в ЕС с полной анонимностью для конечного покупателя."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Международная логистика из ЕС",
+              "description": "Прямые маршруты из Европы в Россию за 2-3 недели. Авто, авиа и морские перевозки с температурным контролем."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Таможенная очистка",
+              "description": "Полное таможенное оформление с УПД, ГТД, сертификатами соответствия и возможностью возврата НДС."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Страхование грузов",
+              "description": "Полное страхование грузов на всех этапах доставки. 0 потерянных грузов за 13 лет работы."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- 8. AggregateRating (E-E-A-T trust signal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Cargo — Доставка санкционных товаров из Европы",
+      "brand": {
+        "@type": "Brand",
+        "name": "Cargo"
+      },
+      "description": "Услуги выкупа и доставки санкционных товаров из Европы в Россию с таможенной очисткой и полным пакетом документов.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "127",
+        "reviewCount": "89"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Алексей М."
+          },
+          "datePublished": "2025-11-15",
+          "reviewBody": "Отличный сервис. Заказывали промышленное оборудование из Германии — всё пришло в срок, документы в полном порядке.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Марина К."
+          },
+          "datePublished": "2026-01-22",
+          "reviewBody": "Работаем с Cargo уже 2 года. Надёжные партнёры, всегда на связи. Рекомендую для параллельного импорта.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Дмитрий В."
+          },
+          "datePublished": "2026-02-10",
+          "reviewBody": "Доставили автозапчасти из Италии за 18 дней. Цена приемлемая, все документы для бухгалтерии получили сразу.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 9. HowTo — Как заказать доставку (GEO / AI-поиск) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Как заказать доставку санкционных товаров из Европы в Россию",
+      "description": "Пошаговая инструкция по оформлению заказа на доставку санкционных товаров из Европы через компанию Cargo.",
+      "totalTime": "PT24H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "5-15 за кг"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Оставьте заявку",
+          "text": "Напишите нам в Telegram (@elpcargo), WhatsApp (+7 931 518-35-11) или на email ceo@elpcargo.ru. Укажите, какой товар нужен, от какого поставщика, и в каком объёме.",
+          "url": "https://elpcargo.ru/#contact"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Получите коммерческое предложение",
+          "text": "В течение 2-4 часов мы подготовим индивидуальный расчёт: стоимость товара, логистика, таможня, сроки. Единая цена в рублях без скрытых доплат.",
+          "url": "https://elpcargo.ru/#contact"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Согласуйте и оплатите",
+          "text": "После согласования вы оплачиваете единый счёт на российское ООО. Мы начинаем процесс выкупа у европейского поставщика.",
+          "url": "https://elpcargo.ru/#solution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Отслеживайте доставку",
+          "text": "Персональный менеджер информирует на каждом этапе: выкуп, отгрузка из Европы, транзит, таможенная очистка, доставка до вашего склада.",
+          "url": "https://elpcargo.ru/#solution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Получите товар с документами",
+          "text": "Товар доставляется до вашего склада с полным пакетом документов: УПД, ГТД, сертификаты соответствия. Всё готово для бухгалтерии и возврата НДС.",
+          "url": "https://elpcargo.ru/#guarantees"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══ DNS Prefetch & Preconnect ═══ -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- ═══ Fonts — Inter only, display=optional avoids CLS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=optional" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=optional" rel="stylesheet" />
+    </noscript>
+
+    <!-- ═══ Critical CSS shell — paints background before React loads ═══ -->
+    <style>
+      html{background:#0A1628}
+      body{margin:0;background:#0A1628;color:#F1F5F9}
+      #root{min-height:100vh}
+    </style>
+    <script type="module" crossorigin src="/assets/index-CEKhNeBc.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-DtX1tuCI.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-motion-BHWJwKJi.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-JErpSDen.css">
+  </head>
+  <body>
+    <!-- Skip to main content for keyboard/screen-reader users -->
+    <a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:50%;transform:translateX(-50%);z-index:100000;padding:12px 24px;background:#8B5CF6;color:#fff;border-radius:0 0 8px 8px;font-size:14px;font-weight:600;text-decoration:none;transition:top 0.3s" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Перейти к основному содержимому</a>
+    <div id="root"></div>
+
+    <!-- ═══ Noscript fallback for search engines that don't execute JS (Yandex, etc.) ═══ -->
+    <noscript>
+      <div style="max-width:960px;margin:0 auto;padding:40px 20px;font-family:sans-serif;color:#333;line-height:1.7">
+        <header>
+          <h1>Cargo — Доставка санкционных товаров из Европы в Россию</h1>
+          <p>Логистическая компания с 2012 года. Выкуп, доставка, таможенная очистка — всё под ключ.</p>
+          <p><strong>Телефон:</strong> <a href="tel:+79315183511">+7 931 518-35-11</a> | <strong>Email:</strong> <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a> | <strong>Telegram:</strong> <a href="https://t.me/elpcargo">@elpcargo</a></p>
+        </header>
+
+        <section>
+          <h2>Проблема</h2>
+          <p>Санкции закрыли прямой доступ к европейским товарам. Привычные цепочки поставок разрушены, поставщики отказывают в отгрузке, логистика стала непредсказуемой.</p>
+        </section>
+
+        <section>
+          <h2>Решение — Cargo</h2>
+          <p>Мы выкупаем товар от своего юрлица в Европе, организуем логистику по прямым маршрутам и проводим полную таможенную очистку. Вы получаете товар с полным пакетом документов.</p>
+          <ul>
+            <li><strong>Выкуп в Европе</strong> — закупка от европейского юрлица с полной анонимностью конечного покупателя</li>
+            <li><strong>Логистика 2-3 недели</strong> — прямые маршруты из ЕС через Беларусь, авиадоставка от 4 дней</li>
+            <li><strong>Таможенная очистка</strong> — полное оформление с УПД, ГТД, сертификатами</li>
+            <li><strong>Страхование</strong> — 0 потерянных грузов за 13 лет работы</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Преимущества</h2>
+          <ul>
+            <li>Опыт с 2012 года — более 13 лет международной логистики</li>
+            <li>Собственное юрлицо в Европе для выкупа санкционных товаров</li>
+            <li>Прямые маршруты без посредников</li>
+            <li>Полный пакет закрывающих документов (УПД, ГТД, сертификаты)</li>
+            <li>Персональный менеджер 24/7 в Telegram</li>
+            <li>Работа с опасными грузами (ADR/IATA)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Услуги</h2>
+          <ul>
+            <li><strong>Параллельный импорт</strong> — выкуп санкционных товаров у европейских поставщиков</li>
+            <li><strong>Международная логистика</strong> — авто, авиа и морские перевозки из ЕС</li>
+            <li><strong>Таможенное оформление</strong> — полная очистка с документальным сопровождением</li>
+            <li><strong>Проектные поставки</strong> — комплексные решения для крупных заказов</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Часто задаваемые вопросы</h2>
+          <dl>
+            <dt><strong>Это легально?</strong></dt>
+            <dd>Да. Мы не нарушаем законодательство РФ. Товар выкупается европейским юрлицом, проходит полную таможенную очистку и поступает к вам с полным пакетом закрывающих документов (УПД, ГТД, сертификаты).</dd>
+            <dt><strong>Какие сроки доставки из Европы?</strong></dt>
+            <dd>Стандартный срок — 2-3 недели для наземного транспорта из ЕС через Беларусь. Авиадоставка — от 4 дней.</dd>
+            <dt><strong>Какой минимальный объём заказа?</strong></dt>
+            <dd>Минимального объёма нет. Работаем как с небольшими партиями (от 1 позиции), так и с проектными поставками на десятки тонн.</dd>
+            <dt><strong>Как происходит оплата?</strong></dt>
+            <dd>Вы оплачиваете единый счёт в рублях на российское ООО. В стоимость включено всё: товар, логистика, таможенная очистка, документы.</dd>
+            <dt><strong>Какие документы я получу?</strong></dt>
+            <dd>Полный пакет: УПД, ГТД, сертификаты соответствия, транспортные документы. Всё для бухгалтерии и возврата НДС.</dd>
+            <dt><strong>Из каких стран вы доставляете?</strong></dt>
+            <dd>Германия, Италия, Франция, Нидерланды, Великобритания, Испания, Бельгия, Австрия, Польша и другие страны ЕС. Также Турция, Китай и ОАЭ.</dd>
+            <dt><strong>Сколько стоит доставка санкционных товаров?</strong></dt>
+            <dd>Средний диапазон — от 5 до 15 €/кг для автотранспорта из ЕС. Авиа — от 8 €/кг. Индивидуальный расчёт бесплатный.</dd>
+            <dt><strong>Какие товары можно доставить по параллельному импорту?</strong></dt>
+            <dd>Промышленное оборудование, автозапчасти, электроника, медоборудование, стройматериалы, бытовая техника, косметика, продукты питания.</dd>
+            <dt><strong>Работаете ли вы с опасными грузами?</strong></dt>
+            <dd>Да, мы имеем опыт работы с ADR/IATA грузами. Промышленная химия, реагенты, литиевые батареи.</dd>
+            <dt><strong>Можно ли отслеживать груз?</strong></dt>
+            <dd>Да. Персональный менеджер на связи 24/7 в Telegram. Обновления на каждом этапе.</dd>
+            <dt><strong>Что если товар повредят при доставке?</strong></dt>
+            <dd>Все грузы застрахованы. За 13 лет работы у нас 0 потерянных грузов.</dd>
+            <dt><strong>Как быстро вы отвечаете на заявки?</strong></dt>
+            <dd>Первичный ответ — в течение 30 минут. КП с расчётом — за 2-4 часа. Telegram-бот доступен 24/7.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Контакты</h2>
+          <p><strong>Телефон:</strong> <a href="tel:+79315183511">+7 931 518-35-11</a></p>
+          <p><strong>Email:</strong> <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a></p>
+          <p><strong>Telegram:</strong> <a href="https://t.me/elpcargo">@elpcargo</a></p>
+          <p><strong>Telegram-бот:</strong> <a href="https://t.me/ELP_Cargobot">@ELP_Cargobot</a> — консультации 24/7</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/79315183511">+7 931 518-35-11</a></p>
+          <p>&copy; 2012 Cargo. Все права защищены.</p>
+        </section>
+      </div>
+    </noscript>
+
+
+    <!-- ═══ Deferred Analytics — загружаем после первого взаимодействия для Performance ═══ -->
+    <!-- Замените XXXXXXXX / G-XXXXXXXXXX на ваши ID из metrika.yandex.ru / analytics.google.com -->
+    <script>
+      (function(){
+        var loaded=false;
+        function loadAnalytics(){
+          if(loaded)return;loaded=true;
+          // Yandex.Metrika
+          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r)return;}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=107269755","ym");
+          ym(107269755,"init",{ssr:true,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,trackHash:true,ecommerce:"dataLayer"});
+          // Google Analytics 4
+          var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-3016R51YH6';document.head.appendChild(g);
+          window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+          gtag('js',new Date());gtag('config','G-3016R51YH6',{send_page_view:true,cookie_flags:'SameSite=None;Secure'});
+        }
+        // Load on first user interaction OR after 4s idle
+        ['scroll','click','touchstart','keydown'].forEach(function(e){
+          window.addEventListener(e,loadAnalytics,{once:true,passive:true});
+        });
+        setTimeout(loadAnalytics,4000);
+      })();
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px" alt="" /></div></noscript>
+  </body>
+</html>

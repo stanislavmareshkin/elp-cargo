@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 рабочих схем импорта в Россию в 2026 году — бесплатный гайд | ELP Cargo</title>
+    <meta name="description" content="Скачайте бесплатный гайд: 5 проверенных схем импорта товаров в Россию в 2026 году. Параллельный импорт, карго из Китая, прямой импорт из ЕС.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/lead-magnet.html">
+    <meta property="og:title" content="5 рабочих схем импорта в Россию — бесплатный гайд">
+    <meta property="og:description" content="Скачайте бесплатный гайд от ELP Cargo: 5 проверенных схем импорта в 2026 году.">
+    <meta property="og:type" content="website">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+        .hero { padding: 80px 0 50px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-family: var(--font-serif); font-size: 2.4em; font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.15em; max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
+
+        .form-card { background: var(--c-bg-card); border: 1px solid rgba(139,92,246,.15); border-radius: 16px; padding: 40px; max-width: 480px; margin: 0 auto 60px; box-shadow: 0 20px 60px rgba(139,92,246,.08); }
+        .form-card input { width: 100%; padding: 14px 18px; margin-bottom: 12px; background: #1a2332; border: 1px solid rgba(255,255,255,.1); border-radius: 8px; color: #fff; font-size: .95em; font-family: var(--font); outline: none; transition: border-color .2s; }
+        .form-card input:focus { border-color: var(--c-accent); }
+        .form-card input::placeholder { color: rgba(255,255,255,.3); }
+        .form-card button { width: 100%; padding: 16px; background: var(--gradient-accent); border: none; border-radius: 8px; color: #fff; font-size: 1.05em; font-weight: 700; cursor: pointer; font-family: var(--font); transition: opacity .2s; margin-top: 4px; }
+        .form-card button:hover { opacity: .9; }
+
+        .chapters { display: grid; gap: 16px; max-width: 600px; margin: 0 auto 80px; }
+        .chapter-item { display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--c-bg-card); border-radius: var(--radius-sm); border: 1px solid var(--c-border); }
+        .chapter-num { min-width: 36px; height: 36px; border-radius: 50%; background: rgba(139,92,246,.15); color: var(--c-accent-bright); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .9em; }
+        .chapter-title { font-weight: 600; font-size: .95em; }
+
+        .trust { text-align: center; padding: 40px 0 60px; color: var(--c-text-sec); font-size: .9em; }
+        .trust-nums { display: flex; justify-content: center; gap: 40px; margin-top: 16px; flex-wrap: wrap; }
+        .trust-item { text-align: center; }
+        .trust-item strong { display: block; font-size: 1.8em; color: var(--c-accent-bright); font-weight: 800; }
+
+        .footer { text-align: center; padding: 30px 0; border-top: 1px solid var(--c-border); color: var(--c-text-sec); font-size: .82em; }
+
+        #result { text-align: center; margin-top: 16px; font-size: .95em; min-height: 24px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">ELP <span>Cargo</span></div>
+            <nav class="nav">
+                <a href="/">Блог</a>
+                <a href="https://elpcargo.ru">Сайт</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-badge">Бесплатный гайд 2026</div>
+            <h1>5 рабочих схем импорта в Россию в 2026 году</h1>
+            <p class="hero-sub">Бесплатный гайд от ELP Cargo — скачайте за 10 секунд. Проверенные маршруты, реальные кейсы, актуальные схемы оплаты.</p>
+        </section>
+
+        <div class="form-card">
+            <form id="lead-form">
+                <input name="name" placeholder="Ваше имя" required>
+                <input name="email" type="email" placeholder="Email" required>
+                <input name="company" placeholder="Компания">
+                <button type="submit" id="submit-btn">Скачать гайд бесплатно</button>
+            </form>
+            <div id="result"></div>
+        </div>
+
+        <h2 style="text-align:center;font-family:var(--font-serif);font-size:1.6em;margin-bottom:24px;">Что внутри гайда</h2>
+        <div class="chapters">
+            <div class="chapter-item"><div class="chapter-num">1</div><div class="chapter-title">Параллельный импорт через Беларусь</div></div>
+            <div class="chapter-item"><div class="chapter-num">2</div><div class="chapter-title">Карго-доставка из Китая (1688, Alibaba)</div></div>
+            <div class="chapter-item"><div class="chapter-num">3</div><div class="chapter-title">Прямой импорт из ЕС (оплата через евроконтракты)</div></div>
+            <div class="chapter-item"><div class="chapter-num">4</div><div class="chapter-title">Импорт из Турции и ОАЭ (альтернативные маршруты)</div></div>
+            <div class="chapter-item"><div class="chapter-num">5</div><div class="chapter-title">Фулфилмент для маркетплейсов (WB/Ozon)</div></div>
+        </div>
+
+        <div class="trust">
+            <p>Гайд подготовлен экспертами ELP Cargo на основе реального опыта</p>
+            <div class="trust-nums">
+                <div class="trust-item"><strong>100+</strong>тонн/мес</div>
+                <div class="trust-item"><strong>0</strong>потерь</div>
+                <div class="trust-item"><strong>50+</strong>клиентов</div>
+                <div class="trust-item"><strong>13</strong>лет опыта</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2026 ELP Cargo. ceo@elpcargo.ru | +7 911 920 01 85 | Telegram: @ELP_Cargo
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('lead-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var btn = document.getElementById('submit-btn');
+        var result = document.getElementById('result');
+        btn.disabled = true;
+        btn.textContent = 'Отправляем...';
+
+        var formData = {
+            name: this.name.value,
+            email: this.email.value,
+            company: this.company.value,
+            source: 'lead-magnet'
+        };
+
+        try {
+            var res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+        } catch(err) {}
+
+        // Always redirect to guide (even if API fails)
+        window.location.href = 'guide-import-2026.html';
+    });
+    </script>
+<script src="/popup.js"></script>
+<script src="/form-recovery.js" async></script>
+</body>
+</html>

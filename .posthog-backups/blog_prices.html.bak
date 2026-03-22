@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стоимость доставки из Европы, Китая, ОАЭ в Россию | ELP Cargo</title>
+    <meta name="description" content="Прозрачные цены на доставку санкционных товаров. Авто от 5 EUR/кг, авиа от 8 EUR/кг. Калькулятор стоимости онлайн. ELP Cargo — импорт под ключ.">
+    <meta name="keywords" content="стоимость доставки из Европы, цена доставки из Германии, тарифы грузоперевозки из Италии, калькулятор доставки из ЕС">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+    <link rel="canonical" href="http://blog.elpcargo.ru/prices.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0A1628; color: #E2E8F0; line-height: 1.7; }
+        .header { background: #0F1D32; padding: 20px 0; border-bottom: 1px solid #1E3A5F; }
+        .header a { color: #60A5FA; text-decoration: none; font-size: 1.1em; font-weight: 600; }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: 2em; margin: 35px 0 10px; color: #F1F5F9; }
+        .subtitle { color: #94A3B8; margin-bottom: 30px; font-size: 1.05em; }
+        h2 { font-size: 1.35em; margin: 35px 0 15px; color: #60A5FA; }
+        p { margin-bottom: 15px; color: #CBD5E1; }
+
+        /* Price table */
+        .price-table { width: 100%; border-collapse: collapse; margin: 20px 0 30px; }
+        .price-table th { background: #1E3A5F; color: #F1F5F9; padding: 12px 15px; text-align: left; font-weight: 600; }
+        .price-table td { padding: 12px 15px; border-bottom: 1px solid #1E3A5F; color: #CBD5E1; }
+        .price-table tr:hover td { background: #0F1D32; }
+        .price { color: #34D399; font-weight: 600; font-size: 1.1em; }
+        .note { color: #94A3B8; font-size: 0.85em; }
+
+        /* Calculator */
+        .calc { background: #0F1D32; border: 1px solid #1E3A5F; border-radius: 12px; padding: 30px; margin: 30px 0; }
+        .calc h2 { margin-top: 0; }
+        .form-row { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .form-group { flex: 1; min-width: 200px; }
+        .form-group label { display: block; color: #94A3B8; margin-bottom: 5px; font-size: 0.9em; }
+        .form-group select, .form-group input {
+            width: 100%; padding: 10px 12px; background: #1E3A5F; border: 1px solid #2D4A6F;
+            color: #F1F5F9; border-radius: 6px; font-size: 1em;
+        }
+        .btn { background: #2563EB; color: white; border: none; padding: 12px 30px; border-radius: 6px;
+               font-size: 1em; cursor: pointer; font-weight: 600; margin-top: 10px; }
+        .btn:hover { background: #1D4ED8; }
+        .result { background: #1A3550; border: 1px solid #34D399; border-radius: 8px; padding: 20px;
+                  margin-top: 20px; display: none; }
+        .result .total { font-size: 1.8em; color: #34D399; font-weight: 700; }
+        .result .breakdown { color: #94A3B8; margin-top: 10px; font-size: 0.9em; }
+
+        /* CTA */
+        .cta { background: #1E3A5F; border: 1px solid #60A5FA; border-radius: 8px; padding: 25px;
+               margin: 35px 0; text-align: center; }
+        .cta a { color: #60A5FA; font-weight: 600; font-size: 1.15em; text-decoration: none; }
+        .cta p { color: #94A3B8; margin: 10px 0 0; font-size: 0.9em; }
+
+        .footer { border-top: 1px solid #1E3A5F; padding: 30px 0; text-align: center; color: #64748B; font-size: 0.85em; }
+        .footer a { color: #60A5FA; text-decoration: none; }
+
+        .badge { display: inline-block; background: #34D399; color: #0A1628; padding: 3px 10px;
+                 border-radius: 4px; font-size: 0.75em; font-weight: 700; vertical-align: middle; margin-left: 8px; }
+    </style>
+</head>
+<body>
+    <div class="header"><div class="container"><a href="https://elpcargo.ru">ELP Cargo</a> &nbsp;/&nbsp; <a href="/blog/">Блог</a> &nbsp;/&nbsp; Цены</div></div>
+
+    <div class="container">
+        <h1>Стоимость доставки <span class="badge">ПРОЗРАЧНЫЕ ЦЕНЫ</span></h1>
+        <p class="subtitle">Одна цена «под ключ»: товар + доставка + растаможка + документы. Без скрытых доплат.</p>
+
+        <h2>Доставка из Европы в Россию</h2>
+        <table class="price-table">
+            <tr><th>Тип доставки</th><th>Срок</th><th>Стоимость</th><th>Мин. вес</th></tr>
+            <tr><td>Авто (фура/сборный)</td><td>2-3 недели</td><td class="price">от 5 EUR/кг</td><td>от 50 кг</td></tr>
+            <tr><td>Авиа (экспресс)</td><td>4-7 дней</td><td class="price">от 8 EUR/кг</td><td>от 10 кг</td></tr>
+            <tr><td>Морской контейнер</td><td>4-6 недель</td><td class="price">от 2 EUR/кг</td><td>от 500 кг</td></tr>
+        </table>
+        <p class="note">* Цены ориентировочные. Точный расчёт зависит от типа товара, объёма и маршрута. Запросите индивидуальный расчёт.</p>
+
+        <h2>Доставка из Китая в Россию</h2>
+        <table class="price-table">
+            <tr><th>Тип доставки</th><th>Срок</th><th>Стоимость</th><th>Мин. вес</th></tr>
+            <tr><td>Авиа</td><td>5-10 дней</td><td class="price">от 6 USD/кг</td><td>от 20 кг</td></tr>
+            <tr><td>Ж/Д</td><td>18-25 дней</td><td class="price">от 3 USD/кг</td><td>от 100 кг</td></tr>
+            <tr><td>Морской</td><td>35-50 дней</td><td class="price">от 1.5 USD/кг</td><td>от 500 кг</td></tr>
+        </table>
+
+        <h2>Доставка из ОАЭ / Ближнего Востока</h2>
+        <table class="price-table">
+            <tr><th>Тип доставки</th><th>Срок</th><th>Стоимость</th><th>Мин. вес</th></tr>
+            <tr><td>Авиа</td><td>3-5 дней</td><td class="price">от 7 USD/кг</td><td>от 20 кг</td></tr>
+            <tr><td>Морской</td><td>3-5 недель</td><td class="price">от 2 USD/кг</td><td>от 300 кг</td></tr>
+        </table>
+
+        <h2>Что входит в стоимость</h2>
+        <ul style="margin: 15px 0 25px 20px; color: #CBD5E1;">
+            <li>Оплата поставщику с наших европейских контрактов</li>
+            <li>Забор груза от поставщика / со склада</li>
+            <li>Международная перевозка (авто / авиа / море)</li>
+            <li>Таможенное оформление в Беларуси</li>
+            <li>Доставка до вашего склада в России</li>
+            <li>Полный пакет документов: УПД, ГТД, сертификаты</li>
+        </ul>
+
+        <!-- Calculator -->
+        <div class="calc">
+            <h2>Калькулятор стоимости</h2>
+            <p style="color: #94A3B8; margin-bottom: 20px;">Получите предварительный расчёт за 10 секунд</p>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Откуда</label>
+                    <select id="origin">
+                        <option value="eu">Европа (ЕС)</option>
+                        <option value="cn">Китай</option>
+                        <option value="uae">ОАЭ / Ближний Восток</option>
+                        <option value="us">США</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Тип доставки</label>
+                    <select id="delivery">
+                        <option value="auto">Авто / Ж/Д</option>
+                        <option value="air">Авиа (экспресс)</option>
+                        <option value="sea">Морской</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Вес груза (кг)</label>
+                    <input type="number" id="weight" value="100" min="1" max="50000">
+                </div>
+                <div class="form-group">
+                    <label>Стоимость товара (EUR/USD)</label>
+                    <input type="number" id="value" value="5000" min="100">
+                </div>
+            </div>
+            <button class="btn" onclick="calculate()">Рассчитать</button>
+
+            <div class="result" id="result">
+                <div>Ориентировочная стоимость «под ключ»:</div>
+                <div class="total" id="totalPrice"></div>
+                <div class="breakdown" id="breakdown"></div>
+                <p style="margin-top: 15px; color: #60A5FA;">Для точного расчёта отправьте запрос — ответим в течение часа</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="mailto:ceo@elpcargo.ru?subject=Запрос на расчёт доставки">Запросить точный расчёт</a>
+            <p>ceo@elpcargo.ru &bull; +7 911 920 01 85 &bull; Telegram: @ELP_Cargo</p>
+        </div>
+
+        <h2>Почему наши цены конкурентны</h2>
+        <ul style="margin: 15px 0 25px 20px; color: #CBD5E1;">
+            <li><strong>Маршрут через Беларусь</strong> — быстрее и дешевле, чем через Казахстан или Турцию</li>
+            <li><strong>Свои контракты в Европе</strong> — нет посредников, прямая оплата поставщику</li>
+            <li><strong>100+ тонн ежемесячно</strong> — объёмные скидки от перевозчиков</li>
+            <li><strong>0 потерянных грузов</strong> — не тратите на страховые случаи</li>
+        </ul>
+    </div>
+
+    <div class="footer"><div class="container">&copy; 2026 <a href="https://elpcargo.ru">ELP Cargo</a> — Доставка санкционных товаров</div></div>
+
+    <script>
+    const rates = {
+        eu:  { auto: 5, air: 8, sea: 2, currency: 'EUR', times: { auto: '2-3 нед', air: '4-7 дн', sea: '4-6 нед' }},
+        cn:  { auto: 3, air: 6, sea: 1.5, currency: 'USD', times: { auto: '18-25 дн', air: '5-10 дн', sea: '35-50 дн' }},
+        uae: { auto: 4, air: 7, sea: 2, currency: 'USD', times: { auto: '2-3 нед', air: '3-5 дн', sea: '3-5 нед' }},
+        us:  { auto: 5, air: 9, sea: 2.5, currency: 'USD', times: { auto: '3-4 нед', air: '5-7 дн', sea: '5-7 нед' }},
+    };
+
+    function calculate() {
+        const origin = document.getElementById('origin').value;
+        const delivery = document.getElementById('delivery').value;
+        const weight = parseFloat(document.getElementById('weight').value) || 100;
+        const goodsValue = parseFloat(document.getElementById('value').value) || 5000;
+
+        const r = rates[origin];
+        const ratePerKg = r[delivery];
+        const currency = r.currency;
+        const time = r.times[delivery];
+
+        const deliveryCost = weight * ratePerKg;
+        const customsDuty = goodsValue * 0.15; // ~15% average customs + VAT
+        const totalMin = deliveryCost + customsDuty;
+        const totalMax = totalMin * 1.3;
+
+        document.getElementById('totalPrice').textContent =
+            `${Math.round(totalMin).toLocaleString()} — ${Math.round(totalMax).toLocaleString()} ${currency}`;
+
+        document.getElementById('breakdown').innerHTML =
+            `Доставка: ~${Math.round(deliveryCost)} ${currency} (${weight} кг × ${ratePerKg} ${currency}/кг)<br>` +
+            `Таможня + НДС: ~${Math.round(customsDuty)} ${currency}<br>` +
+            `Срок: ${time}<br>` +
+            `<br><em>* Расчёт приблизительный. Точная стоимость зависит от типа товара и объёма.</em>`;
+
+        document.getElementById('result').style.display = 'block';
+    }
+    </script>
+<script src="/popup.js"></script>
+</body>
+</html>

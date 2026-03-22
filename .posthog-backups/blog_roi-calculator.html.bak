@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Калькулятор: Сколько вы сэкономите с ELP Cargo | ELP Cargo</title>
+    <meta name="description" content="Рассчитайте экономию на международной доставке с ELP Cargo. Узнайте, сколько вы сэкономите на доставке из Китая, Европы, Турции, ОАЭ.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/roi-calculator.html">
+    <meta property="og:title" content="ROI Калькулятор: Сколько вы сэкономите с ELP Cargo">
+    <meta property="og:description" content="Рассчитайте экономию на международной доставке. Стоимость, сроки, оплата поставщикам.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ELP Cargo">
+    <meta property="og:url" content="https://blog.elpcargo.ru/roi-calculator.html">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"ROI Калькулятор ELP Cargo","description":"Рассчитайте экономию на международной доставке с ELP Cargo","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"RUB"},"author":{"@type":"Organization","name":"ELP Cargo","url":"https://elpcargo.ru"}}</script>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --c-green: #22c55e; --c-green-bg: rgba(34,197,94,.1);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; text-decoration: none; }
+        .nav a:hover { color: var(--c-accent); text-decoration: none; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+        .hero { padding: 60px 0 40px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-family: var(--font-serif); font-size: 2.2em; font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.05em; max-width: 600px; margin: 0 auto; }
+
+        .calc-card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 40px; margin-bottom: 40px; }
+        .calc-card h2 { font-family: var(--font-serif); font-size: 1.4em; margin-bottom: 28px; }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+        .field { display: flex; flex-direction: column; }
+        .field label { font-size: .85em; font-weight: 600; color: var(--c-text-sec); margin-bottom: 6px; }
+        .field input, .field select { background: rgba(255,255,255,.05); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--c-text); font-size: 1em; font-family: var(--font); transition: border-color var(--transition); }
+        .field input:focus, .field select:focus { outline: none; border-color: var(--c-accent); }
+        .field input::placeholder { color: var(--c-text-dim); }
+        .field select option { background: #1a1a2e; color: var(--c-text); }
+
+        .field-full { grid-column: 1 / -1; }
+
+        .toggle-row { display: flex; align-items: center; gap: 12px; }
+        .toggle { position: relative; width: 48px; height: 26px; background: rgba(255,255,255,.1); border-radius: 13px; cursor: pointer; transition: background var(--transition); flex-shrink: 0; }
+        .toggle.active { background: var(--c-accent); }
+        .toggle::after { content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: white; border-radius: 50%; transition: transform var(--transition); }
+        .toggle.active::after { transform: translateX(22px); }
+        .toggle-label { font-size: .9em; color: var(--c-text-sec); }
+
+        .btn-calc { width: 100%; background: var(--gradient-accent); border: none; border-radius: var(--radius-sm); padding: 16px; color: white; font-size: 1.05em; font-weight: 700; cursor: pointer; transition: opacity var(--transition), transform var(--transition); font-family: var(--font); margin-top: 8px; }
+        .btn-calc:hover { opacity: .9; transform: translateY(-1px); }
+
+        /* Results */
+        .results { display: none; margin-top: 32px; animation: fadeIn .5s ease; }
+        .results.visible { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+        @media (max-width: 600px) { .results-grid { grid-template-columns: 1fr; } }
+
+        .result-card { background: rgba(34,197,94,.06); border: 1px solid rgba(34,197,94,.15); border-radius: var(--radius); padding: 24px; text-align: center; }
+        .result-card.accent { background: rgba(139,92,246,.08); border-color: rgba(139,92,246,.2); }
+        .result-icon { font-size: 1.6em; margin-bottom: 8px; }
+        .result-value { font-size: 1.8em; font-weight: 800; color: var(--c-green); margin-bottom: 4px; }
+        .result-card.accent .result-value { color: var(--c-accent-bright); }
+        .result-label { color: var(--c-text-sec); font-size: .82em; }
+
+        .savings-breakdown { background: rgba(255,255,255,.03); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 32px; }
+        .savings-breakdown h3 { font-size: 1em; margin-bottom: 16px; color: var(--c-text); }
+        .breakdown-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--c-border); }
+        .breakdown-row:last-child { border-bottom: none; }
+        .breakdown-label { color: var(--c-text-sec); font-size: .9em; }
+        .breakdown-value { font-weight: 700; color: var(--c-green); font-size: .9em; }
+        .breakdown-value.negative { color: #ef4444; }
+
+        .annual-highlight { background: var(--gradient-accent); border-radius: var(--radius); padding: 32px; text-align: center; margin-bottom: 32px; }
+        .annual-highlight .big-number { font-size: 2.4em; font-weight: 800; color: white; }
+        .annual-highlight .big-label { color: rgba(255,255,255,.7); font-size: .95em; margin-top: 4px; }
+
+        /* Lead Form */
+        .lead-form { background: var(--c-bg-card); border: 1px solid rgba(139,92,246,.2); border-radius: var(--radius); padding: 40px; text-align: center; display: none; }
+        .lead-form.visible { display: block; }
+        .lead-form h3 { font-family: var(--font-serif); font-size: 1.3em; margin-bottom: 8px; }
+        .lead-form p { color: var(--c-text-sec); font-size: .92em; margin-bottom: 24px; }
+        .lead-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        @media (max-width: 500px) { .lead-form-grid { grid-template-columns: 1fr; } }
+        .lead-form input { background: rgba(255,255,255,.05); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--c-text); font-size: .95em; font-family: var(--font); width: 100%; }
+        .lead-form input:focus { outline: none; border-color: var(--c-accent); }
+        .lead-form .btn-submit { background: var(--gradient-accent); border: none; border-radius: var(--radius-sm); padding: 14px 40px; color: white; font-size: 1em; font-weight: 700; cursor: pointer; font-family: var(--font); transition: opacity var(--transition); }
+        .lead-form .btn-submit:hover { opacity: .9; }
+        .lead-form .success-msg { display: none; color: var(--c-green); font-weight: 600; margin-top: 16px; }
+
+        .footer { border-top: 1px solid var(--c-border); padding: 40px 0; text-align: center; color: var(--c-text-sec); font-size: .82em; margin-top: 60px; }
+        .footer a { color: var(--c-accent); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">ELP <span>Cargo</span></a>
+            <nav class="nav">
+                <a href="/calculator.html">Калькулятор</a>
+                <a href="/roi-calculator.html">ROI</a>
+                <a href="https://elpcargo.ru">Сайт</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-badge">ROI Калькулятор</div>
+            <h1>Сколько вы сэкономите с ELP Cargo</h1>
+            <p class="hero-sub">Введите ваши текущие параметры доставки — мы покажем реальную экономию на стоимости, сроках и рисках</p>
+        </section>
+
+        <div class="calc-card">
+            <h2>Ваши текущие параметры</h2>
+            <div class="form-grid">
+                <div class="field">
+                    <label>Текущая стоимость доставки за кг ($)</label>
+                    <input type="number" id="currentRate" placeholder="6" min="0" step="0.5" value="">
+                </div>
+                <div class="field">
+                    <label>Текущий срок доставки (дней)</label>
+                    <input type="number" id="currentDays" placeholder="35" min="1" value="">
+                </div>
+                <div class="field">
+                    <label>Объём грузов в месяц (кг)</label>
+                    <input type="number" id="monthlyVolume" placeholder="1000" min="1" value="">
+                </div>
+                <div class="field">
+                    <label>Количество поставок в месяц</label>
+                    <input type="number" id="monthlyShipments" placeholder="4" min="1" value="">
+                </div>
+                <div class="field field-full">
+                    <label>Есть ли проблемы с оплатой поставщикам?</label>
+                    <div class="toggle-row" style="margin-top: 8px;">
+                        <div class="toggle" id="paymentToggle" onclick="togglePayment()"></div>
+                        <span class="toggle-label" id="paymentLabel">Нет, оплата без проблем</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-calc" onclick="calculate()">Рассчитать экономию</button>
+
+            <div class="results" id="results">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">💰</div>
+                        <div class="result-value" id="monthlySavings">$0</div>
+                        <div class="result-label">Экономия в месяц</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⏱</div>
+                        <div class="result-value" id="timeSaved">0 дн</div>
+                        <div class="result-label">Быстрее доставка</div>
+                    </div>
+                    <div class="result-card accent">
+                        <div class="result-icon">🛡</div>
+                        <div class="result-value" id="riskReduction">0%</div>
+                        <div class="result-label">Снижение рисков</div>
+                    </div>
+                </div>
+
+                <div class="savings-breakdown">
+                    <h3>Детализация экономии</h3>
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">Ваша текущая ставка за кг</span>
+                        <span class="breakdown-value negative" id="brkCurrentRate">$0</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">Ставка ELP Cargo (ср.)</span>
+                        <span class="breakdown-value" id="brkElpRate">$4.00</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">Экономия на доставке / мес</span>
+                        <span class="breakdown-value" id="brkDeliverySave">$0</span>
+                    </div>
+                    <div class="breakdown-row" id="paymentRow" style="display:none;">
+                        <span class="breakdown-label">Экономия на оплате поставщикам (3-5% комиссии vs SWIFT)</span>
+                        <span class="breakdown-value" id="brkPaymentSave">$0</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span class="breakdown-label">Экономия времени</span>
+                        <span class="breakdown-value" id="brkTimeSave">0 дней</span>
+                    </div>
+                </div>
+
+                <div class="annual-highlight">
+                    <div class="big-number" id="annualSavings">$0</div>
+                    <div class="big-label">Годовая экономия с ELP Cargo</div>
+                </div>
+
+                <div class="lead-form visible" id="leadForm">
+                    <h3>Получить детальный расчёт</h3>
+                    <p>Оставьте контакт — подготовим индивидуальное предложение с точными ставками для вашего маршрута</p>
+                    <div class="lead-form-grid">
+                        <input type="text" id="leadName" placeholder="Ваше имя" autocomplete="name">
+                        <input type="email" id="leadEmail" placeholder="Email" autocomplete="email">
+                        <input type="tel" id="leadPhone" placeholder="Телефон" autocomplete="tel">
+                        <input type="text" id="leadCompany" placeholder="Компания" autocomplete="organization">
+                    </div>
+                    <button class="btn-submit" onclick="submitLead()">Получить расчёт</button>
+                    <div class="success-msg" id="successMsg">Спасибо! Мы свяжемся с вами в течение 2 часов.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024-2026 <a href="https://elpcargo.ru">ELP Cargo</a> — Международная логистика и параллельный импорт</p>
+            <p style="margin-top:8px;">Станислав Марешкин | <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a> | <a href="https://t.me/ELP_Cargo">@ELP_Cargo</a></p>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+        // Form recovery integration
+        if (typeof window.ELPFormRecovery === 'undefined') {
+            var s = document.createElement('script');
+            s.src = '/form-recovery.js';
+            s.async = true;
+            document.head.appendChild(s);
+        }
+    })();
+
+    var hasPaymentIssues = false;
+
+    function togglePayment() {
+        hasPaymentIssues = !hasPaymentIssues;
+        var toggle = document.getElementById('paymentToggle');
+        var label = document.getElementById('paymentLabel');
+        if (hasPaymentIssues) {
+            toggle.classList.add('active');
+            label.textContent = 'Да, есть сложности с оплатой';
+        } else {
+            toggle.classList.remove('active');
+            label.textContent = 'Нет, оплата без проблем';
+        }
+    }
+
+    function calculate() {
+        var currentRate = parseFloat(document.getElementById('currentRate').value) || 6;
+        var currentDays = parseInt(document.getElementById('currentDays').value) || 35;
+        var monthlyVolume = parseFloat(document.getElementById('monthlyVolume').value) || 1000;
+        var monthlyShipments = parseInt(document.getElementById('monthlyShipments').value) || 4;
+
+        // ELP Cargo rates (averages)
+        var elpRate = 4.0; // avg $4/kg
+        var elpDays = Math.max(14, currentDays - 14); // 2-3 weeks faster
+        var timeSaved = Math.max(0, currentDays - elpDays);
+
+        // Delivery cost savings
+        var currentMonthlyCost = currentRate * monthlyVolume;
+        var elpMonthlyCost = elpRate * monthlyVolume;
+        var deliverySavings = Math.max(0, currentMonthlyCost - elpMonthlyCost);
+
+        // Payment facilitation savings (if applicable)
+        var paymentSavings = 0;
+        if (hasPaymentIssues) {
+            // Typical SWIFT fees: 5-8% vs ELP commission: 2-3%, saving 3-5%
+            var estimatedMonthlyPayment = currentMonthlyCost * 1.5; // rough goods value
+            paymentSavings = estimatedMonthlyPayment * 0.04; // avg 4% saving
+        }
+
+        var totalMonthlySavings = deliverySavings + paymentSavings;
+        var annualSavings = totalMonthlySavings * 12;
+
+        // Risk reduction (shipment consolidation, customs handling)
+        var riskPct = 25;
+        if (hasPaymentIssues) riskPct += 20;
+        if (currentDays > 30) riskPct += 10;
+        if (monthlyShipments > 3) riskPct += 10;
+        riskPct = Math.min(riskPct, 65);
+
+        // Update UI
+        document.getElementById('monthlySavings').textContent = '$' + formatNum(totalMonthlySavings);
+        document.getElementById('timeSaved').textContent = timeSaved + ' дн';
+        document.getElementById('riskReduction').textContent = riskPct + '%';
+        document.getElementById('annualSavings').textContent = '$' + formatNum(annualSavings);
+
+        document.getElementById('brkCurrentRate').textContent = '$' + currentRate.toFixed(2);
+        document.getElementById('brkElpRate').textContent = '$' + elpRate.toFixed(2);
+        document.getElementById('brkDeliverySave').textContent = '$' + formatNum(deliverySavings);
+        document.getElementById('brkTimeSave').textContent = timeSaved + ' дней / поставка';
+
+        if (hasPaymentIssues) {
+            document.getElementById('paymentRow').style.display = 'flex';
+            document.getElementById('brkPaymentSave').textContent = '$' + formatNum(paymentSavings);
+        } else {
+            document.getElementById('paymentRow').style.display = 'none';
+        }
+
+        document.getElementById('results').classList.add('visible');
+
+        // Scroll to results
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Track calculation event
+        try {
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    source: 'roi-calculator',
+                    event: 'calculation',
+                    data: {
+                        currentRate: currentRate,
+                        currentDays: currentDays,
+                        monthlyVolume: monthlyVolume,
+                        monthlyShipments: monthlyShipments,
+                        paymentIssues: hasPaymentIssues,
+                        estimatedSavings: totalMonthlySavings
+                    }
+                })
+            }).catch(function(){});
+        } catch(e) {}
+    }
+
+    function formatNum(n) {
+        return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function submitLead() {
+        var name = document.getElementById('leadName').value.trim();
+        var email = document.getElementById('leadEmail').value.trim();
+        var phone = document.getElementById('leadPhone').value.trim();
+        var company = document.getElementById('leadCompany').value.trim();
+
+        if (!email && !phone) {
+            alert('Укажите email или телефон');
+            return;
+        }
+
+        var data = {
+            source: 'roi-calculator-lead',
+            name: name,
+            email: email,
+            phone: phone,
+            company: company,
+            currentRate: document.getElementById('currentRate').value,
+            monthlyVolume: document.getElementById('monthlyVolume').value,
+            paymentIssues: hasPaymentIssues
+        };
+
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(function() {
+            document.getElementById('successMsg').style.display = 'block';
+            // Clear localStorage recovery data
+            try { localStorage.removeItem('elp_form_recovery'); } catch(e) {}
+        }).catch(function() {
+            document.getElementById('successMsg').style.display = 'block';
+        });
+    }
+    </script>
+</body>
+</html>

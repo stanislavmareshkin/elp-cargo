@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости доставки из-за рубежа | ELP Cargo</title>
+    <meta name="description" content="Онлайн-калькулятор стоимости международной доставки грузов. Рассчитайте примерную стоимость доставки из Китая, Европы, Турции, ОАЭ, США в Россию.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/calculator.html">
+    <meta property="og:title" content="Калькулятор стоимости доставки из-за рубежа | ELP Cargo">
+    <meta property="og:description" content="Рассчитайте примерную стоимость доставки грузов из Китая, Европы, Турции, ОАЭ, США в Россию.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ELP Cargo">
+    <meta property="og:url" content="https://blog.elpcargo.ru/calculator.html">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Калькулятор стоимости доставки","description":"Онлайн-калькулятор стоимости международной доставки грузов в Россию","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"RUB"},"author":{"@type":"Organization","name":"ELP Cargo","url":"https://elpcargo.ru"}}</script>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; text-decoration: none; }
+        .nav a:hover { color: var(--c-accent); text-decoration: none; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+        .hero { padding: 60px 0 40px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-family: var(--font-serif); font-size: 2.2em; font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.05em; max-width: 600px; margin: 0 auto; }
+
+        .calc-section { padding: 0 0 60px; }
+        .calc-card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 36px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: .88em; font-weight: 600; color: var(--c-text-sec); }
+        .form-group input, .form-group select {
+            background: rgba(255,255,255,.05); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); padding: 12px 14px; color: var(--c-text);
+            font-family: var(--font); font-size: .95em; outline: none;
+            transition: border-color var(--transition);
+        }
+        .form-group input:focus, .form-group select:focus { border-color: var(--c-accent); }
+        .form-group select { cursor: pointer; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B5CF6' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
+        }
+        .form-group select option { background: #0d1525; color: var(--c-text); }
+
+        .checkbox-row { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; grid-column: 1 / -1; margin-top: 4px; }
+        .checkbox-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: .92em; color: var(--c-text-sec); }
+        .checkbox-label input[type="checkbox"] { accent-color: var(--c-accent); width: 18px; height: 18px; cursor: pointer; }
+
+        .btn-calc {
+            grid-column: 1 / -1; margin-top: 8px;
+            background: var(--gradient-accent); color: #fff; border: none;
+            border-radius: var(--radius-sm); padding: 14px 32px;
+            font-family: var(--font); font-size: 1em; font-weight: 700;
+            cursor: pointer; transition: opacity var(--transition), transform var(--transition);
+        }
+        .btn-calc:hover { opacity: .9; transform: translateY(-1px); }
+
+        /* Results */
+        .result-area { display: none; margin-top: 32px; }
+        .result-area.active { display: block; }
+        .result-card { background: rgba(139,92,246,.06); border: 1px solid rgba(139,92,246,.2); border-radius: var(--radius); padding: 28px; }
+        .result-title { font-size: 1.2em; font-weight: 700; margin-bottom: 16px; color: var(--c-accent-bright); }
+        .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+        @media (max-width: 640px) { .result-grid { grid-template-columns: 1fr; } }
+        .result-item { text-align: center; }
+        .result-value { font-size: 1.4em; font-weight: 800; }
+        .result-label { font-size: .82em; color: var(--c-text-sec); margin-top: 2px; }
+        .result-details { color: var(--c-text-sec); font-size: .9em; line-height: 1.8; }
+        .result-details li { list-style: none; padding-left: 20px; position: relative; }
+        .result-details li::before { content: '✓'; position: absolute; left: 0; color: var(--c-accent); }
+
+        /* Lead form */
+        .lead-section { margin-top: 36px; }
+        .lead-section h3 { font-size: 1.1em; font-weight: 700; margin-bottom: 16px; text-align: center; }
+        .lead-form { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        @media (max-width: 640px) { .lead-form { grid-template-columns: 1fr; } }
+        .lead-form input {
+            background: rgba(255,255,255,.05); border: 1px solid var(--c-border);
+            border-radius: var(--radius-sm); padding: 12px 14px; color: var(--c-text);
+            font-family: var(--font); font-size: .95em; outline: none;
+        }
+        .lead-form input:focus { border-color: var(--c-accent); }
+        .btn-lead {
+            grid-column: 1 / -1;
+            background: var(--gradient-accent); color: #fff; border: none;
+            border-radius: var(--radius-sm); padding: 14px;
+            font-family: var(--font); font-size: 1em; font-weight: 700;
+            cursor: pointer; transition: opacity var(--transition);
+        }
+        .btn-lead:hover { opacity: .9; }
+        .lead-success { display: none; text-align: center; padding: 20px; color: var(--c-accent-bright); font-weight: 600; }
+
+        .disclaimer { text-align: center; color: var(--c-text-dim); font-size: .78em; margin-top: 16px; }
+
+        /* Footer */
+        .footer { padding: 40px 0; border-top: 1px solid var(--c-border); margin-top: 60px; }
+        .footer-inner { max-width: 900px; margin: 0 auto; padding: 0 28px; text-align: center; color: var(--c-text-sec); font-size: .85em; }
+        .footer a { color: var(--c-accent); }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <div class="logo">ELP <span>Cargo</span></div>
+        <nav class="nav">
+            <a href="https://elpcargo.ru">Главная</a>
+            <a href="https://blog.elpcargo.ru">Блог</a>
+            <a href="https://blog.elpcargo.ru/calculator.html">Калькулятор</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">Онлайн-расчёт</div>
+        <h1>Калькулятор стоимости доставки</h1>
+        <p class="hero-sub">Узнайте примерную стоимость доставки груза из-за рубежа за 30 секунд. Для точного расчёта оставьте заявку.</p>
+    </div>
+</section>
+
+<section class="calc-section">
+    <div class="container">
+        <div class="calc-card">
+            <form id="calcForm" class="form-grid" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="country">Страна отправления</label>
+                    <select id="country" required>
+                        <option value="china">Китай</option>
+                        <option value="germany">Германия</option>
+                        <option value="italy">Италия</option>
+                        <option value="france">Франция</option>
+                        <option value="turkey">Турция</option>
+                        <option value="uae">ОАЭ</option>
+                        <option value="usa">США</option>
+                        <option value="korea">Корея</option>
+                        <option value="japan">Япония</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">Город доставки</label>
+                    <input type="text" id="city" value="Москва" placeholder="Москва" required>
+                </div>
+                <div class="form-group">
+                    <label for="cargoType">Тип груза</label>
+                    <select id="cargoType" required>
+                        <option value="equipment">Оборудование</option>
+                        <option value="parts">Запчасти</option>
+                        <option value="electronics">Электроника</option>
+                        <option value="cosmetics">Косметика</option>
+                        <option value="construction">Стройматериалы</option>
+                        <option value="food">Продукты питания</option>
+                        <option value="furniture">Мебель</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Вес (кг)</label>
+                    <input type="number" id="weight" min="0.1" step="0.1" placeholder="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="volume">Объём (м³) — необязательно</label>
+                    <input type="number" id="volume" min="0.01" step="0.01" placeholder="0.5">
+                </div>
+                <div class="form-group">
+                    <!-- spacer for alignment -->
+                </div>
+                <div class="checkbox-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="customs"> Нужна растаможка?
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="payment"> Нужна оплата поставщику?
+                    </label>
+                </div>
+                <button type="button" class="btn-calc" onclick="calculate()">Рассчитать стоимость</button>
+            </form>
+
+            <div id="resultArea" class="result-area">
+                <div class="result-card">
+                    <div class="result-title">Примерная стоимость доставки</div>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <div class="result-value" id="resCost">—</div>
+                            <div class="result-label">Стоимость (USD)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value" id="resDays">—</div>
+                            <div class="result-label">Сроки (дней)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value" id="resWeight">—</div>
+                            <div class="result-label">Расчётный вес</div>
+                        </div>
+                    </div>
+                    <ul class="result-details" id="resDetails"></ul>
+                </div>
+                <p class="disclaimer">* Расчёт является предварительным. Точная стоимость зависит от характера груза, упаковки, актуального курса и тарифов перевозчиков.</p>
+
+                <div class="lead-section">
+                    <h3>Получить точный расчёт от менеджера</h3>
+                    <form id="leadForm" class="lead-form" onsubmit="return false;">
+                        <input type="text" id="leadName" placeholder="Ваше имя" required>
+                        <input type="email" id="leadEmail" placeholder="Email" required>
+                        <input type="tel" id="leadPhone" placeholder="Телефон">
+                        <button type="button" class="btn-lead" onclick="submitLead()">Получить точный расчёт</button>
+                    </form>
+                    <div id="leadSuccess" class="lead-success">Спасибо! Менеджер свяжется с вами в ближайшее время.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        &copy; 2024–2026 <a href="https://elpcargo.ru">ELP Cargo</a>. Международная доставка и таможенное оформление.<br>
+        <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a> &middot; +7 911 920 01 85 &middot; <a href="https://t.me/ELP_Cargo">@ELP_Cargo</a>
+    </div>
+</footer>
+
+<script>
+const RATES = {
+    china:   { rate: 3.5, days: [18, 35], name: 'Китай' },
+    germany: { rate: 5.0, days: [14, 25], name: 'Германия' },
+    italy:   { rate: 5.0, days: [14, 25], name: 'Италия' },
+    france:  { rate: 5.0, days: [14, 25], name: 'Франция' },
+    turkey:  { rate: 4.0, days: [10, 20], name: 'Турция' },
+    uae:     { rate: 4.5, days: [12, 22], name: 'ОАЭ' },
+    usa:     { rate: 7.0, days: [20, 40], name: 'США' },
+    korea:   { rate: 5.0, days: [16, 30], name: 'Корея' },
+    japan:   { rate: 5.0, days: [16, 30], name: 'Япония' },
+    other:   { rate: 5.0, days: [18, 35], name: 'Другое' }
+};
+
+const CARGO_NAMES = {
+    equipment: 'Оборудование', parts: 'Запчасти', electronics: 'Электроника',
+    cosmetics: 'Косметика', construction: 'Стройматериалы', food: 'Продукты питания',
+    furniture: 'Мебель', other: 'Другое'
+};
+
+let lastCalcData = {};
+
+function calculate() {
+    const country = document.getElementById('country').value;
+    const city = document.getElementById('city').value || 'Москва';
+    const cargoType = document.getElementById('cargoType').value;
+    const weight = parseFloat(document.getElementById('weight').value);
+    const volume = parseFloat(document.getElementById('volume').value) || 0;
+    const customs = document.getElementById('customs').checked;
+    const paymentService = document.getElementById('payment').checked;
+
+    if (!weight || weight <= 0) {
+        alert('Укажите вес груза');
+        return;
+    }
+
+    const info = RATES[country];
+    const volumeWeight = volume > 0 ? volume * 167 : 0;
+    const calcWeight = Math.max(weight, volumeWeight);
+
+    let baseCost = calcWeight * info.rate;
+    if (baseCost < 500) baseCost = 500;
+
+    let totalCost = baseCost;
+    const details = [];
+    details.push('Доставка ' + info.name + ' → ' + city);
+    details.push('Базовая стоимость: $' + baseCost.toFixed(0));
+
+    if (volumeWeight > weight) {
+        details.push('Объёмный вес (' + volumeWeight.toFixed(1) + ' кг) > фактический (' + weight + ' кг) — расчёт по объёмному');
+    }
+
+    if (customs) {
+        const cargoValue = calcWeight * 10;
+        const customsFee = cargoValue * 0.15;
+        totalCost += customsFee;
+        details.push('Таможенное оформление: ~$' + customsFee.toFixed(0));
+    }
+
+    if (paymentService) {
+        const payFee = totalCost * 0.03;
+        totalCost += payFee;
+        details.push('Оплата поставщику (3%): ~$' + payFee.toFixed(0));
+    }
+
+    details.push('Консолидация и упаковка на складе');
+    details.push('Отслеживание груза на всех этапах');
+    details.push('Страхование груза');
+
+    const costLow = Math.round(totalCost * 0.8);
+    const costHigh = Math.round(totalCost * 1.2);
+
+    document.getElementById('resCost').textContent = '$' + costLow.toLocaleString() + ' – $' + costHigh.toLocaleString();
+    document.getElementById('resDays').textContent = info.days[0] + '–' + info.days[1];
+    document.getElementById('resWeight').textContent = calcWeight.toFixed(1) + ' кг';
+
+    const detailsList = document.getElementById('resDetails');
+    detailsList.innerHTML = details.map(d => '<li>' + d + '</li>').join('');
+
+    document.getElementById('resultArea').classList.add('active');
+
+    lastCalcData = {
+        country: info.name, city, cargoType: CARGO_NAMES[cargoType],
+        weight, volume, calcWeight,
+        customs, paymentService,
+        costRange: '$' + costLow + '–$' + costHigh,
+        days: info.days[0] + '–' + info.days[1]
+    };
+}
+
+function submitLead() {
+    const name = document.getElementById('leadName').value.trim();
+    const emailVal = document.getElementById('leadEmail').value.trim();
+    const phone = document.getElementById('leadPhone').value.trim();
+
+    if (!name || !emailVal) {
+        alert('Укажите имя и email');
+        return;
+    }
+
+    const payload = {
+        name: name,
+        email: emailVal,
+        phone: phone,
+        source: 'calculator',
+        message: JSON.stringify(lastCalcData)
+    };
+
+    // Try to submit to API
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    }).then(r => {
+        if (!r.ok) throw new Error('API error');
+        return r.json();
+    }).catch(() => {
+        // Fallback: mailto
+        const subj = encodeURIComponent('Запрос расчёта — ' + lastCalcData.country + ' → ' + lastCalcData.city);
+        const body = encodeURIComponent(
+            'Имя: ' + name + '\nEmail: ' + emailVal + '\nТелефон: ' + phone +
+            '\n\nРасчёт:\n' + JSON.stringify(lastCalcData, null, 2)
+        );
+        window.open('mailto:ceo@elpcargo.ru?subject=' + subj + '&body=' + body);
+    });
+
+    document.getElementById('leadForm').style.display = 'none';
+    document.getElementById('leadSuccess').style.display = 'block';
+}
+</script>
+
+<script src="/form-recovery.js" async></script>
+</body>
+</html>

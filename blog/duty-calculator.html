@@ -191,6 +191,12 @@
             .calc-card { padding: 20px; }
         }
     </style>
+<!-- PostHog Analytics -->
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_PLACEHOLDER',{api_host:'https://eu.posthog.com',autocapture:true,capture_pageview:true,capture_pageleave:true})
+</script>
+<!-- End PostHog -->
 </head>
 <body>
 
@@ -409,5 +415,105 @@ function submitLead() {
     document.getElementById('lead-success').style.display = 'block';
 }
 </script>
+<!-- PostHog Custom Event Tracking -->
+<script>
+(function() {
+  'use strict';
+  if (typeof posthog === 'undefined') return;
+
+  // Track all form submissions
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+    var formId = form.id || form.getAttribute('name') || 'unknown';
+    var source = 'page';
+    if (formId === 'elp-popup-form' || formId.indexOf('popup') !== -1) source = 'exit-popup';
+    if (formId === 'contactForm') source = 'contact-form';
+    if (form.closest && form.closest('#elp-popup-overlay')) source = 'exit-popup';
+
+    posthog.capture('form_submit', {
+      form_id: formId,
+      source: source,
+      page: location.pathname
+    });
+  }, true);
+
+  // Track calculator usage (if calculator page)
+  var calcBtn = document.querySelector('[onclick*="calculate"]');
+  if (calcBtn) {
+    var origCalculate = window.calculate;
+    if (typeof origCalculate === 'function') {
+      window.calculate = function() {
+        var country = document.getElementById('country');
+        var weight = document.getElementById('weight');
+        var cargoType = document.getElementById('cargoType');
+        posthog.capture('calculator_use', {
+          country: country ? country.value : '',
+          weight: weight ? weight.value : '',
+          cargo_type: cargoType ? cargoType.value : '',
+          page: location.pathname
+        });
+        return origCalculate.apply(this, arguments);
+      };
+    }
+  }
+
+  // Track lead magnet downloads
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest ? e.target.closest('a') : null;
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+
+    // Lead magnet downloads (PDF, guides, etc.)
+    if (href.match(/\.(pdf|doc|docx|xlsx)$/i) || href.indexOf('lead-magnet') !== -1 ||
+        link.textContent.toLowerCase().indexOf('скачать') !== -1) {
+      posthog.capture('lead_magnet_download', {
+        url: href,
+        text: link.textContent.trim().substring(0, 100),
+        page: location.pathname
+      });
+    }
+
+    // Telegram widget clicks
+    if (href.indexOf('t.me') !== -1 || href.indexOf('telegram') !== -1) {
+      posthog.capture('tg_widget_click', {
+        url: href,
+        page: location.pathname
+      });
+    }
+  }, true);
+
+  // Track Telegram toggle chat clicks
+  var tgToggle = document.querySelector('[onclick*="toggleChat"]');
+  if (tgToggle) {
+    tgToggle.addEventListener('click', function() {
+      posthog.capture('tg_widget_click', {
+        action: 'toggle_chat',
+        page: location.pathname
+      });
+    });
+  }
+
+  // Track popup shown (watch for exit popup)
+  var popupObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      m.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          var popup = node.querySelector ? node.querySelector('#elp-popup-overlay') : null;
+          if (!popup && node.id === 'elp-popup-overlay') popup = node;
+          if (popup) {
+            posthog.capture('popup_shown', {
+              type: 'exit-intent',
+              page: location.pathname
+            });
+          }
+        }
+      });
+    });
+  });
+  popupObserver.observe(document.body, { childList: true, subtree: true });
+
+})();
+</script>
+<!-- End PostHog Custom Events -->
 </body>
 </html>

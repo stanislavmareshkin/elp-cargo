@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет клиента | ELP Cargo</title>
+    <meta name="description" content="Личный кабинет клиента ELP Cargo — запрос расчёта, отслеживание груза, документы, FAQ.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 10px;
+        }
+        header h1 { font-size: 2rem; color: #fff; }
+        header h1 span { color: #8B5CF6; }
+        header p { color: #888; margin-top: 8px; }
+
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 28px 0;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+        .nav-tab:hover { border-color: #8B5CF6; color: #fff; }
+        .nav-tab.active { background: #8B5CF6; color: #fff; border-color: #8B5CF6; }
+
+        .section {
+            display: none;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.3s;
+        }
+        .section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .section h2 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; }
+
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 0.88rem; color: #aaa; margin-bottom: 5px; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #8B5CF6; }
+
+        .btn {
+            padding: 13px 28px;
+            background: #8B5CF6;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            width: 100%;
+            margin-top: 8px;
+        }
+        .btn:hover { background: #7c3aed; }
+
+        .success-msg {
+            display: none;
+            padding: 16px;
+            background: #0a2a0a;
+            border: 1px solid #22c55e44;
+            border-radius: 10px;
+            color: #22c55e;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 16px;
+        }
+
+        /* Tracking */
+        .tracking-row {
+            display: flex;
+            gap: 12px;
+        }
+        .tracking-row input { flex: 1; }
+        .tracking-row .btn { width: auto; margin-top: 0; }
+
+        /* Documents */
+        .doc-list { list-style: none; }
+        .doc-list li {
+            padding: 14px 16px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .doc-list li:last-child { border-bottom: none; }
+        .doc-icon { font-size: 1.4rem; }
+        .doc-info { flex: 1; }
+        .doc-info .doc-title { color: #fff; font-weight: 500; }
+        .doc-info .doc-desc { color: #777; font-size: 0.82rem; }
+        .doc-dl {
+            padding: 8px 16px;
+            background: #222;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #8B5CF6;
+            text-decoration: none;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        .doc-dl:hover { background: #2a2a2a; }
+
+        /* Contact card */
+        .contact-card {
+            padding: 24px;
+            background: #111;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .contact-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 4px; }
+        .contact-card .role { color: #8B5CF6; font-size: 0.9rem; margin-bottom: 16px; }
+        .contact-links { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+        .contact-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .contact-links a:hover { color: #8B5CF6; }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #222;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            padding: 16px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .faq-q:hover { color: #8B5CF6; }
+        .faq-arrow {
+            transition: transform 0.3s;
+            color: #8B5CF6;
+            font-size: 1.2rem;
+        }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-a { max-height: 300px; }
+        .faq-a-inner { padding-bottom: 16px; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 0.82rem;
+        }
+        footer a { color: #8B5CF6; text-decoration: none; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            .section { padding: 20px; }
+            .nav-tab { font-size: 0.82rem; padding: 8px 14px; }
+            .tracking-row { flex-direction: column; }
+            .tracking-row .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Личный кабинет <span>ELP Cargo</span></h1>
+    <p>Управление перевозками и документами</p>
+</header>
+
+<div class="container">
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showTab('calc')">Запросить расчёт</button>
+        <button class="nav-tab" onclick="showTab('tracking')">Отследить груз</button>
+        <button class="nav-tab" onclick="showTab('docs')">Документы</button>
+        <button class="nav-tab" onclick="showTab('contact')">Контакты</button>
+        <button class="nav-tab" onclick="showTab('faq')">FAQ</button>
+    </div>
+
+    <!-- 1. Request Quote -->
+    <div class="section active" id="sec-calc">
+        <h2>Запросить расчёт доставки</h2>
+        <form id="quote-form" onsubmit="submitQuote(event)">
+            <div class="form-group">
+                <label>Компания</label>
+                <input type="text" id="q-company" placeholder="ООО «Ваша компания»" required>
+            </div>
+            <div class="form-group">
+                <label>Описание груза</label>
+                <textarea id="q-cargo" placeholder="Что везём: тип товара, количество, особенности"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Маршрут</label>
+                <input type="text" id="q-route" placeholder="Например: Шанхай → Москва">
+            </div>
+            <div class="form-group">
+                <label>Вес (кг)</label>
+                <input type="number" id="q-weight" placeholder="500" min="0.1" step="0.1">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="q-email" placeholder="info@company.ru" required>
+            </div>
+            <div class="form-group">
+                <label>Телефон</label>
+                <input type="tel" id="q-phone" placeholder="+7 999 123 45 67">
+            </div>
+            <button type="submit" class="btn">Отправить запрос</button>
+        </form>
+        <div class="success-msg" id="quote-success">Запрос отправлен! Мы подготовим расчёт в течение 2 часов.</div>
+    </div>
+
+    <!-- 2. Track Shipment -->
+    <div class="section" id="sec-tracking">
+        <h2>Отследить груз</h2>
+        <p style="color:#888;margin-bottom:16px;">Введите номер отслеживания, полученный от менеджера</p>
+        <div class="tracking-row">
+            <input type="text" id="track-number" placeholder="ELP-2026-XXXXX">
+            <button class="btn" onclick="trackShipment()">Найти</button>
+        </div>
+        <div id="track-result" style="margin-top:20px;"></div>
+    </div>
+
+    <!-- 3. Documents -->
+    <div class="section" id="sec-docs">
+        <h2>Документы</h2>
+        <ul class="doc-list">
+            <li>
+                <span class="doc-icon">📄</span>
+                <div class="doc-info">
+                    <div class="doc-title">Договор-оферта</div>
+                    <div class="doc-desc">Публичный договор на оказание логистических услуг</div>
+                </div>
+                <a href="#" class="doc-dl" onclick="alert('Документ будет доступен после регистрации');return false;">Скачать</a>
+            </li>
+            <li>
+                <span class="doc-icon">📋</span>
+                <div class="doc-info">
+                    <div class="doc-title">Заявка на перевозку</div>
+                    <div class="doc-desc">Бланк заявки для оформления перевозки</div>
+                </div>
+                <a href="#" class="doc-dl" onclick="alert('Документ будет доступен после регистрации');return false;">Скачать</a>
+            </li>
+            <li>
+                <span class="doc-icon">📦</span>
+                <div class="doc-info">
+                    <div class="doc-title">Инструкция по упаковке</div>
+                    <div class="doc-desc">Требования к упаковке грузов для международной перевозки</div>
+                </div>
+                <a href="#" class="doc-dl" onclick="alert('Документ будет доступен после регистрации');return false;">Скачать</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 4. Manager Contact -->
+    <div class="section" id="sec-contact">
+        <h2>Ваш менеджер</h2>
+        <div class="contact-card">
+            <h3>Станислав</h3>
+            <div class="role">Менеджер по логистике</div>
+            <div class="contact-links">
+                <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a>
+                <a href="tel:+79119200185">+7 911 920 01 85</a>
+                <a href="https://t.me/ELP_Cargo" target="_blank">@ELP_Cargo в Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. FAQ -->
+    <div class="section" id="sec-faq">
+        <h2>Часто задаваемые вопросы</h2>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Как оплатить поставщику в ЕС?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">ELP Cargo предоставляет услугу оплаты поставщикам в ЕС через наши зарубежные счета. Вы переводите средства нам в рублях, мы оплачиваем поставщику в евро. Комиссия — от 2%. Полная легальность и документальное сопровождение.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Какие сроки доставки из Китая?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Авиа — 7-12 дней, авто через Казахстан — 18-25 дней, ж/д — 25-35 дней, море — 35-50 дней. Точные сроки зависят от города отправления и назначения. Экспресс-доставка — от 5 дней.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Работаете ли с санкционными товарами?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Мы работаем только с легальным импортом. Для товаров из «параллельного импорта» (разрешённых Минпромторгом) у нас есть отработанные схемы доставки через дружественные страны с полным таможенным оформлением.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Как проходит растаможка?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Мы берём растаможку «под ключ»: подготовка декларации, расчёт платежей, подача документов, контроль выпуска. Вам нужно предоставить только контракт, инвойс и транспортные документы. Среднее время растаможки — 1-3 рабочих дня.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Минимальный вес/объём?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Минимального веса нет — мы работаем от 1 кг (авиа). Для сборных грузов минимум — 0.1 м³. Для полных контейнеров — от 20 футов. Есть услуга консолидации для мелких партий.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Какая страховка груза?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Мы предлагаем страхование грузов на полную стоимость через наших партнёров-страховщиков. Стоимость — от 0.3% от стоимости груза. Покрытие: повреждение, утеря, кража. Оформление — за 1 день.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Как отследить груз?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">После отправки вы получаете трекинг-номер. Отследить груз можно в разделе «Отследить груз» выше, или написав менеджеру в Telegram. Обновления статуса приходят автоматически.</div></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Какие документы нужны?</span>
+                <span class="faq-arrow">&#9660;</span>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner">Для импорта потребуются: контракт с поставщиком, инвойс, упаковочный лист, транспортная накладная. Для некоторых товаров — сертификат соответствия или декларация. Мы помогаем подготовить все документы.</div></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 <a href="https://elpcargo.ru">ELP Cargo</a> — логистика полного цикла
+</footer>
+
+<script>
+function showTab(tab) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('sec-' + tab).classList.add('active');
+    event.target.classList.add('active');
+}
+
+function toggleFaq(el) {
+    el.parentElement.classList.toggle('open');
+}
+
+function submitQuote(e) {
+    e.preventDefault();
+    const data = {
+        source: 'portal',
+        company: document.getElementById('q-company').value,
+        cargo: document.getElementById('q-cargo').value,
+        route: document.getElementById('q-route').value,
+        weight: document.getElementById('q-weight').value,
+        email: document.getElementById('q-email').value,
+        phone: document.getElementById('q-phone').value,
+        timestamp: new Date().toISOString(),
+    };
+
+    fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+    }).catch(() => {});
+
+    document.getElementById('quote-form').style.display = 'none';
+    document.getElementById('quote-success').style.display = 'block';
+}
+
+function trackShipment() {
+    const num = document.getElementById('track-number').value.trim();
+    if (!num) { alert('Введите номер отслеживания'); return; }
+    // Redirect to tracking page with the number
+    window.location.href = 'tracking.html?track=' + encodeURIComponent(num);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс: Дизайнерская мебель из Европы — 3 отправителя в 1 контейнер | ELP Cargo</title>
+    <meta name="description" content="Реальный кейс ELP Cargo: консолидация дизайнерской мебели из Италии и Швейцарии в Москву. 3 отправителя, 1 контейнер, 0 царапин, 2-3 недели вместо 2 месяцев.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://blog.elpcargo.ru/case-europe.html">
+    <meta property="og:title" content="Кейс: Дизайнерская мебель из Европы — 3 отправителя в 1 контейнер">
+    <meta property="og:description" content="Реальный кейс: консолидация мебели из Италии и Швейцарии. 3 отправителя, 0 царапин, 2-3 недели.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ELP Cargo">
+    <meta property="og:url" content="https://blog.elpcargo.ru/case-europe.html">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Кейс: Дизайнерская мебель из Европы — 3 отправителя в 1 контейнер","description":"Реальный кейс ELP Cargo: консолидация дизайнерской мебели из Италии и Швейцарии в Москву за 2-3 недели.","author":{"@type":"Organization","name":"ELP Cargo","url":"https://elpcargo.ru"},"publisher":{"@type":"Organization","name":"ELP Cargo"}}</script>
+    <style>
+        :root {
+            --c-black: #050a14; --c-bg-card: #0d1525; --c-border: rgba(255,255,255,.06);
+            --c-accent: #8B5CF6; --c-accent-bright: #A78BFA;
+            --c-text: rgba(255,255,255,.88); --c-text-sec: rgba(255,255,255,.45); --c-text-dim: rgba(255,255,255,.25);
+            --gradient-accent: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #C084FC 100%);
+            --radius: 12px; --radius-sm: 8px;
+            --transition: .35s cubic-bezier(.4,0,.2,1);
+            --font: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font); color: var(--c-text); background: var(--c-black); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+        a { color: var(--c-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--c-border); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.1em; color: var(--c-text); }
+        .logo span { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav a { margin-left: 24px; color: var(--c-text-sec); font-size: .88em; font-weight: 500; text-decoration: none; }
+        .nav a:hover { color: var(--c-accent); text-decoration: none; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+        .hero { padding: 80px 0 50px; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: 100%; background: radial-gradient(ellipse at center top, rgba(139,92,246,.1) 0%, transparent 70%); pointer-events: none; }
+        .hero-badge { display: inline-block; background: rgba(139,92,246,.12); color: var(--c-accent-bright); padding: 6px 18px; border-radius: 50px; font-size: .82em; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(139,92,246,.2); }
+        .hero h1 { font-family: var(--font-serif); font-size: 2.6em; font-weight: 700; line-height: 1.2; margin-bottom: 18px; letter-spacing: -.01em; }
+        .hero-sub { color: var(--c-text-sec); font-size: 1.15em; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 60px; }
+        .stat-card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 28px 20px; text-align: center; position: relative; overflow: hidden; transition: all var(--transition); }
+        .stat-card:hover { border-color: rgba(139,92,246,.2); transform: translateY(-2px); }
+        .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient-accent); opacity: 0; transition: opacity var(--transition); }
+        .stat-card:hover::before { opacity: 1; }
+        .stat-icon { font-size: 1.8em; margin-bottom: 10px; }
+        .stat-value { font-size: 1.4em; font-weight: 800; color: var(--c-text); margin-bottom: 4px; }
+        .stat-label { color: var(--c-text-sec); font-size: .82em; font-weight: 500; }
+
+        .story { margin-bottom: 60px; }
+        .story h2 { font-family: var(--font-serif); font-size: 1.6em; font-weight: 700; margin-bottom: 20px; }
+        .story p { color: var(--c-text-sec); margin-bottom: 18px; font-size: 1em; }
+        .story strong { color: var(--c-text); font-weight: 600; }
+
+        .benefits { margin-bottom: 60px; }
+        .benefits h2 { font-family: var(--font-serif); font-size: 1.6em; font-weight: 700; margin-bottom: 28px; text-align: center; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .benefit-card { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 32px 24px; text-align: center; transition: all var(--transition); }
+        .benefit-card:hover { border-color: rgba(139,92,246,.2); transform: translateY(-2px); }
+        .benefit-icon { font-size: 2em; margin-bottom: 14px; }
+        .benefit-card h3 { font-size: 1.05em; font-weight: 700; margin-bottom: 10px; color: var(--c-text); }
+        .benefit-card p { color: var(--c-text-sec); font-size: .9em; margin: 0; }
+
+        .form-section { margin-bottom: 60px; }
+        .form-box { background: var(--c-bg-card); border: 1px solid var(--c-border); border-radius: var(--radius); padding: 48px 40px; text-align: center; position: relative; overflow: hidden; }
+        .form-box::before { content: ''; position: absolute; top: -50%; left: -20%; width: 140%; height: 200%; background: radial-gradient(ellipse at top, rgba(139,92,246,.06) 0%, transparent 60%); pointer-events: none; }
+        .form-box h2 { font-family: var(--font-serif); font-size: 1.5em; font-weight: 700; margin-bottom: 8px; }
+        .form-box > p { color: var(--c-text-sec); margin-bottom: 28px; }
+        .form-inner { max-width: 440px; margin: 0 auto; text-align: left; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+        .form-input { width: 100%; padding: 13px 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-sm); color: #fff; font-size: .92em; font-family: inherit; outline: none; transition: border-color var(--transition); }
+        .form-input:focus { border-color: var(--c-accent); }
+        .form-input::placeholder { color: var(--c-text-dim); }
+        .form-full { margin-bottom: 12px; }
+        .cta-btn { display: inline-block; width: 100%; background: var(--gradient-accent); color: #fff; padding: 15px 32px; border-radius: var(--radius-sm); font-weight: 700; font-size: 1em; text-decoration: none; box-shadow: 0 4px 24px rgba(139,92,246,.3); transition: all var(--transition); border: none; cursor: pointer; font-family: inherit; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(139,92,246,.45); text-decoration: none; }
+
+        .footer { border-top: 1px solid var(--c-border); padding: 32px 0; text-align: center; }
+        .footer-contacts { color: var(--c-text-sec); font-size: .9em; margin-bottom: 10px; }
+        .footer-contacts a { color: var(--c-accent); }
+        .footer-copy { color: var(--c-text-dim); font-size: .82em; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8em; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-box { padding: 32px 24px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.5em; }
+            .hero { padding: 50px 0 30px; }
+            .container { padding: 0 18px; }
+        }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+</head>
+<body>
+    <div class="header">
+        <div class="header-inner">
+            <div class="logo"><span>ELP</span> CARGO</div>
+            <div class="nav"><a href="/">Блог</a><a href="/prices.html">Цены</a><a href="https://elpcargo.ru">Главная</a></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-badge">Кейс: Доставка из Европы</div>
+            <h1>Дизайнерская мебель из Италии и Швейцарии: 3 отправителя, 0 царапин</h1>
+            <p class="hero-sub">Как мы консолидировали мебель от трёх европейских поставщиков в один контейнер и доставили в Москву за 2-3 недели вместо 1.5-2 месяцев</p>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">&#127758;</div>
+                <div class="stat-value">Италия + Швейцария</div>
+                <div class="stat-label">Маршрут</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">&#128230;</div>
+                <div class="stat-value">3 в 1 контейнер</div>
+                <div class="stat-label">Консолидация</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">&#9200;</div>
+                <div class="stat-value">2-3 недели</div>
+                <div class="stat-label">Срок доставки</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">&#9989;</div>
+                <div class="stat-value">0 царапин</div>
+                <div class="stat-label">Результат</div>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="story">
+            <h2>Задача: собрать мебель от трёх поставщиков и привезти без повреждений</h2>
+            <p>Интерьерная студия из Москвы заказала дизайнерскую мебель у <strong>трёх европейских производителей</strong>: диваны и кресла из Милана, столовую группу из Швейцарии и светильники из другой итальянской мастерской. Классическая логистика предполагала три отдельные поставки с общим сроком 1.5-2 месяца и тройными расходами на доставку и таможню.</p>
+            <p>ELP Cargo предложила <strong>консолидацию всех трёх заказов в один контейнер</strong> через наш европейский склад. Мы организовали сбор мебели от каждого производителя, проверили комплектность, упаковали с учётом специфики каждого предмета (лакированные поверхности, текстиль, хрупкое стекло светильников) и загрузили всё в один 40-футовый контейнер.</p>
+            <p>Ключевое преимущество -- <strong>единая таможенная декларация и один комплект документов</strong> вместо трёх. Это сэкономило клиенту до 40% на логистических расходах. А контроль загрузки нашим представителем и правильная фиксация каждого предмета в контейнере обеспечили <strong>доставку без единой царапины</strong>. Общий срок от момента готовности последнего заказа до получения на складе в Москве -- 18 дней.</p>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <h2>Почему клиенты выбирают ELP Cargo для доставки из Европы</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128230;</div>
+                    <h3>Консолидация грузов</h3>
+                    <p>Собираем заказы от нескольких поставщиков из разных стран Европы на одном складе и отправляем единым контейнером</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#9889;</div>
+                    <h3>2-3 недели, не 2 месяца</h3>
+                    <p>Оптимизированные маршруты через проверенных перевозчиков. Ваш груз не простаивает на промежуточных складах</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128203;</div>
+                    <h3>Полное оформление</h3>
+                    <p>Берём на себя всю документацию, таможню и сертификацию. Единый комплект документов -- экономия до 40%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="form-section">
+            <div class="form-box">
+                <h2>Рассчитать доставку из Европы</h2>
+                <p>Заполните форму -- рассчитаем стоимость и сроки за 1 час</p>
+                <form id="contactForm" class="form-inner" onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <input type="text" id="f-name" class="form-input" placeholder="Ваше имя" required>
+                        <input type="email" id="f-email" class="form-input" placeholder="Email" required>
+                    </div>
+                    <div class="form-full">
+                        <input type="tel" id="f-phone" class="form-input" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-full">
+                        <textarea id="f-message" class="form-input" placeholder="Опишите груз: что, сколько, из какой страны" rows="3" style="resize:vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">Рассчитать доставку из Европы</button>
+                    <div id="formResult" style="margin-top:12px;text-align:center;font-size:.88em;"></div>
+                </form>
+                <div style="color:var(--c-text-dim);margin-top:16px;font-size:.82em;">ceo@elpcargo.ru &middot; +7 911 920 01 85 &middot; Telegram: @ELP_Cargo</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <a href="mailto:ceo@elpcargo.ru">ceo@elpcargo.ru</a> &middot;
+                <a href="tel:+79119200185">+7 911 920 01 85</a> &middot;
+                <a href="https://t.me/ELP_Cargo" target="_blank">@ELP_Cargo</a>
+            </div>
+            <div class="footer-copy">&copy; 2012&ndash;2026 <a href="https://elpcargo.ru">ELP Cargo</a> &mdash; Международная логистика и доставка</div>
+        </div>
+    </div>
+
+    <script>
+    async function submitForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const result = document.getElementById('formResult');
+        btn.textContent = 'Отправляем...'; btn.disabled = true;
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    name: document.getElementById('f-name').value,
+                    email: document.getElementById('f-email').value,
+                    phone: document.getElementById('f-phone').value,
+                    message: document.getElementById('f-message').value,
+                    source: 'landing-europe'
+                })
+            });
+            if (res.ok) {
+                result.style.color = '#22C55E';
+                result.textContent = 'Отправлено! Ответим в течение часа.';
+                e.target.reset();
+            } else { throw new Error(); }
+        } catch { result.style.color = '#EF4444'; result.textContent = 'Ошибка. Напишите на ceo@elpcargo.ru'; }
+        btn.textContent = 'Рассчитать доставку из Европы'; btn.disabled = false;
+    }
+    </script>
+<script src="/popup.js"></script>
+<script src="/tg-widget.js"></script>
+<script src="/form-recovery.js" async></script>
+</body>
+</html>
