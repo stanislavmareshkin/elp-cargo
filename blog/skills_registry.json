@@ -1,7 +1,28 @@
 {
-  "generated": "2026-03-21 02:30:03",
-  "total": 103,
+  "generated": "2026-03-22 02:30:04",
+  "total": 126,
   "skills": [
+    {
+      "name": "ab_test_subjects",
+      "file": "ab_test_subjects.py",
+      "description": "A/B Testing for Email Subject Line Styles — Thompson Sampling.",
+      "category": "analytics",
+      "flags": [
+        "--update"
+      ],
+      "schedule": "daily 21:00 MSK",
+      "dependencies": [
+        "numpy"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-21 04:47",
+      "size_kb": 10.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
     {
       "name": "agent_orchestrator",
       "file": "agent_orchestrator.py",
@@ -52,6 +73,23 @@
       "error": null
     },
     {
+      "name": "aggressive_config",
+      "file": "aggressive_config.py",
+      "description": "Aggressive configuration for $1-2/day from $40 balance.",
+      "category": "infrastructure",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-21 20:51",
+      "size_kb": 2.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "ai_scoring",
       "file": "ai_scoring.py",
       "description": "AI Lead Scoring — uses Claude API to prioritize leads in the Google Sheet.",
@@ -77,7 +115,7 @@
       "last_modified": "2026-03-20 09:55",
       "size_kb": 12.1,
       "has_log": true,
-      "last_run": "2026-03-20 17:02",
+      "last_run": "2026-03-21 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -143,7 +181,7 @@
         "--industry",
         "--route"
       ],
-      "schedule": null,
+      "schedule": "Mon-Fri 14:00 MSK",
       "dependencies": [
         "anthropic",
         "dotenv",
@@ -158,9 +196,9 @@
       ],
       "last_modified": "2026-03-20 14:55",
       "size_kb": 12.3,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-21 12:06",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -211,8 +249,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-18 15:48",
-      "size_kb": 21.9,
+      "last_modified": "2026-03-21 06:18",
+      "size_kb": 21.7,
       "has_log": true,
       "last_run": "2026-03-18 18:19",
       "status": "active",
@@ -257,7 +295,7 @@
       "last_modified": "2026-03-20 13:34",
       "size_kb": 2.0,
       "has_log": true,
-      "last_run": "2026-03-21 02:00",
+      "last_run": "2026-03-22 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -312,7 +350,7 @@
       "last_modified": "2026-03-18 16:28",
       "size_kb": 11.0,
       "has_log": true,
-      "last_run": "2026-03-21 01:30",
+      "last_run": "2026-03-22 01:31",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -341,16 +379,14 @@
       "error": null
     },
     {
-      "name": "call_scripts",
-      "file": "call_scripts.py",
-      "description": "Warm Call Script Generator — creates personalized phone scripts for hot leads.",
-      "category": "outreach",
+      "name": "bounce_cleaner",
+      "file": "bounce_cleaner.py",
+      "description": "Bounce Cleaner — cleans invalid/bounced emails from the Contacts sheet.",
+      "category": "leadgen",
       "flags": [
-        "--auto",
-        "--dry",
-        "--limit"
+        "--dry-run"
       ],
-      "schedule": null,
+      "schedule": "daily 06:00 MSK",
       "dependencies": [
         "dotenv",
         "google",
@@ -362,11 +398,11 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 15:58",
-      "size_kb": 12.7,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "last_modified": "2026-03-21 04:44",
+      "size_kb": 15.7,
+      "has_log": true,
+      "last_run": "2026-03-21 09:04",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -421,8 +457,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 12:33",
-      "size_kb": 14.2,
+      "last_modified": "2026-03-21 06:19",
+      "size_kb": 14.1,
       "has_log": true,
       "last_run": "2026-03-20 12:37",
       "status": "active",
@@ -615,6 +651,33 @@
       "error": null
     },
     {
+      "name": "contact_maintenance",
+      "file": "contact_maintenance.py",
+      "description": "Contact Maintenance — deduplication + lead decay scoring.",
+      "category": "leadgen",
+      "flags": [
+        "--dry-run"
+      ],
+      "schedule": "monthly 1th 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 04:48",
+      "size_kb": 15.9,
+      "has_log": true,
+      "last_run": "2026-03-21 05:13",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "content_distributor",
       "file": "content_distributor.py",
       "description": "Content Distributor — reposts blog articles to multiple platforms.",
@@ -643,6 +706,31 @@
       "error": null
     },
     {
+      "name": "conversion_dashboard",
+      "file": "conversion_dashboard.py",
+      "description": "Conversion Funnel Dashboard — daily business metrics visualization.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily 20:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 04:49",
+      "size_kb": 16.0,
+      "has_log": true,
+      "last_run": "2026-03-21 17:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "coordinator",
       "file": "coordinator.py",
       "description": "Bot Coordinator — manages margin allocation across all 6 trading bots.",
@@ -659,9 +747,9 @@
       ],
       "last_modified": "2026-03-17 18:43",
       "size_kb": 13.3,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-22 02:29",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -681,7 +769,38 @@
       "last_modified": "2026-03-17 15:49",
       "size_kb": 16.2,
       "has_log": true,
-      "last_run": "2026-03-18 20:47",
+      "last_run": "2026-03-22 02:29",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "cosmo_outreach",
+      "file": "cosmo_outreach.py",
+      "description": "Cosmetology Outreach — рассылка по 3 каналам: Telegram DM, Instagram, SMS/WA.",
+      "category": "outreach",
+      "flags": [
+        "--all",
+        "--dry",
+        "--instagram",
+        "--limit",
+        "--phones",
+        "--telegram"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 17:26",
+      "size_kb": 13.6,
+      "has_log": true,
+      "last_run": "2026-03-21 17:48",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -711,6 +830,27 @@
       ],
       "last_modified": "2026-03-20 15:58",
       "size_kb": 13.0,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "crypto_yield_monitor",
+      "file": "crypto_yield_monitor.py",
+      "description": "Crypto Yield Monitor — Daily monitoring of flexible earn rates across exchanges. Fetches Binance, Bybit, OKX earn products, ranks by APY, tracks delta vs previous day, sends Telegram report.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily 2,8,14,20:30 UTC",
+      "dependencies": [
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 07:18",
+      "size_kb": 11.2,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -765,6 +905,30 @@
       "error": null
     },
     {
+      "name": "deal_tracker",
+      "file": "deal_tracker.py",
+      "description": "Deal Tracker — tracks reply-to-deal journey, measures ROI by channel.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily 19:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 04:50",
+      "size_kb": 20.9,
+      "has_log": true,
+      "last_run": "2026-03-21 16:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "deliverability_monitor",
       "file": "deliverability_monitor.py",
       "description": "Email Deliverability Monitor — checks SPF, DKIM, DMARC, blacklists, bounce/open rates.",
@@ -808,10 +972,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:48",
-      "size_kb": 16.9,
-      "has_log": false,
-      "last_run": null,
+      "last_modified": "2026-03-21 04:46",
+      "size_kb": 17.0,
+      "has_log": true,
+      "last_run": "2026-03-21 05:24",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -837,7 +1001,7 @@
       "last_modified": "2026-03-18 18:02",
       "size_kb": 10.0,
       "has_log": true,
-      "last_run": "2026-03-20 15:00",
+      "last_run": "2026-03-21 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -908,12 +1072,14 @@
       "category": "analytics",
       "flags": [],
       "schedule": "daily 10:00 MSK",
-      "dependencies": [],
+      "dependencies": [
+        "gzip"
+      ],
       "uses": [],
-      "last_modified": "2026-03-18 16:51",
-      "size_kb": 2.3,
+      "last_modified": "2026-03-21 04:42",
+      "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-20 07:00",
+      "last_run": "2026-03-21 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -934,7 +1100,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-20 11:53",
+      "last_run": "2026-03-21 04:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -983,7 +1149,7 @@
       "last_modified": "2026-03-20 11:52",
       "size_kb": 12.7,
       "has_log": true,
-      "last_run": "2026-03-20 11:12",
+      "last_run": "2026-03-21 04:45",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1132,7 +1298,7 @@
       "last_modified": "2026-03-20 17:30",
       "size_kb": 23.0,
       "has_log": true,
-      "last_run": "2026-03-21 02:28",
+      "last_run": "2026-03-22 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1146,7 +1312,7 @@
         "--daemon",
         "--dry-run"
       ],
-      "schedule": "every 30 min (6-16:*/30 UTC)",
+      "schedule": null,
       "dependencies": [
         "anthropic",
         "dotenv",
@@ -1161,7 +1327,7 @@
       "last_modified": "2026-03-18 16:51",
       "size_kb": 17.7,
       "has_log": true,
-      "last_run": "2026-03-20 16:30",
+      "last_run": "2026-03-21 11:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1252,29 +1418,6 @@
       "error": null
     },
     {
-      "name": "google_business",
-      "file": "google_business.py",
-      "description": "Google Business Profile Optimization — generates optimized GBP content via Claude.",
-      "category": "leadgen",
-      "flags": [],
-      "schedule": null,
-      "dependencies": [
-        "anthropic",
-        "dotenv"
-      ],
-      "uses": [
-        "claude_api",
-        "telegram"
-      ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 9.8,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
-      "syntax_ok": true,
-      "error": null
-    },
-    {
       "name": "gov_parsers",
       "file": "gov_parsers.py",
       "description": "Government & Public Data Parsers — RusProfile, Zakupki.gov.ru, FNS lead extraction.",
@@ -1313,7 +1456,7 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-17 16:15",
+      "last_modified": "2026-03-21 20:52",
       "size_kb": 10.3,
       "has_log": false,
       "last_run": null,
@@ -1341,6 +1484,86 @@
       "has_log": true,
       "last_run": "2026-03-18 18:16",
       "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "hot_lead_alert",
+      "file": "hot_lead_alert.py",
+      "description": "Hot Lead Alert — instant Telegram notification when a high-score lead appears.",
+      "category": "leadgen",
+      "flags": [
+        "--dry-run"
+      ],
+      "schedule": "Mon-Fri 6,8,10,12,14,16:0 UTC",
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 11:58",
+      "size_kb": 12.7,
+      "has_log": true,
+      "last_run": "2026-03-21 17:36",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "ig_cosmo_district_parser",
+      "file": "ig_cosmo_district_parser.py",
+      "description": "Instagram Account Finder — женщины из Красносельского и Кировского районов СПб, интересующиеся инъекционной косметологией.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 18:03",
+      "size_kb": 12.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "ig_cosmo_playwright",
+      "file": "ig_cosmo_playwright.py",
+      "description": "Instagram Cosmetology Lead Parser (Playwright) — Красносельский район СПб.",
+      "category": "leadgen",
+      "flags": [
+        "--collect",
+        "--dry",
+        "--limit",
+        "--login",
+        "--password",
+        "--per-tag",
+        "--username"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "playwright",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 14:45",
+      "size_kb": 29.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1387,6 +1610,35 @@
       "has_log": false,
       "last_run": null,
       "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "instagram_cosmo_parser",
+      "file": "instagram_cosmo_parser.py",
+      "description": "Instagram Cosmetology Lead Parser — Красносельский район, Балтийская жемчужина.",
+      "category": "leadgen",
+      "flags": [
+        "--dry",
+        "--limit",
+        "--login",
+        "--per-tag",
+        "--session"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "instaloader",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 14:14",
+      "size_kb": 16.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1559,7 +1811,7 @@
       "last_modified": "2026-03-18 16:49",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-20 06:00",
+      "last_run": "2026-03-21 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1606,7 +1858,7 @@
       "last_modified": "2026-03-17 16:15",
       "size_kb": 10.7,
       "has_log": true,
-      "last_run": "2026-03-21 02:27",
+      "last_run": "2026-03-22 02:27",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1628,7 +1880,7 @@
       "last_modified": "2026-03-18 07:27",
       "size_kb": 12.5,
       "has_log": true,
-      "last_run": "2026-03-21 02:02",
+      "last_run": "2026-03-22 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1654,10 +1906,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 16:23",
-      "size_kb": 34.4,
+      "last_modified": "2026-03-21 04:44",
+      "size_kb": 38.6,
       "has_log": true,
-      "last_run": "2026-03-20 11:13",
+      "last_run": "2026-03-21 12:35",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1700,10 +1952,11 @@
       "uses": [
         "claude_api",
         "google_sheets",
+        "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:55",
-      "size_kb": 12.4,
+      "last_modified": "2026-03-21 12:01",
+      "size_kb": 15.7,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -1711,24 +1964,141 @@
       "error": null
     },
     {
-      "name": "multilang_outreach",
-      "file": "multilang_outreach.py",
-      "description": "Multi-Language Outreach — generates English and Chinese email templates via Claude Haiku.",
-      "category": "outreach",
+      "name": "parser_2gis_cosmo",
+      "file": "parser_2gis_cosmo.py",
+      "description": "parser_2gis_cosmo.py — Parse 2GIS for cosmetology clinics in Krasnoselsky district, SPb. Collect reviewer names as potential leads. Target competitor: dr-di.ru / @dr.diana.cosmetolog.spb",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": "Monday 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 16:48",
+      "size_kb": 12.7,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "parser_avito_cosmo",
+      "file": "parser_avito_cosmo.py",
+      "description": "Avito parser: cosmetology services in SPb Krasnoselsky district. - Method 1: Avito API (fast, structured) - Method 2: Avito HTML scrape (fallback) - Method 3: Google SERP scrape for Avito results (if ",
+      "category": "leadgen",
       "flags": [],
       "schedule": null,
       "dependencies": [
-        "anthropic",
-        "dotenv"
+        "bs4",
+        "dotenv",
+        "requests"
       ],
       "uses": [
-        "claude_api"
+        "proxy",
+        "telegram"
       ],
-      "last_modified": "2026-03-20 16:00",
-      "size_kb": 12.6,
+      "last_modified": "2026-03-21 16:50",
+      "size_kb": 23.2,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "parser_profi_cosmo",
+      "file": "parser_profi_cosmo.py",
+      "description": "Parser profi.ru — cosmetologists in Saint Petersburg (Krasnoselsky district focus). Extracts specialists, ratings, reviews, prices, specializations. From reviews — extracts reviewer location data (pot",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": "monthly 1,15th 13:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 16:50",
+      "size_kb": 16.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "parser_tg_beauty",
+      "file": "parser_tg_beauty.py",
+      "description": "Telegram Beauty/Cosmetology Parser — collects members from beauty channels in SPb.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": "Friday 12:00 MSK",
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 16:46",
+      "size_kb": 12.3,
+      "has_log": true,
+      "last_run": "2026-03-21 16:46",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "parser_vk_wall_cosmo",
+      "file": "parser_vk_wall_cosmo.py",
+      "description": "VK Wall Parser — Cosmetologist Leads from SPb Communities Scans SPb community walls for cosmetology-related posts. Uses VK API service token (wall.get + users.get).",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": "Wednesday 11:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 16:59",
+      "size_kb": 14.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "parser_yandex_maps_cosmo",
+      "file": "parser_yandex_maps_cosmo.py",
+      "description": "Yandex Maps cosmetology clinics parser — Krasnoselsky district SPb.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "bs4",
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 16:45",
+      "size_kb": 19.5,
+      "has_log": true,
+      "last_run": "2026-03-21 16:46",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1834,12 +2204,13 @@
       "uses": [
         "claude_api",
         "google_sheets",
+        "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 15.6,
+      "last_modified": "2026-03-21 11:58",
+      "size_kb": 18.0,
       "has_log": true,
-      "last_run": "2026-03-20 16:30",
+      "last_run": "2026-03-21 17:36",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1926,6 +2297,49 @@
       "error": null
     },
     {
+      "name": "scalper_bot",
+      "file": "scalper_bot.py",
+      "description": "High-Frequency Scalper Bot — targets $1-2/day on small balance.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pandas",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-21 20:53",
+      "size_kb": 8.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "scraper_utils",
+      "file": "scraper_utils.py",
+      "description": "Shared web scraping utilities with Playwright fallback for JS-rendered pages.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "playwright",
+        "requests"
+      ],
+      "uses": [
+        "proxy"
+      ],
+      "last_modified": "2026-03-21 06:18",
+      "size_kb": 6.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "seasonal_triggers",
       "file": "seasonal_triggers.py",
       "description": "Seasonal Campaign Triggers — selects active campaign based on current date.",
@@ -2004,6 +2418,49 @@
       "error": null
     },
     {
+      "name": "setup_posthog",
+      "file": "setup_posthog.py",
+      "description": "PostHog Analytics Setup for blog.elpcargo.ru Adds PostHog JS snippet + custom event tracking to all HTML files.",
+      "category": "content",
+      "flags": [
+        "--api-key",
+        "--dry-run",
+        "--remove"
+      ],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 06:20",
+      "size_kb": 10.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "simple_grid_v2",
+      "file": "simple_grid_v2.py",
+      "description": "Simple Grid Bot v2 — оптимизирован для $1-2/день на малом балансе.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit"
+      ],
+      "uses": [],
+      "last_modified": "2026-03-21 21:00",
+      "size_kb": 9.6,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "smart_segmentation",
       "file": "smart_segmentation.py",
       "description": "Smart Email Segmentation — segments contacts by industry for targeted mailer campaigns.",
@@ -2035,21 +2492,22 @@
     {
       "name": "smart_send_time",
       "file": "smart_send_time.py",
-      "description": "Smart Send Time Optimizer — analyzes email open patterns to find optimal send times.",
+      "description": "Smart Send Time — analyzes email open patterns and recommends optimal send times.",
       "category": "enrichment",
       "flags": [],
-      "schedule": "Sunday 22:00 MSK",
+      "schedule": "Monday 08:00 MSK",
       "dependencies": [
         "dotenv",
+        "gzip",
         "requests"
       ],
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 15:55",
-      "size_kb": 12.7,
-      "has_log": false,
-      "last_run": null,
+      "last_modified": "2026-03-21 04:49",
+      "size_kb": 15.2,
+      "has_log": true,
+      "last_run": "2026-03-21 04:49",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2067,11 +2525,28 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 15:59",
-      "size_kb": 12.2,
+      "last_modified": "2026-03-21 12:27",
+      "size_kb": 11.6,
+      "has_log": true,
+      "last_run": "2026-03-21 10:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "stable_profit_config",
+      "file": "stable_profit_config.py",
+      "description": "STABLE PROFIT CONFIG — цель $1-2/день с баланса ~$40",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-21 20:58",
+      "size_kb": 1.6,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2324,33 +2799,6 @@
       "error": null
     },
     {
-      "name": "tg_qualifier_bot",
-      "file": "tg_qualifier_bot.py",
-      "description": "Telegram Bot Lead Qualification — interactive qualification flow for @ELP_Cargobot.",
-      "category": "trading",
-      "flags": [
-        "--dry"
-      ],
-      "schedule": null,
-      "dependencies": [
-        "dotenv",
-        "google",
-        "gspread",
-        "telegram"
-      ],
-      "uses": [
-        "google_sheets",
-        "telegram"
-      ],
-      "last_modified": "2026-03-20 14:56",
-      "size_kb": 14.0,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
-      "syntax_ok": true,
-      "error": null
-    },
-    {
       "name": "trade_notifier",
       "file": "trade_notifier.py",
       "description": "Trade Notifier — sends all bot trades to @SalesBybitBot Telegram channel.",
@@ -2392,30 +2840,6 @@
       "error": null
     },
     {
-      "name": "video_pitch",
-      "file": "video_pitch.py",
-      "description": "Video Pitch Script Generator — creates video scripts for ELP Cargo.",
-      "category": "content",
-      "flags": [],
-      "schedule": null,
-      "dependencies": [
-        "anthropic",
-        "dotenv",
-        "requests"
-      ],
-      "uses": [
-        "claude_api",
-        "telegram"
-      ],
-      "last_modified": "2026-03-20 15:54",
-      "size_kb": 10.5,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
-      "syntax_ok": true,
-      "error": null
-    },
-    {
       "name": "visitor_tracker",
       "file": "visitor_tracker.py",
       "description": "Website Visitor Tracking — analyzes nginx logs for blog.elpcargo.ru.",
@@ -2436,21 +2860,19 @@
       "last_modified": "2026-03-20 14:54",
       "size_kb": 11.3,
       "has_log": true,
-      "last_run": "2026-03-20 16:00",
+      "last_run": "2026-03-21 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
     },
     {
-      "name": "vk_parser",
-      "file": "vk_parser.py",
-      "description": "VK Community Parser — finds logistics/import companies via VK Groups & Pages.",
-      "category": "leadgen",
+      "name": "vk_contact_extractor",
+      "file": "vk_contact_extractor.py",
+      "description": "VK Contact Extractor — вытаскивает телефоны, email, TG, Instagram из VK профилей.",
+      "category": "uncategorized",
       "flags": [
-        "--debug",
-        "--dry",
-        "--keyword",
-        "--limit"
+        "--collect",
+        "--dry"
       ],
       "schedule": null,
       "dependencies": [
@@ -2460,11 +2882,146 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 09:17",
-      "size_kb": 15.5,
+      "last_modified": "2026-03-21 16:06",
+      "size_kb": 9.3,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "vk_cosmo_parser",
+      "file": "vk_cosmo_parser.py",
+      "description": "VK Cosmetology Lead Parser — женщины 20-45, Красносельский район СПб.",
+      "category": "leadgen",
+      "flags": [
+        "--collect",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Thursday 14:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 15:08",
+      "size_kb": 14.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "vk_dm_sender",
+      "file": "vk_dm_sender.py",
+      "description": "VK DM Sender (Playwright) — рассылка личных сообщений через браузер.",
+      "category": "uncategorized",
+      "flags": [
+        "--dry",
+        "--limit",
+        "--login",
+        "--password",
+        "--phone",
+        "--send"
+      ],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "playwright",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 15:44",
+      "size_kb": 14.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "vk_outreach",
+      "file": "vk_outreach.py",
+      "description": "VK Outreach — parser and outreach module for VK logistics communities.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry-run",
+        "--keyword",
+        "--limit",
+        "--no-api"
+      ],
+      "schedule": "Thursday 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 04:53",
+      "size_kb": 26.5,
+      "has_log": true,
+      "last_run": "2026-03-21 04:53",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "vk_parser",
+      "file": "vk_parser.py",
+      "description": "VK Parser — finds leads via known VED/logistics community walls.",
+      "category": "leadgen",
+      "flags": [
+        "--debug",
+        "--dry",
+        "--limit"
+      ],
+      "schedule": "Thursday 10:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 12:26",
+      "size_kb": 11.2,
+      "has_log": true,
+      "last_run": "2026-03-21 12:27",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "webhook_server",
+      "file": "webhook_server.py",
+      "description": "Unified Flask Webhook API Server for ELP Cargo.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "flask",
+        "flask_cors",
+        "requests"
+      ],
+      "uses": [
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 06:20",
+      "size_kb": 18.7,
+      "has_log": true,
+      "last_run": "2026-03-21 06:22",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -2480,43 +3037,20 @@
       "dependencies": [
         "dotenv",
         "google",
-        "gspread"
+        "gspread",
+        "mimetypes",
+        "openpyxl",
+        "pandas"
       ],
       "uses": [
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-18 17:15",
-      "size_kb": 7.6,
+      "last_modified": "2026-03-21 06:19",
+      "size_kb": 18.8,
       "has_log": false,
       "last_run": null,
       "status": "active",
-      "syntax_ok": true,
-      "error": null
-    },
-    {
-      "name": "whatsapp_responder",
-      "file": "whatsapp_responder.py",
-      "description": "WhatsApp Auto-Responder for ELP Cargo — Telegram bridge with future WA API support.",
-      "category": "outreach",
-      "flags": [
-        "--daemon",
-        "--dry"
-      ],
-      "schedule": null,
-      "dependencies": [
-        "dotenv",
-        "requests"
-      ],
-      "uses": [
-        "claude_api",
-        "telegram"
-      ],
-      "last_modified": "2026-03-20 13:48",
-      "size_kb": 14.7,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2567,47 +3101,75 @@
       "status": "active",
       "syntax_ok": true,
       "error": null
+    },
+    {
+      "name": "yandex_maps_parser",
+      "file": "yandex_maps_parser.py",
+      "description": "Yandex Maps Parser — scrapes logistics/cargo companies from Yandex Maps.",
+      "category": "leadgen",
+      "flags": [
+        "--city",
+        "--debug",
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "Thursday 11:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-21 04:48",
+      "size_kb": 26.4,
+      "has_log": true,
+      "last_run": "2026-03-21 04:49",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
     }
   ],
   "summary": {
-    "total": 103,
-    "active": 63,
+    "total": 126,
+    "active": 83,
     "by_category": {
-      "analytics": 7,
+      "analytics": 11,
       "content": 12,
       "enrichment": 8,
-      "infrastructure": 6,
-      "leadgen": 22,
-      "outreach": 14,
-      "trading": 33,
-      "uncategorized": 1
+      "infrastructure": 7,
+      "leadgen": 38,
+      "outreach": 12,
+      "trading": 35,
+      "uncategorized": 3
     },
     "by_status": {
-      "active": 63,
-      "dormant": 39,
+      "active": 83,
+      "dormant": 42,
       "library": 1
     },
     "by_dependency": {
-      "dotenv": 89,
-      "requests": 53,
-      "google": 33,
-      "anthropic": 32,
-      "gspread": 30,
-      "pybit": 19,
-      "asyncio": 10,
-      "telethon": 8,
-      "pandas": 5,
+      "dotenv": 106,
+      "requests": 72,
+      "google": 36,
+      "gspread": 33,
+      "anthropic": 29,
+      "pybit": 21,
+      "asyncio": 12,
+      "telethon": 10,
+      "pandas": 7,
       "imaplib": 5,
-      "numpy": 3,
+      "numpy": 4,
       "googleapiclient": 3,
-      "telegram": 3,
+      "bs4": 3,
+      "playwright": 3,
+      "gzip": 2,
+      "flask": 2,
+      "telegram": 2,
       "feedparser": 1,
       "difflib": 1,
-      "ccxt": 1,
-      "bs4": 1,
-      "imapclient": 1,
-      "signal": 1,
-      "flask": 1
+      "ccxt": 1
     }
   }
 }

@@ -170,13 +170,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== FORM SUBMISSION =====
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
+            btn.innerHTML = 'Отправляем...';
+            btn.disabled = true;
+
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name') || form.querySelector('[name="name"], [placeholder*="имя"], [placeholder*="Имя"]')?.value || '',
+                contact: formData.get('email') || formData.get('contact') || formData.get('phone') || form.querySelector('[name="email"], [name="contact"], [name="phone"], [type="email"], [type="tel"]')?.value || '',
+                message: formData.get('message') || form.querySelector('[name="message"], textarea')?.value || 'Запрос ставки с главной страницы',
+            };
+
+            // If no structured data found, collect all inputs
+            if (!data.name && !data.contact) {
+                const inputs = form.querySelectorAll('input, textarea');
+                inputs.forEach((inp, i) => {
+                    if (i === 0 && !data.name) data.name = inp.value;
+                    else if (i === 1 && !data.contact) data.contact = inp.value;
+                    else if (!data.message || data.message === 'Запрос ставки с главной страницы') data.message = inp.value;
+                });
+            }
+
+            try {
+                await fetch('https://blog.elpcargo.ru/api/contact', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data),
+                });
+            } catch (err) {
+                console.error('Form submit error:', err);
+            }
+
             btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px">Отправлено <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>';
             btn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
-            btn.disabled = true;
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.style.background = '';

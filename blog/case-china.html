@@ -231,7 +231,7 @@
         const result = document.getElementById('formResult');
         btn.textContent = 'Отправляем...'; btn.disabled = true;
         try {
-            const res = await fetch('/api/contact', {
+            const res = await fetch('https://blog.elpcargo.ru/api/contact', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -354,5 +354,6 @@
 })();
 </script>
 <!-- End PostHog Custom Events -->
+<script src="/callback-widget.js" defer></script>
 </body>
 </html>

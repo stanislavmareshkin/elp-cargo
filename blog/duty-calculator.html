@@ -405,7 +405,7 @@ function submitLead() {
         timestamp: new Date().toISOString(),
     };
 
-    fetch('/api/contact', {
+    fetch('https://blog.elpcargo.ru/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -515,5 +515,6 @@ function submitLead() {
 })();
 </script>
 <!-- End PostHog Custom Events -->
+<script src="/callback-widget.js" defer></script>
 </body>
 </html>

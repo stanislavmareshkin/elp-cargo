@@ -382,7 +382,7 @@ function submitForm(e) {
         source: 'comparison',
         timestamp: new Date().toISOString()
     };
-    fetch('/api/contact', {
+    fetch('https://blog.elpcargo.ru/api/contact', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
@@ -491,5 +491,6 @@ function submitForm(e) {
 })();
 </script>
 <!-- End PostHog Custom Events -->
+<script src="/callback-widget.js" defer></script>
 </body>
 </html>

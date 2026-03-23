@@ -346,7 +346,7 @@
         };
 
         // Try sending to API
-        fetch('/api/contact', {
+        fetch('https://blog.elpcargo.ru/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -467,5 +467,6 @@
 })();
 </script>
 <!-- End PostHog Custom Events -->
+<script src="/callback-widget.js" defer></script>
 </body>
 </html>

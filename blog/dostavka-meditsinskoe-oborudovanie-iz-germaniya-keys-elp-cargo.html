@@ -84,7 +84,7 @@
             <a href="/" class="back">&larr; Все статьи</a>
             <h1>Доставка медицинское оборудование из Германия: кейс ELP Cargo</h1>
             <div class="article-meta">ELP Cargo &middot; Кейс &middot; 20.03.2026</div>
-            <h2>Задача</h2><p>Доставка медицинское оборудование (500 кг) по маршруту Германия -> Екатеринбург.</p><h2>Решение</h2><p>ELP Cargo организовала доставку за 18 дней.</p><h2>Результат</h2><p>все сертификаты оформлены, оборудование работает</p>
+            <h2>Задача</h2><p>Доставка <a href="/blog/kak-privezti-meditsinskoe-oborudovanie-iz-evropy-v-2024-godu.html" title="Как привезти медицинское оборудование из Европы в 2024 году">медицинское оборудование</a> (500 кг) по маршруту Германия -> Екатеринбург.</p><h2>Решение</h2><p>ELP Cargo организовала доставку за 18 дней.</p><h2>Результат</h2><p>все сертификаты оформлены, оборудование работает</p>
             <div class="cta-box">
                 <h3>Нужна доставка?</h3>
                 <p>Заполните форму — рассчитаем стоимость за 1 час.</p>
@@ -107,7 +107,7 @@
         const result = document.getElementById('formResult');
         btn.textContent = 'Отправляем...'; btn.disabled = true;
         try {
-            const res = await fetch('/api/contact', {
+            const res = await fetch('https://blog.elpcargo.ru/api/contact', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -260,5 +260,6 @@
 })();
 </script>
 <!-- End PostHog Custom Events -->
+<script src="/callback-widget.js" defer></script>
 </body>
 </html>
