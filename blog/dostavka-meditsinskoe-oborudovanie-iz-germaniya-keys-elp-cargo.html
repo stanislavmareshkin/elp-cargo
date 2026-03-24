@@ -61,10 +61,6 @@
         .footer { border-top: 1px solid var(--c-border); padding: 24px 0; text-align: center; color: var(--c-text-dim); font-size: .82em; }
         @media (max-width: 640px) { h1 { font-size: 1.6em; } .container { padding: 0 18px; } }
     </style>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
 <!-- PostHog Analytics -->
 <script>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -261,5 +257,31 @@
 </script>
 <!-- End PostHog Custom Events -->
 <script src="/callback-widget.js" defer></script>
+
+<!-- ====== Shared Analytics Snippet for blog.elpcargo.ru ====== -->
+<!-- To update analytics across all pages, edit this file and run: -->
+<!-- python3 /root/bybit-bot/inject_analytics.py                   -->
+
+<!-- Yandex.Metrika counter (ID: 107269755) -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+<!-- VK Pixel (ID: YOUR_VK_PIXEL_ID — replace with real pixel ID) -->
+<script type="text/javascript">
+!function(){var t=document.createElement("script");
+t.type="text/javascript",t.async=!0,
+t.src="https://vk.com/js/api/openapi.js?173",
+t.onload=function(){VK.Retargeting.Init("YOUR_VK_PIXEL_ID"),VK.Retargeting.Hit()},
+document.head.appendChild(t)}();
+</script>
+<noscript><img src="https://vk.com/rtrg?p=YOUR_VK_PIXEL_ID" style="position:fixed;left:-999px;" alt=""/></noscript>
+<!-- ====== /Shared Analytics ====== -->
+
 </body>
 </html>

@@ -63,10 +63,6 @@
         .footer { border-top: 1px solid var(--c-border); padding: 24px 0; text-align: center; color: var(--c-text-dim); font-size: .82em; }
         @media (max-width: 640px) { h1 { font-size: 1.6em; } .container { padding: 0 18px; } }
     </style>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
 </head>
 <body>
     <div class="header">
@@ -168,5 +164,31 @@ async function submitInline(e){e.preventDefault();const r=document.getElementByI
     <script>let chatOpen=false;function toggleChat(){chatOpen=!chatOpen;document.getElementById('tg-popup').style.display=chatOpen?'block':'none';document.getElementById('tg-icon').style.display=chatOpen?'none':'block';document.getElementById('tg-close').style.display=chatOpen?'block':'none';}</script>
 
 <script src="/callback-widget.js" defer></script>
+
+<!-- ====== Shared Analytics Snippet for blog.elpcargo.ru ====== -->
+<!-- To update analytics across all pages, edit this file and run: -->
+<!-- python3 /root/bybit-bot/inject_analytics.py                   -->
+
+<!-- Yandex.Metrika counter (ID: 107269755) -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+
+<!-- VK Pixel (ID: YOUR_VK_PIXEL_ID — replace with real pixel ID) -->
+<script type="text/javascript">
+!function(){var t=document.createElement("script");
+t.type="text/javascript",t.async=!0,
+t.src="https://vk.com/js/api/openapi.js?173",
+t.onload=function(){VK.Retargeting.Init("YOUR_VK_PIXEL_ID"),VK.Retargeting.Hit()},
+document.head.appendChild(t)}();
+</script>
+<noscript><img src="https://vk.com/rtrg?p=YOUR_VK_PIXEL_ID" style="position:fixed;left:-999px;" alt=""/></noscript>
+<!-- ====== /Shared Analytics ====== -->
+
 </body>
 </html>

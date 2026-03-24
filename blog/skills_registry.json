@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-22 02:30:04",
-  "total": 126,
+  "generated": "2026-03-23 02:30:04",
+  "total": 138,
   "skills": [
     {
       "name": "ab_test_subjects",
@@ -15,7 +15,7 @@
         "numpy"
       ],
       "uses": [],
-      "last_modified": "2026-03-21 04:47",
+      "last_modified": "2026-03-22 11:59",
       "size_kb": 10.9,
       "has_log": false,
       "last_run": null,
@@ -26,7 +26,7 @@
     {
       "name": "agent_orchestrator",
       "file": "agent_orchestrator.py",
-      "description": "Multi-Agent Orchestrator for ClaudeClaw / ELP system. Routes tasks to specialized sub-agents, collects results, sends to Telegram.",
+      "description": "",
       "category": "outreach",
       "flags": [
         "--agent",
@@ -45,13 +45,13 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-20 16:58",
-      "size_kb": 11.3,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 11.5,
       "has_log": false,
       "last_run": null,
-      "status": "dormant",
-      "syntax_ok": true,
-      "error": null
+      "status": "error",
+      "syntax_ok": false,
+      "error": "SyntaxError: '(' was never closed (line 53)"
     },
     {
       "name": "agent_router",
@@ -112,10 +112,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 09:55",
-      "size_kb": 12.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.3,
       "has_log": true,
-      "last_run": "2026-03-21 17:00",
+      "last_run": "2026-03-22 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -134,7 +134,7 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-17 17:21",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 14.7,
       "has_log": true,
       "last_run": "2026-03-17 17:25",
@@ -168,6 +168,37 @@
       "error": null
     },
     {
+      "name": "auto_kp_sender",
+      "file": "auto_kp_sender.py",
+      "description": "Auto KP Sender — sends personalized commercial proposals and answers to interested leads.",
+      "category": "leadgen",
+      "flags": [
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 9,14:0 UTC",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 12:58",
+      "size_kb": 22.8,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "auto_proposal",
       "file": "auto_proposal.py",
       "description": "Auto Commercial Proposal Generator — creates personalized KP for ELP Cargo leads.",
@@ -181,7 +212,7 @@
         "--industry",
         "--route"
       ],
-      "schedule": "Mon-Fri 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "anthropic",
         "dotenv",
@@ -194,8 +225,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:55",
-      "size_kb": 12.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.6,
       "has_log": true,
       "last_run": "2026-03-21 12:06",
       "status": "active",
@@ -207,10 +238,8 @@
       "file": "avito_leads.py",
       "description": "Avito Lead Scanner — finds delivery/logistics requests on Avito.",
       "category": "leadgen",
-      "flags": [
-        "--once"
-      ],
-      "schedule": "Mon-Fri 08:30 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -222,10 +251,10 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 12:13",
-      "size_kb": 18.9,
-      "has_log": false,
-      "last_run": null,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 18.7,
+      "has_log": true,
+      "last_run": "2026-03-22 21:20",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -295,7 +324,7 @@
       "last_modified": "2026-03-20 13:34",
       "size_kb": 2.0,
       "has_log": true,
-      "last_run": "2026-03-22 02:00",
+      "last_run": "2026-03-23 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -347,10 +376,10 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:28",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 11.0,
       "has_log": true,
-      "last_run": "2026-03-22 01:31",
+      "last_run": "2026-03-23 01:52",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -370,8 +399,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-19 05:28",
-      "size_kb": 39.6,
+      "last_modified": "2026-03-22 15:44",
+      "size_kb": 45.5,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -398,10 +427,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:44",
-      "size_kb": 15.7,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-21 09:04",
+      "last_run": "2026-03-22 08:31",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -429,8 +458,8 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 25.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 25.6,
       "has_log": true,
       "last_run": "2026-03-20 16:17",
       "status": "active",
@@ -457,8 +486,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-21 06:19",
-      "size_kb": 14.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 14.4,
       "has_log": true,
       "last_run": "2026-03-20 12:37",
       "status": "active",
@@ -610,6 +639,30 @@
       "error": null
     },
     {
+      "name": "competitor_intel",
+      "file": "competitor_intel.py",
+      "description": "Competitor Intelligence — weekly deep scan of competitor activity.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "Friday 12:00 MSK",
+      "dependencies": [
+        "dotenv",
+        "requests"
+      ],
+      "uses": [
+        "claude_api",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 15:51",
+      "size_kb": 28.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "competitor_monitor",
       "file": "competitor_monitor.py",
       "description": "Competitor Monitor — weekly scrape of competitor websites for changes.",
@@ -669,8 +722,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:48",
-      "size_kb": 15.9,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 16.1,
       "has_log": true,
       "last_run": "2026-03-21 05:13",
       "status": "active",
@@ -697,8 +750,8 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:29",
-      "size_kb": 10.8,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 10.7,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -722,10 +775,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:49",
-      "size_kb": 16.0,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 16.2,
       "has_log": true,
-      "last_run": "2026-03-21 17:00",
+      "last_run": "2026-03-22 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -745,10 +798,10 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-17 18:43",
-      "size_kb": 13.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-22 02:29",
+      "last_run": "2026-03-23 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -766,10 +819,10 @@
         "requests"
       ],
       "uses": [],
-      "last_modified": "2026-03-17 15:49",
-      "size_kb": 16.2,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-22 02:29",
+      "last_run": "2026-03-23 02:23",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -797,8 +850,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 17:26",
-      "size_kb": 13.6,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.8,
       "has_log": true,
       "last_run": "2026-03-21 17:48",
       "status": "active",
@@ -876,8 +929,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:49",
-      "size_kb": 14.4,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 14.7,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -905,6 +958,29 @@
       "error": null
     },
     {
+      "name": "dca_bot",
+      "file": "dca_bot.py",
+      "description": "Smart DCA Bot -- Dollar Cost Averaging for BTC and ETH on SPOT market.",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "pybit",
+        "requests"
+      ],
+      "uses": [
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 15:44",
+      "size_kb": 16.4,
+      "has_log": true,
+      "last_run": "2026-03-23 02:22",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "deal_tracker",
       "file": "deal_tracker.py",
       "description": "Deal Tracker — tracks reply-to-deal journey, measures ROI by channel.",
@@ -923,7 +999,7 @@
       "last_modified": "2026-03-21 04:50",
       "size_kb": 20.9,
       "has_log": true,
-      "last_run": "2026-03-21 16:00",
+      "last_run": "2026-03-22 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -972,10 +1048,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:46",
-      "size_kb": 17.0,
+      "last_modified": "2026-03-22 12:51",
+      "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-21 05:24",
+      "last_run": "2026-03-22 21:19",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1001,7 +1077,7 @@
       "last_modified": "2026-03-18 18:02",
       "size_kb": 10.0,
       "has_log": true,
-      "last_run": "2026-03-21 15:00",
+      "last_run": "2026-03-22 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1027,8 +1103,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:35",
-      "size_kb": 6.8,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 7.1,
       "has_log": true,
       "last_run": "2026-03-20 15:53",
       "status": "active",
@@ -1057,10 +1133,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-19 05:28",
-      "size_kb": 13.6,
+      "last_modified": "2026-03-22 21:21",
+      "size_kb": 13.5,
       "has_log": true,
-      "last_run": "2026-03-20 07:00",
+      "last_run": "2026-03-22 21:22",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1079,7 +1155,7 @@
       "last_modified": "2026-03-21 04:42",
       "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-21 07:00",
+      "last_run": "2026-03-22 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1100,7 +1176,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-21 04:05",
+      "last_run": "2026-03-22 04:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1146,10 +1222,42 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 11:52",
-      "size_kb": 12.7,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 13.7,
       "has_log": true,
-      "last_run": "2026-03-21 04:45",
+      "last_run": "2026-03-22 21:19",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "enrich_emails",
+      "file": "enrich_emails.py",
+      "description": "Enrich leads in Google Sheet — find emails by company name/domain.",
+      "category": "enrichment",
+      "flags": [
+        "--dry-run",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 10:00 MSK",
+      "dependencies": [
+        "bs4",
+        "dns",
+        "dotenv",
+        "duckduckgo_search",
+        "google",
+        "gspread",
+        "requests"
+      ],
+      "uses": [
+        "google_sheets",
+        "proxy",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 19:37",
+      "size_kb": 19.2,
+      "has_log": true,
+      "last_run": "2026-03-22 19:39",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1172,10 +1280,10 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:48",
-      "size_kb": 13.3,
-      "has_log": false,
-      "last_run": null,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.6,
+      "has_log": true,
+      "last_run": "2026-03-22 21:19",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1219,10 +1327,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-18 15:41",
-      "size_kb": 13.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-20 11:00",
+      "last_run": "2026-03-22 21:22",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1245,7 +1353,7 @@
       "last_modified": "2026-03-18 19:44",
       "size_kb": 5.4,
       "has_log": true,
-      "last_run": "2026-03-18 19:46",
+      "last_run": "2026-03-22 17:52",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1262,11 +1370,11 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-18 07:28",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 11.3,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-23 02:26",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1295,10 +1403,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 17:30",
-      "size_kb": 23.0,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 23.2,
       "has_log": true,
-      "last_run": "2026-03-22 02:28",
+      "last_run": "2026-03-23 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1312,7 +1420,7 @@
         "--daemon",
         "--dry-run"
       ],
-      "schedule": null,
+      "schedule": "every 30 min (6-16:*/30 UTC)",
       "dependencies": [
         "anthropic",
         "dotenv",
@@ -1324,10 +1432,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:51",
-      "size_kb": 17.7,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 18.0,
       "has_log": true,
-      "last_run": "2026-03-21 11:30",
+      "last_run": "2026-03-23 02:29",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1352,8 +1460,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 16:58",
-      "size_kb": 6.2,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 6.5,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1382,8 +1490,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 16:58",
-      "size_kb": 13.6,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 13.9,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1409,8 +1517,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:37",
-      "size_kb": 7.9,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 8.1,
       "has_log": true,
       "last_run": "2026-03-20 13:40",
       "status": "active",
@@ -1436,10 +1544,10 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 10:14",
-      "size_kb": 19.8,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 20.0,
       "has_log": true,
-      "last_run": "2026-03-20 10:27",
+      "last_run": "2026-03-22 12:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1456,11 +1564,11 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-21 20:52",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 10.3,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-23 02:29",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1506,10 +1614,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-21 11:58",
-      "size_kb": 12.7,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-21 17:36",
+      "last_run": "2026-03-22 15:31",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1528,8 +1636,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 18:03",
-      "size_kb": 12.8,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.1,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1559,8 +1667,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 14:45",
-      "size_kb": 29.7,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 29.9,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1634,8 +1742,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 14:14",
-      "size_kb": 16.5,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 16.8,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1677,11 +1785,11 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:56",
-      "size_kb": 19.6,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 19.5,
+      "has_log": true,
+      "last_run": "2026-03-23 02:25",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1704,8 +1812,8 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 13.0,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.2,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -1728,8 +1836,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-18 15:41",
-      "size_kb": 5.8,
+      "last_modified": "2026-03-22 18:17",
+      "size_kb": 5.9,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -1782,11 +1890,11 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-18 18:38",
-      "size_kb": 18.0,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 17.9,
+      "has_log": true,
+      "last_run": "2026-03-22 18:00",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1811,7 +1919,7 @@
       "last_modified": "2026-03-18 16:49",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-21 06:00",
+      "last_run": "2026-03-22 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1835,10 +1943,10 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:52",
-      "size_kb": 15.0,
-      "has_log": false,
-      "last_run": null,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.3,
+      "has_log": true,
+      "last_run": "2026-03-22 21:20",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1855,10 +1963,10 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-17 16:15",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 10.7,
       "has_log": true,
-      "last_run": "2026-03-22 02:27",
+      "last_run": "2026-03-23 02:23",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1877,10 +1985,10 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-18 07:27",
-      "size_kb": 12.5,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.4,
       "has_log": true,
-      "last_run": "2026-03-22 00:00",
+      "last_run": "2026-03-23 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1893,7 +2001,7 @@
       "flags": [
         "--limit"
       ],
-      "schedule": "Mon-Fri 11:00 MSK",
+      "schedule": "Mon-Fri 16:00 MSK",
       "dependencies": [
         "anthropic",
         "dotenv",
@@ -1906,10 +2014,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:44",
-      "size_kb": 38.6,
+      "last_modified": "2026-03-22 15:42",
+      "size_kb": 41.6,
       "has_log": true,
-      "last_run": "2026-03-21 12:35",
+      "last_run": "2026-03-22 18:22",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1928,11 +2036,11 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-17 16:15",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 11.0,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-23 02:22",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1955,8 +2063,42 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-21 12:01",
-      "size_kb": 15.7,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.9,
+      "has_log": true,
+      "last_run": "2026-03-22 21:17",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "multichannel_orchestrator",
+      "file": "multichannel_orchestrator.py",
+      "description": "Multichannel Outreach Orchestrator — escalates contacts across Email -> TG -> LinkedIn.",
+      "category": "outreach",
+      "flags": [
+        "--debug",
+        "--dry-run",
+        "--li-limit",
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 14:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "google",
+        "gspread",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 15:53",
+      "size_kb": 24.5,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -1969,7 +2111,7 @@
       "description": "parser_2gis_cosmo.py — Parse 2GIS for cosmetology clinics in Krasnoselsky district, SPb. Collect reviewer names as potential leads. Target competitor: dr-di.ru / @dr.diana.cosmetolog.spb",
       "category": "leadgen",
       "flags": [],
-      "schedule": "Monday 10:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -1981,7 +2123,7 @@
       "size_kb": 12.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2015,7 +2157,7 @@
       "description": "Parser profi.ru — cosmetologists in Saint Petersburg (Krasnoselsky district focus). Extracts specialists, ratings, reviews, prices, specializations. From reviews — extracts reviewer location data (pot",
       "category": "leadgen",
       "flags": [],
-      "schedule": "monthly 1,15th 13:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -2028,7 +2170,7 @@
       "size_kb": 16.6,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2038,7 +2180,7 @@
       "description": "Telegram Beauty/Cosmetology Parser — collects members from beauty channels in SPb.",
       "category": "leadgen",
       "flags": [],
-      "schedule": "Friday 12:00 MSK",
+      "schedule": null,
       "dependencies": [
         "asyncio",
         "dotenv",
@@ -2048,8 +2190,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 16:46",
-      "size_kb": 12.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.6,
       "has_log": true,
       "last_run": "2026-03-21 16:46",
       "status": "active",
@@ -2062,7 +2204,7 @@
       "description": "VK Wall Parser — Cosmetologist Leads from SPb Communities Scans SPb community walls for cosmetology-related posts. Uses VK API service token (wall.get + users.get).",
       "category": "leadgen",
       "flags": [],
-      "schedule": "Wednesday 11:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -2074,7 +2216,7 @@
       "size_kb": 14.5,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2094,8 +2236,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-21 16:45",
-      "size_kb": 19.5,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 19.6,
       "has_log": true,
       "last_run": "2026-03-21 16:46",
       "status": "active",
@@ -2125,8 +2267,8 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 15.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.4,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -2175,8 +2317,8 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 12.6,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.9,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -2207,10 +2349,36 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-21 11:58",
-      "size_kb": 18.0,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 18.3,
       "has_log": true,
-      "last_run": "2026-03-21 17:36",
+      "last_run": "2026-03-22 21:19",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "resend_unopened",
+      "file": "resend_unopened.py",
+      "description": "Resend Unopened — re-sends emails to contacts who never opened the original.",
+      "category": "uncategorized",
+      "flags": [
+        "--limit"
+      ],
+      "schedule": "Mon-Fri 13:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api",
+        "smtp",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 12:52",
+      "size_kb": 15.7,
+      "has_log": true,
+      "last_run": "2026-03-22 12:57",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2236,10 +2404,10 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:26",
-      "size_kb": 19.9,
+      "last_modified": "2026-03-22 12:52",
+      "size_kb": 20.5,
       "has_log": true,
-      "last_run": "2026-03-20 13:00",
+      "last_run": "2026-03-22 21:20",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2288,10 +2456,10 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-17 18:42",
+      "last_modified": "2026-03-22 12:02",
       "size_kb": 13.6,
       "has_log": true,
-      "last_run": "2026-03-18 14:42",
+      "last_run": "2026-03-22 17:52",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2309,11 +2477,60 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-21 20:53",
-      "size_kb": 8.9,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 9.2,
+      "has_log": true,
+      "last_run": "2026-03-23 00:22",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "scout_leads",
+      "file": "scout_leads.py",
+      "description": "Lead Scout — ELP Cargo business intelligence agent.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": "daily */3:0 UTC",
+      "dependencies": [
+        "anthropic",
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 12:29",
+      "size_kb": 13.4,
+      "has_log": true,
+      "last_run": "2026-03-23 00:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "scout_tech",
+      "file": "scout_tech.py",
+      "description": "Tech Scout — AI & tools intelligence agent.",
+      "category": "trading",
+      "flags": [],
+      "schedule": "daily */3:30 UTC",
+      "dependencies": [
+        "anthropic",
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 12:27",
+      "size_kb": 9.6,
+      "has_log": true,
+      "last_run": "2026-03-23 00:30",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -2364,6 +2581,28 @@
       "error": null
     },
     {
+      "name": "selfheal",
+      "file": "selfheal.py",
+      "description": "SelfHeal — autonomous server guardian agent.",
+      "category": "analytics",
+      "flags": [],
+      "schedule": "daily */2:0 UTC",
+      "dependencies": [
+        "dotenv"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 12:23",
+      "size_kb": 13.1,
+      "has_log": true,
+      "last_run": "2026-03-23 02:00",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
       "name": "seo_gap_analyzer",
       "file": "seo_gap_analyzer.py",
       "description": "SEO Keyword Gap Analysis — finds topic gaps vs competitor websites.",
@@ -2382,8 +2621,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:50",
-      "size_kb": 15.0,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.3,
       "has_log": true,
       "last_run": "2026-03-20 13:56",
       "status": "active",
@@ -2409,10 +2648,27 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:50",
-      "size_kb": 14.2,
+      "last_modified": "2026-03-22 15:42",
+      "size_kb": 15.7,
       "has_log": true,
       "last_run": "2026-03-19 05:29",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "seo_internal_links",
+      "file": "seo_internal_links.py",
+      "description": "Auto internal linking for elpcargo.ru blog articles.",
+      "category": "content",
+      "flags": [],
+      "schedule": "Sunday 07:00 MSK",
+      "dependencies": [],
+      "uses": [],
+      "last_modified": "2026-03-22 15:43",
+      "size_kb": 7.6,
+      "has_log": false,
+      "last_run": null,
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2452,11 +2708,11 @@
         "pybit"
       ],
       "uses": [],
-      "last_modified": "2026-03-21 21:00",
-      "size_kb": 9.6,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 9.9,
+      "has_log": true,
+      "last_run": "2026-03-23 00:22",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -2481,8 +2737,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:53",
-      "size_kb": 12.4,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 12.6,
       "has_log": true,
       "last_run": "2026-03-20 13:56",
       "status": "active",
@@ -2504,10 +2760,10 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:49",
-      "size_kb": 15.2,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 15.3,
       "has_log": true,
-      "last_run": "2026-03-21 04:49",
+      "last_run": "2026-03-22 19:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2528,7 +2784,7 @@
       "last_modified": "2026-03-21 12:27",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-21 10:00",
+      "last_run": "2026-03-22 11:12",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2669,8 +2925,8 @@
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 20.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 20.3,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -2688,7 +2944,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Mon-Fri 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "asyncio",
         "dotenv",
@@ -2698,10 +2954,40 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:37",
-      "size_kb": 16.8,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 17.1,
       "has_log": true,
-      "last_run": "2026-03-20 12:48",
+      "last_run": "2026-03-22 21:20",
+      "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_content_funnel",
+      "file": "tg_content_funnel.py",
+      "description": "TG Content Funnel — automated content for @elp_cargo_case.",
+      "category": "content",
+      "flags": [
+        "--cross-post",
+        "--dry-run",
+        "--force"
+      ],
+      "schedule": "1,3,5 10:00 MSK",
+      "dependencies": [
+        "anthropic",
+        "asyncio",
+        "dotenv",
+        "requests",
+        "telethon"
+      ],
+      "uses": [
+        "claude_api",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 15:52",
+      "size_kb": 24.6,
+      "has_log": false,
+      "last_run": null,
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2729,10 +3015,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-18 16:51",
-      "size_kb": 15.7,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-20 12:00",
+      "last_run": "2026-03-22 21:20",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2756,11 +3042,36 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 15.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.6,
       "has_log": true,
-      "last_run": "2026-03-20 15:01",
+      "last_run": "2026-03-22 15:53",
       "status": "active",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "tg_leads_api",
+      "file": "tg_leads_api.py",
+      "description": "Telegram Leads API — CLI helper for ClaudeClaw bot commands.",
+      "category": "leadgen",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [
+        "dotenv",
+        "google",
+        "gspread"
+      ],
+      "uses": [
+        "claude_api",
+        "google_sheets",
+        "telegram"
+      ],
+      "last_modified": "2026-03-22 15:41",
+      "size_kb": 6.5,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2775,7 +3086,7 @@
         "--limit",
         "--source"
       ],
-      "schedule": "Mon-Fri 15:00 MSK",
+      "schedule": null,
       "dependencies": [
         "anthropic",
         "asyncio",
@@ -2790,8 +3101,8 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-20 13:25",
-      "size_kb": 15.1,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 15.4,
       "has_log": true,
       "last_run": "2026-03-20 13:26",
       "status": "active",
@@ -2811,8 +3122,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-17 18:20",
-      "size_kb": 13.2,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 13.1,
       "has_log": true,
       "last_run": "2026-03-17 18:42",
       "status": "active",
@@ -2857,10 +3168,10 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:54",
-      "size_kb": 11.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-21 16:00",
+      "last_run": "2026-03-22 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2882,8 +3193,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 16:06",
-      "size_kb": 9.3,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 9.5,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -2900,7 +3211,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Thursday 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -2908,11 +3219,11 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 15:08",
-      "size_kb": 14.5,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 14.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2938,8 +3249,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 15:44",
-      "size_kb": 14.5,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 14.7,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -2966,8 +3277,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:53",
-      "size_kb": 26.5,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 26.8,
       "has_log": true,
       "last_run": "2026-03-21 04:53",
       "status": "active",
@@ -2984,7 +3295,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Thursday 10:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -2992,10 +3303,10 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-21 12:26",
-      "size_kb": 11.2,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-21 12:27",
+      "last_run": "2026-03-22 12:01",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3008,19 +3319,21 @@
       "flags": [],
       "schedule": null,
       "dependencies": [
+        "anthropic",
         "dotenv",
         "flask",
         "flask_cors",
         "requests"
       ],
       "uses": [
+        "claude_api",
         "smtp",
         "telegram"
       ],
-      "last_modified": "2026-03-21 06:20",
-      "size_kb": 18.7,
+      "last_modified": "2026-03-22 19:25",
+      "size_kb": 60.5,
       "has_log": true,
-      "last_run": "2026-03-21 06:22",
+      "last_run": "2026-03-22 21:45",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3058,9 +3371,9 @@
       "name": "yandex_audiences",
       "file": "yandex_audiences.py",
       "description": "Yandex Audiences Export — exports segmented email lists for Yandex Direct retargeting.",
-      "category": "trading",
+      "category": "infrastructure",
       "flags": [],
-      "schedule": "monthly 1th 08:00 MSK",
+      "schedule": "Monday 08:00 MSK",
       "dependencies": [
         "dotenv",
         "google",
@@ -3070,8 +3383,8 @@
       "uses": [
         "telegram"
       ],
-      "last_modified": "2026-03-20 15:59",
-      "size_kb": 8.0,
+      "last_modified": "2026-03-22 15:50",
+      "size_kb": 13.6,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -3094,8 +3407,8 @@
         "claude_api",
         "telegram"
       ],
-      "last_modified": "2026-03-20 14:59",
-      "size_kb": 10.9,
+      "last_modified": "2026-03-22 12:02",
+      "size_kb": 11.2,
       "has_log": true,
       "last_run": "2026-03-20 16:17",
       "status": "active",
@@ -3105,7 +3418,7 @@
     {
       "name": "yandex_maps_parser",
       "file": "yandex_maps_parser.py",
-      "description": "Yandex Maps Parser — scrapes logistics/cargo companies from Yandex Maps.",
+      "description": "",
       "category": "leadgen",
       "flags": [
         "--city",
@@ -3122,47 +3435,48 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-21 04:48",
-      "size_kb": 26.4,
+      "last_modified": "2026-03-22 11:59",
+      "size_kb": 26.7,
       "has_log": true,
       "last_run": "2026-03-21 04:49",
-      "status": "active",
-      "syntax_ok": true,
-      "error": null
+      "status": "error",
+      "syntax_ok": false,
+      "error": "SyntaxError: '(' was never closed (line 46)"
     }
   ],
   "summary": {
-    "total": 126,
-    "active": 83,
+    "total": 138,
+    "active": 96,
     "by_category": {
-      "analytics": 11,
-      "content": 12,
-      "enrichment": 8,
-      "infrastructure": 7,
-      "leadgen": 38,
-      "outreach": 12,
-      "trading": 35,
-      "uncategorized": 3
+      "analytics": 13,
+      "content": 14,
+      "enrichment": 9,
+      "infrastructure": 8,
+      "leadgen": 41,
+      "outreach": 13,
+      "trading": 36,
+      "uncategorized": 4
     },
     "by_status": {
-      "active": 83,
-      "dormant": 42,
+      "active": 96,
+      "dormant": 39,
+      "error": 2,
       "library": 1
     },
     "by_dependency": {
-      "dotenv": 106,
-      "requests": 72,
-      "google": 36,
-      "gspread": 33,
-      "anthropic": 29,
-      "pybit": 21,
-      "asyncio": 12,
-      "telethon": 10,
+      "dotenv": 117,
+      "requests": 78,
+      "google": 41,
+      "gspread": 38,
+      "anthropic": 36,
+      "pybit": 22,
+      "asyncio": 14,
+      "telethon": 12,
       "pandas": 7,
       "imaplib": 5,
       "numpy": 4,
+      "bs4": 4,
       "googleapiclient": 3,
-      "bs4": 3,
       "playwright": 3,
       "gzip": 2,
       "flask": 2,
