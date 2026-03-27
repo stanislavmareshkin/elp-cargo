@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-25 02:30:03",
+  "generated": "2026-03-26 02:30:04",
   "total": 135,
   "skills": [
     {
@@ -152,7 +152,7 @@
       "description": "Multi-Touch Attribution Tracker — builds attribution paths for leads.",
       "category": "enrichment",
       "flags": [],
-      "schedule": "Monday 08:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -167,7 +167,7 @@
       "size_kb": 13.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -272,7 +272,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Monday 10:10 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -285,7 +285,7 @@
       "size_kb": 22.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -327,7 +327,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 2.1,
       "has_log": true,
-      "last_run": "2026-03-25 02:00",
+      "last_run": "2026-03-26 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -380,9 +380,9 @@
       ],
       "last_modified": "2026-03-24 11:56",
       "size_kb": 10.5,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-26 02:00",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -432,7 +432,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-24 13:19",
+      "last_run": "2026-03-25 04:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -506,7 +506,7 @@
         "--limit",
         "--source"
       ],
-      "schedule": "Wednesday 12:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -518,7 +518,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 14.5,
       "has_log": true,
-      "last_run": "2026-03-24 10:30",
+      "last_run": "2026-03-25 09:12",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -698,10 +698,8 @@
       "file": "competitor_monitor.py",
       "description": "Competitor Monitor — weekly scrape of competitor websites for changes.",
       "category": "analytics",
-      "flags": [
-        "--telegram"
-      ],
-      "schedule": "Friday 12:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "difflib",
         "dotenv"
@@ -713,7 +711,7 @@
       "size_kb": 7.4,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -833,7 +831,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.3,
       "has_log": true,
-      "last_run": "2026-03-24 17:00",
+      "last_run": "2026-03-25 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -881,7 +879,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 14.6,
       "has_log": true,
-      "last_run": "2026-03-25 02:14",
+      "last_run": "2026-03-25 12:14",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -902,7 +900,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.1,
       "has_log": true,
-      "last_run": "2026-03-25 02:14",
+      "last_run": "2026-03-25 12:14",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -964,7 +962,7 @@
       "description": "Crypto Yield Monitor — Daily monitoring of flexible earn rates across exchanges. Fetches Binance, Bybit, OKX earn products, ranks by APY, tracks delta vs previous day, sends Telegram report.",
       "category": "analytics",
       "flags": [],
-      "schedule": "daily 2,8,14,20:30 UTC",
+      "schedule": null,
       "dependencies": [
         "requests"
       ],
@@ -975,7 +973,7 @@
       "size_kb": 11.2,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -989,7 +987,7 @@
         "--industry",
         "--limit"
       ],
-      "schedule": "monthly 1,15th 11:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -1002,7 +1000,7 @@
       "size_kb": 14.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1068,7 +1066,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 20.9,
       "has_log": true,
-      "last_run": "2026-03-24 16:00",
+      "last_run": "2026-03-25 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1103,7 +1101,7 @@
       "description": "Email Deliverability Monitor — checks SPF, DKIM, DMARC, blacklists, bounce/open rates.",
       "category": "analytics",
       "flags": [],
-      "schedule": "Monday 07:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -1115,7 +1113,7 @@
       "size_kb": 12.0,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1143,7 +1141,7 @@
       "last_modified": "2026-03-24 13:49",
       "size_kb": 17.2,
       "has_log": true,
-      "last_run": "2026-03-24 11:35",
+      "last_run": "2026-03-25 09:25",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1169,7 +1167,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.1,
       "has_log": true,
-      "last_run": "2026-03-24 15:00",
+      "last_run": "2026-03-25 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1208,10 +1206,8 @@
       "file": "email_leads.py",
       "description": "Email Lead Generator — cold outreach for ELP Cargo.",
       "category": "outreach",
-      "flags": [
-        "--limit"
-      ],
-      "schedule": "Mon-Fri 10:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -1227,7 +1223,7 @@
       "last_modified": "2026-03-24 13:51",
       "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-24 07:00",
+      "last_run": "2026-03-25 07:10",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1246,7 +1242,7 @@
       "last_modified": "2026-03-21 04:42",
       "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-24 07:00",
+      "last_run": "2026-03-25 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1267,7 +1263,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-24 04:03",
+      "last_run": "2026-03-25 04:04",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1302,7 +1298,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "daily 07:30 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -1316,7 +1312,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.8,
       "has_log": true,
-      "last_run": "2026-03-24 04:34",
+      "last_run": "2026-03-25 04:34",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1348,7 +1344,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-24 07:01",
+      "last_run": "2026-03-25 07:01",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1358,10 +1354,8 @@
       "file": "exhibition_parser.py",
       "description": "Exhibition & Conference Parser — finds logistics exhibitors and pushes to lead sheet.",
       "category": "leadgen",
-      "flags": [
-        "--limit"
-      ],
-      "schedule": "Monday 09:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "bs4",
         "dotenv",
@@ -1375,7 +1369,7 @@
       "size_kb": 13.7,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1385,7 +1379,7 @@
       "description": "Auto Follow-Up Bot — multi-step escalation sequence for cold leads.",
       "category": "outreach",
       "flags": [],
-      "schedule": "Mon-Fri 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -1400,7 +1394,7 @@
       "last_modified": "2026-03-24 13:52",
       "size_kb": 12.5,
       "has_log": true,
-      "last_run": "2026-03-24 11:00",
+      "last_run": "2026-03-25 11:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1420,7 +1414,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.3,
       "has_log": true,
-      "last_run": "2026-03-25 02:10",
+      "last_run": "2026-03-25 12:10",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1451,9 +1445,9 @@
       ],
       "last_modified": "2026-03-24 11:54",
       "size_kb": 22.9,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-26 02:29",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1466,7 +1460,7 @@
         "--daemon",
         "--dry-run"
       ],
-      "schedule": "every 30 min (6-16:*/30 UTC)",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "imaplib",
@@ -1480,7 +1474,7 @@
       "last_modified": "2026-03-24 17:01",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-25 02:26",
+      "last_run": "2026-03-26 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1552,7 +1546,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Thursday 11:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -1565,7 +1559,7 @@
       "size_kb": 8.2,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1579,7 +1573,7 @@
         "--dry",
         "--source"
       ],
-      "schedule": "Tuesday 11:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -1611,7 +1605,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.4,
       "has_log": true,
-      "last_run": "2026-03-25 02:14",
+      "last_run": "2026-03-25 12:14",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1633,8 +1627,8 @@
       ],
       "last_modified": "2026-03-24 11:53",
       "size_kb": 7.2,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-25 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1661,7 +1655,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-24 16:00",
+      "last_run": "2026-03-25 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1786,9 +1780,9 @@
       ],
       "last_modified": "2026-03-24 11:56",
       "size_kb": 19.2,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-26 02:27",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -1847,10 +1841,8 @@
       "file": "lead_recycler.py",
       "description": "Lead Recycler — re-engages dead leads with a fresh approach.",
       "category": "leadgen",
-      "flags": [
-        "--limit"
-      ],
-      "schedule": "Tuesday 14:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -1866,7 +1858,7 @@
       "size_kb": 14.1,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -1889,7 +1881,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-24 21:30",
+      "last_run": "2026-03-25 20:15",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1915,7 +1907,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-24 06:00",
+      "last_run": "2026-03-25 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1963,7 +1955,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.8,
       "has_log": true,
-      "last_run": "2026-03-25 02:12",
+      "last_run": "2026-03-25 12:12",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1985,7 +1977,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 12.5,
       "has_log": true,
-      "last_run": "2026-03-25 02:00",
+      "last_run": "2026-03-25 12:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2058,7 +2050,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.0,
       "has_log": true,
-      "last_run": "2026-03-25 02:14",
+      "last_run": "2026-03-25 12:14",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2082,10 +2074,10 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-24 11:53",
-      "size_kb": 16.0,
+      "last_modified": "2026-03-25 12:36",
+      "size_kb": 15.6,
       "has_log": true,
-      "last_run": "2026-03-24 21:17",
+      "last_run": "2026-03-25 15:48",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2101,7 +2093,7 @@
         "--li-limit",
         "--limit"
       ],
-      "schedule": "Mon-Fri 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "asyncio",
         "dotenv",
@@ -2119,7 +2111,7 @@
       "size_kb": 24.3,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2252,7 +2244,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 23.0,
       "has_log": true,
-      "last_run": "2026-03-24 16:30",
+      "last_run": "2026-03-25 16:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2277,7 +2269,7 @@
       "last_modified": "2026-03-24 13:50",
       "size_kb": 15.4,
       "has_log": true,
-      "last_run": "2026-03-24 10:00",
+      "last_run": "2026-03-25 10:21",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2287,10 +2279,8 @@
       "file": "retarget.py",
       "description": "Retarget — automatic re-engagement for contacts who opened email but didn't reply.",
       "category": "outreach",
-      "flags": [
-        "--limit"
-      ],
-      "schedule": "Mon-Fri 16:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -2305,7 +2295,7 @@
       "last_modified": "2026-03-24 13:52",
       "size_kb": 20.0,
       "has_log": true,
-      "last_run": "2026-03-24 13:09",
+      "last_run": "2026-03-25 13:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2354,8 +2344,8 @@
       ],
       "last_modified": "2026-03-24 17:01",
       "size_kb": 12.6,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-25 14:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2379,9 +2369,9 @@
       ],
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.6,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-25 20:15",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -2426,7 +2416,7 @@
       "last_modified": "2026-03-24 10:34",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-25 00:00",
+      "last_run": "2026-03-26 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2448,7 +2438,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 9.6,
       "has_log": true,
-      "last_run": "2026-03-25 00:30",
+      "last_run": "2026-03-26 00:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2534,7 +2524,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-25 02:30",
+      "last_run": "2026-03-26 02:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2712,7 +2702,7 @@
       "description": "Smart Send Time — analyzes email open patterns and recommends optimal send times.",
       "category": "enrichment",
       "flags": [],
-      "schedule": "Sunday 22:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "gzip",
@@ -2725,7 +2715,7 @@
       "size_kb": 15.3,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -2735,7 +2725,7 @@
       "description": "Auto Blog Social Sharing — publishes new blog articles to Telegram and X/Twitter.",
       "category": "content",
       "flags": [],
-      "schedule": "daily 13:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv"
       ],
@@ -2745,7 +2735,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-24 10:00",
+      "last_run": "2026-03-25 10:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2832,7 +2822,7 @@
         "--dry",
         "--limit"
       ],
-      "schedule": "Mon-Fri 14:00 MSK",
+      "schedule": null,
       "dependencies": [
         "asyncio",
         "dotenv",
@@ -2845,7 +2835,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 17.1,
       "has_log": true,
-      "last_run": "2026-03-24 11:00",
+      "last_run": "2026-03-25 11:21",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2932,7 +2922,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 15.7,
       "has_log": true,
-      "last_run": "2026-03-24 12:00",
+      "last_run": "2026-03-25 12:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2989,8 +2979,8 @@
       ],
       "last_modified": "2026-03-24 11:55",
       "size_kb": 15.2,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-25 10:10",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3085,7 +3075,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-24 16:00",
+      "last_run": "2026-03-25 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3219,9 +3209,9 @@
       ],
       "last_modified": "2026-03-24 11:54",
       "size_kb": 60.0,
-      "has_log": false,
-      "last_run": null,
-      "status": "dormant",
+      "has_log": true,
+      "last_run": "2026-03-25 19:38",
+      "status": "active",
       "syntax_ok": true,
       "error": null
     },
@@ -3230,10 +3220,8 @@
       "file": "weekly_report.py",
       "description": "Weekly Lead Generation Performance Report.",
       "category": "analytics",
-      "flags": [
-        "--telegram"
-      ],
-      "schedule": "Monday 10:00 MSK",
+      "flags": [],
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -3250,7 +3238,7 @@
       "size_kb": 18.8,
       "has_log": false,
       "last_run": null,
-      "status": "active",
+      "status": "dormant",
       "syntax_ok": true,
       "error": null
     },
@@ -3341,7 +3329,7 @@
         "--dry-run",
         "--limit"
       ],
-      "schedule": "Thursday 11:15 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "requests"
@@ -3361,7 +3349,7 @@
   ],
   "summary": {
     "total": 135,
-    "active": 82,
+    "active": 75,
     "by_category": {
       "analytics": 17,
       "content": 15,
@@ -3373,8 +3361,8 @@
       "uncategorized": 7
     },
     "by_status": {
-      "active": 82,
-      "dormant": 49,
+      "active": 75,
+      "dormant": 56,
       "error": 3,
       "library": 1
     },

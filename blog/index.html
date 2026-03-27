@@ -124,6 +124,10 @@
             .nav a { padding: 6px 10px; font-size: .82em; }
         }
     </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
 </head>
 <body>
     <div class="header">
@@ -132,6 +136,7 @@
             <div class="nav">
                 <a href="https://elpcargo.ru">Главная</a>
                 <a href="/">Блог</a>
+                <a href="/calculator.html">Калькулятор</a>
                 <a href="/prices.html">Цены</a>
                 <a href="mailto:ceo@elpcargo.ru">Связаться</a>
             </div>
@@ -154,6 +159,12 @@
     </div>
 
     <div class="grid">
+        <div class="card">
+            <span class="card-tag tag-price">Цены</span>
+            <h2><a href="/blog/rastamozhka-promyshlennogo-oborudovaniya-polnaya-stoimost-v-2024.html">Растаможка промышленного оборудования: полная стоимость в 2024</a></h2>
+            <p>Узнайте реальную стоимость растаможки промышленного оборудования. Тарифы, сборы и документы для импорта в Россию от ELP Cargo.</p>
+            <a href="/blog/rastamozhka-promyshlennogo-oborudovaniya-polnaya-stoimost-v-2024.html" class="read">Читать &rarr;</a>
+        </div>
         <div class="card">
             <span class="card-tag tag-auto">Автозапчасти</span>
             <h2><a href="/blog/import-avtozapchastey-iz-korei-skhemy-dostavki-v-rossiyu-2024.html">Импорт автозапчастей из Кореи: схемы доставки в Россию 2024</a></h2>
@@ -320,31 +331,26 @@
         btn.textContent = 'Отправляем...';
         btn.disabled = true;
         try {
-            const apiUrl = 'https://blog.elpcargo.ru/api/contact';
-            const payload = {
-                name: document.getElementById('f-name').value,
-                company: document.getElementById('f-company').value,
-                contact: document.getElementById('f-contact').value,
-                message: document.getElementById('f-message').value,
-                page: location.href,
-                source: 'main-form'
-            };
-            const res = await fetch(apiUrl, {
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(payload)
+                body: JSON.stringify({
+                    name: document.getElementById('f-name').value,
+                    company: document.getElementById('f-company').value,
+                    contact: document.getElementById('f-contact').value,
+                    message: document.getElementById('f-message').value,
+                })
             });
             if (res.ok) {
                 result.style.color = '#22C55E';
                 result.textContent = 'Отправлено! Ответим в течение часа.';
                 e.target.reset();
             } else {
-                throw new Error('Server error ' + res.status);
+                throw new Error('Server error');
             }
         } catch (err) {
             result.style.color = '#EF4444';
             result.textContent = 'Ошибка. Напишите на ceo@elpcargo.ru';
-            console.error('Form error:', err);
         }
         btn.textContent = 'Запросить расчёт';
         btn.disabled = false;
@@ -383,33 +389,6 @@
     <style>@keyframes slideUp { from { opacity:0;transform:translateY(10px); } to { opacity:1;transform:translateY(0); } }
     @media(max-width:480px){#tg-popup{width:calc(100vw - 48px);right:-4px;}}</style>
     <script>let chatOpen=false;function toggleChat(){chatOpen=!chatOpen;document.getElementById('tg-popup').style.display=chatOpen?'block':'none';document.getElementById('tg-icon').style.display=chatOpen?'none':'block';document.getElementById('tg-close').style.display=chatOpen?'block':'none';}</script>
-
-<script src="/callback-widget.js" defer></script>
-
-<!-- ====== Shared Analytics Snippet for blog.elpcargo.ru ====== -->
-<!-- To update analytics across all pages, edit this file and run: -->
-<!-- python3 /root/bybit-bot/inject_analytics.py                   -->
-
-<!-- Yandex.Metrika counter (ID: 107269755) -->
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-ym(107269755,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/107269755" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
-
-<!-- VK Pixel (ID: YOUR_VK_PIXEL_ID — replace with real pixel ID) -->
-<script type="text/javascript">
-!function(){var t=document.createElement("script");
-t.type="text/javascript",t.async=!0,
-t.src="https://vk.com/js/api/openapi.js?173",
-t.onload=function(){VK.Retargeting.Init("YOUR_VK_PIXEL_ID"),VK.Retargeting.Hit()},
-document.head.appendChild(t)}();
-</script>
-<noscript><img src="https://vk.com/rtrg?p=YOUR_VK_PIXEL_ID" style="position:fixed;left:-999px;" alt=""/></noscript>
-<!-- ====== /Shared Analytics ====== -->
 
 </body>
 </html>
