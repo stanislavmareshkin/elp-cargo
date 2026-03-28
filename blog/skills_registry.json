@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26 02:30:04",
+  "generated": "2026-03-27 02:30:03",
   "total": 135,
   "skills": [
     {
@@ -327,7 +327,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 2.1,
       "has_log": true,
-      "last_run": "2026-03-26 02:00",
+      "last_run": "2026-03-27 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -381,7 +381,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 10.5,
       "has_log": true,
-      "last_run": "2026-03-26 02:00",
+      "last_run": "2026-03-27 02:01",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -432,7 +432,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-25 04:00",
+      "last_run": "2026-03-26 03:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -831,7 +831,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.3,
       "has_log": true,
-      "last_run": "2026-03-25 17:00",
+      "last_run": "2026-03-26 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1066,7 +1066,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 20.9,
       "has_log": true,
-      "last_run": "2026-03-25 16:00",
+      "last_run": "2026-03-26 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1126,7 +1126,7 @@
         "--dry-run",
         "--limit"
       ],
-      "schedule": "Mon-Fri 12:00 MSK",
+      "schedule": null,
       "dependencies": [
         "dotenv",
         "google",
@@ -1141,7 +1141,7 @@
       "last_modified": "2026-03-24 13:49",
       "size_kb": 17.2,
       "has_log": true,
-      "last_run": "2026-03-25 09:25",
+      "last_run": "2026-03-26 09:25",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1167,7 +1167,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.1,
       "has_log": true,
-      "last_run": "2026-03-25 15:00",
+      "last_run": "2026-03-26 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1242,7 +1242,7 @@
       "last_modified": "2026-03-21 04:42",
       "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-25 07:00",
+      "last_run": "2026-03-26 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1263,7 +1263,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-25 04:04",
+      "last_run": "2026-03-26 04:13",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1344,7 +1344,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-25 07:01",
+      "last_run": "2026-03-26 07:01",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1443,10 +1443,10 @@
         "google_sheets",
         "telegram"
       ],
-      "last_modified": "2026-03-24 11:54",
+      "last_modified": "2026-03-26 06:42",
       "size_kb": 22.9,
       "has_log": true,
-      "last_run": "2026-03-26 02:29",
+      "last_run": "2026-03-27 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1474,7 +1474,7 @@
       "last_modified": "2026-03-24 17:01",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-26 02:28",
+      "last_run": "2026-03-27 02:27",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1655,7 +1655,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-25 16:00",
+      "last_run": "2026-03-26 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1781,7 +1781,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-26 02:27",
+      "last_run": "2026-03-27 02:29",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1806,8 +1806,8 @@
       ],
       "last_modified": "2026-03-24 17:01",
       "size_kb": 12.9,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-26 08:58",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1881,7 +1881,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-25 20:15",
+      "last_run": "2026-03-26 09:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1907,7 +1907,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-25 06:00",
+      "last_run": "2026-03-26 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2077,7 +2077,7 @@
       "last_modified": "2026-03-25 12:36",
       "size_kb": 15.6,
       "has_log": true,
-      "last_run": "2026-03-25 15:48",
+      "last_run": "2026-03-26 09:59",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2244,7 +2244,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 23.0,
       "has_log": true,
-      "last_run": "2026-03-25 16:30",
+      "last_run": "2026-03-26 16:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2269,7 +2269,7 @@
       "last_modified": "2026-03-24 13:50",
       "size_kb": 15.4,
       "has_log": true,
-      "last_run": "2026-03-25 10:21",
+      "last_run": "2026-03-26 10:20",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2416,7 +2416,7 @@
       "last_modified": "2026-03-24 10:34",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-26 00:00",
+      "last_run": "2026-03-27 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2438,7 +2438,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 9.6,
       "has_log": true,
-      "last_run": "2026-03-26 00:30",
+      "last_run": "2026-03-27 00:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2524,7 +2524,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-26 02:30",
+      "last_run": "2026-03-27 02:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2602,7 +2602,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 15.4,
       "has_log": true,
-      "last_run": "2026-03-24 05:00",
+      "last_run": "2026-03-26 05:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2922,7 +2922,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 15.7,
       "has_log": true,
-      "last_run": "2026-03-25 12:00",
+      "last_run": "2026-03-26 12:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3075,7 +3075,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-25 16:00",
+      "last_run": "2026-03-26 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3157,8 +3157,8 @@
       ],
       "last_modified": "2026-03-24 11:53",
       "size_kb": 26.8,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-26 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3210,7 +3210,7 @@
       "last_modified": "2026-03-24 11:54",
       "size_kb": 60.0,
       "has_log": true,
-      "last_run": "2026-03-25 19:38",
+      "last_run": "2026-03-27 01:56",
       "status": "active",
       "syntax_ok": true,
       "error": null
