@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-28 02:30:04",
-  "total": 135,
+  "generated": "2026-03-29 02:30:04",
+  "total": 136,
   "skills": [
     {
       "name": "ab_test_subjects",
@@ -109,6 +109,25 @@
       "uses": [],
       "last_modified": "2026-03-21 20:51",
       "size_kb": 2.9,
+      "has_log": false,
+      "last_run": null,
+      "status": "dormant",
+      "syntax_ok": true,
+      "error": null
+    },
+    {
+      "name": "aggressive_outreach",
+      "file": "aggressive_outreach.py",
+      "description": "Aggressive email outreach to hot leads",
+      "category": "trading",
+      "flags": [],
+      "schedule": null,
+      "dependencies": [],
+      "uses": [
+        "smtp"
+      ],
+      "last_modified": "2026-03-28 10:35",
+      "size_kb": 3.0,
       "has_log": false,
       "last_run": null,
       "status": "dormant",
@@ -256,7 +275,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 17.9,
       "has_log": true,
-      "last_run": "2026-03-28 02:29",
+      "last_run": "2026-03-28 10:03",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -327,7 +346,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 2.1,
       "has_log": true,
-      "last_run": "2026-03-28 02:00",
+      "last_run": "2026-03-29 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -381,7 +400,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 10.5,
       "has_log": true,
-      "last_run": "2026-03-28 02:01",
+      "last_run": "2026-03-29 02:09",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -432,7 +451,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-27 03:05",
+      "last_run": "2026-03-28 04:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -831,7 +850,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.3,
       "has_log": true,
-      "last_run": "2026-03-27 17:00",
+      "last_run": "2026-03-28 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1066,7 +1085,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 20.9,
       "has_log": true,
-      "last_run": "2026-03-27 16:00",
+      "last_run": "2026-03-28 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1167,7 +1186,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.1,
       "has_log": true,
-      "last_run": "2026-03-27 15:00",
+      "last_run": "2026-03-28 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1242,7 +1261,7 @@
       "last_modified": "2026-03-21 04:42",
       "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-27 07:00",
+      "last_run": "2026-03-28 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1263,7 +1282,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-27 04:14",
+      "last_run": "2026-03-28 04:07",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1312,7 +1331,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.8,
       "has_log": true,
-      "last_run": "2026-03-25 04:34",
+      "last_run": "2026-03-28 17:32",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1447,7 +1466,7 @@
       "last_modified": "2026-03-27 09:31",
       "size_kb": 23.5,
       "has_log": true,
-      "last_run": "2026-03-28 02:28",
+      "last_run": "2026-03-29 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1475,7 +1494,7 @@
       "last_modified": "2026-03-24 17:01",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-28 02:26",
+      "last_run": "2026-03-29 02:29",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1656,7 +1675,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-27 16:00",
+      "last_run": "2026-03-28 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1782,7 +1801,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-28 02:27",
+      "last_run": "2026-03-29 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1882,7 +1901,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-27 16:31",
+      "last_run": "2026-03-28 10:15",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1908,7 +1927,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-27 06:00",
+      "last_run": "2026-03-28 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2078,7 +2097,7 @@
       "last_modified": "2026-03-25 12:36",
       "size_kb": 15.6,
       "has_log": true,
-      "last_run": "2026-03-27 06:05",
+      "last_run": "2026-03-28 06:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2245,7 +2264,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 23.0,
       "has_log": true,
-      "last_run": "2026-03-27 16:30",
+      "last_run": "2026-03-28 16:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2370,7 +2389,7 @@
       "last_modified": "2026-03-27 09:30",
       "size_kb": 7.1,
       "has_log": true,
-      "last_run": "2026-03-28 02:29",
+      "last_run": "2026-03-29 02:29",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2416,7 +2435,7 @@
       "last_modified": "2026-03-24 10:34",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-28 00:00",
+      "last_run": "2026-03-29 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2438,7 +2457,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 9.6,
       "has_log": true,
-      "last_run": "2026-03-28 00:30",
+      "last_run": "2026-03-29 00:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2524,7 +2543,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-28 02:30",
+      "last_run": "2026-03-29 02:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2546,8 +2565,8 @@
         "proxy",
         "telegram"
       ],
-      "last_modified": "2026-03-27 10:36",
-      "size_kb": 9.1,
+      "last_modified": "2026-03-28 08:03",
+      "size_kb": 9.2,
       "has_log": false,
       "last_run": null,
       "status": "active",
@@ -3075,7 +3094,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-27 16:00",
+      "last_run": "2026-03-28 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3348,7 +3367,7 @@
     }
   ],
   "summary": {
-    "total": 135,
+    "total": 136,
     "active": 79,
     "by_category": {
       "analytics": 17,
@@ -3357,12 +3376,12 @@
       "infrastructure": 5,
       "leadgen": 35,
       "outreach": 14,
-      "trading": 32,
+      "trading": 33,
       "uncategorized": 7
     },
     "by_status": {
       "active": 79,
-      "dormant": 52,
+      "dormant": 53,
       "error": 3,
       "library": 1
     },
