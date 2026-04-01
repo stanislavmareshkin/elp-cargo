@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30 02:30:03",
+  "generated": "2026-03-31 02:30:04",
   "total": 136,
   "skills": [
     {
@@ -248,8 +248,8 @@
       ],
       "last_modified": "2026-03-24 11:54",
       "size_kb": 12.4,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-30 06:59",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -346,7 +346,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 2.1,
       "has_log": true,
-      "last_run": "2026-03-30 02:00",
+      "last_run": "2026-03-31 02:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -400,7 +400,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 10.5,
       "has_log": true,
-      "last_run": "2026-03-30 02:10",
+      "last_run": "2026-03-31 02:10",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -451,7 +451,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.0,
       "has_log": true,
-      "last_run": "2026-03-29 04:00",
+      "last_run": "2026-03-30 03:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -824,8 +824,8 @@
       ],
       "last_modified": "2026-03-24 11:56",
       "size_kb": 10.5,
-      "has_log": false,
-      "last_run": null,
+      "has_log": true,
+      "last_run": "2026-03-30 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -850,7 +850,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 16.3,
       "has_log": true,
-      "last_run": "2026-03-29 17:00",
+      "last_run": "2026-03-30 17:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1085,7 +1085,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 20.9,
       "has_log": true,
-      "last_run": "2026-03-29 16:00",
+      "last_run": "2026-03-30 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1186,7 +1186,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 10.1,
       "has_log": true,
-      "last_run": "2026-03-29 15:00",
+      "last_run": "2026-03-30 15:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1261,7 +1261,7 @@
       "last_modified": "2026-03-21 04:42",
       "size_kb": 3.5,
       "has_log": true,
-      "last_run": "2026-03-29 07:00",
+      "last_run": "2026-03-30 07:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1282,7 +1282,7 @@
       "last_modified": "2026-03-19 05:29",
       "size_kb": 14.8,
       "has_log": true,
-      "last_run": "2026-03-29 04:05",
+      "last_run": "2026-03-30 04:08",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1363,7 +1363,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-27 07:01",
+      "last_run": "2026-03-30 07:01",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1466,7 +1466,7 @@
       "last_modified": "2026-03-27 09:31",
       "size_kb": 23.5,
       "has_log": true,
-      "last_run": "2026-03-30 02:28",
+      "last_run": "2026-03-31 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1494,7 +1494,7 @@
       "last_modified": "2026-03-24 17:01",
       "size_kb": 17.6,
       "has_log": true,
-      "last_run": "2026-03-30 02:25",
+      "last_run": "2026-03-31 02:27",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1675,7 +1675,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.0,
       "has_log": true,
-      "last_run": "2026-03-29 15:00",
+      "last_run": "2026-03-30 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1801,7 +1801,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 19.2,
       "has_log": true,
-      "last_run": "2026-03-30 02:28",
+      "last_run": "2026-03-31 02:28",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -1927,7 +1927,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.2,
       "has_log": true,
-      "last_run": "2026-03-29 06:00",
+      "last_run": "2026-03-30 06:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2097,7 +2097,7 @@
       "last_modified": "2026-03-25 12:36",
       "size_kb": 15.6,
       "has_log": true,
-      "last_run": "2026-03-29 06:05",
+      "last_run": "2026-03-30 06:05",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2264,7 +2264,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 23.0,
       "has_log": true,
-      "last_run": "2026-03-29 16:30",
+      "last_run": "2026-03-30 16:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2289,7 +2289,7 @@
       "last_modified": "2026-03-24 13:50",
       "size_kb": 15.4,
       "has_log": true,
-      "last_run": "2026-03-27 10:21",
+      "last_run": "2026-03-30 10:18",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2389,7 +2389,7 @@
       "last_modified": "2026-03-27 09:30",
       "size_kb": 7.1,
       "has_log": true,
-      "last_run": "2026-03-30 02:29",
+      "last_run": "2026-03-31 02:29",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2435,7 +2435,7 @@
       "last_modified": "2026-03-24 10:34",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-30 00:00",
+      "last_run": "2026-03-31 00:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2457,7 +2457,7 @@
       "last_modified": "2026-03-24 10:52",
       "size_kb": 9.6,
       "has_log": true,
-      "last_run": "2026-03-30 00:30",
+      "last_run": "2026-03-31 00:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2543,7 +2543,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 13.2,
       "has_log": true,
-      "last_run": "2026-03-30 02:30",
+      "last_run": "2026-03-31 02:30",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -2941,7 +2941,7 @@
       "last_modified": "2026-03-24 11:56",
       "size_kb": 15.7,
       "has_log": true,
-      "last_run": "2026-03-27 12:00",
+      "last_run": "2026-03-30 12:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3094,7 +3094,7 @@
       "last_modified": "2026-03-24 11:53",
       "size_kb": 11.6,
       "has_log": true,
-      "last_run": "2026-03-29 16:00",
+      "last_run": "2026-03-30 16:00",
       "status": "active",
       "syntax_ok": true,
       "error": null
@@ -3229,7 +3229,7 @@
       "last_modified": "2026-03-24 11:54",
       "size_kb": 60.0,
       "has_log": true,
-      "last_run": "2026-03-29 21:33",
+      "last_run": "2026-03-30 15:47",
       "status": "active",
       "syntax_ok": true,
       "error": null
